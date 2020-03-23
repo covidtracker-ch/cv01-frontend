@@ -1,8 +1,18 @@
 $f-main: "Helvetica Neue", Helvetica, sans-serif;
 $c-highlight: #e53e3e;
 
+@mixin mobile() {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
 html {
   font-size: 20px;
+
+  @include mobile {
+    font-size: 16px;
+  }
 }
 body {
   background-color: #fff;
@@ -57,6 +67,10 @@ p {
   
   .container {
     padding: 8rem 1rem;
+
+    @include mobile {
+      padding: 4rem 1rem;
+    }
   }
 }
 
@@ -73,10 +87,14 @@ p {
     margin-left: 1rem;
     font-size: .8rem;
   }
+
+  @include mobile {
+    top: 1rem;
+  }
 }
 
 .form {
-  padding: 6rem 0;
+  padding: 2rem 0 6rem 0;
 }
 
 .input-wrap {
@@ -137,4 +155,64 @@ p {
   margin-top: 6rem;
   border-bottom: 1px solid #ccc;
   padding-bottom: .5rem;
+}
+
+.footer {
+  background: #fafafa;
+  border-top: 1px solid #ddd;
+  padding: 2rem 0;
+  color: #888;
+  font-size: .8rem;
+  text-align: center;
+
+  &__nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.header {
+  background-color: $c-highlight;
+  color: #fff;
+  padding: 1rem 0;
+
+  h1 {
+    font-size: 1rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+section.imprint {
+  padding: 4rem 0;
+}
+
+section.partners {
+  padding: 2rem 1rem 2rem 1rem;
+  border-bottom: 1px solid #ddd;
+}
+.partners-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.partner {
+  width: 11rem;
+  margin: 0 1rem;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  @include mobile {
+    width: 100%;
+    max-width: 7rem;
+  }
 }

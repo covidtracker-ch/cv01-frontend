@@ -2,6 +2,8 @@
 de:
   title: "COVID-19 Tracking Schweiz"
   introduction: "<p>Die aktuelle Coronavirus-Epidemie breitet sich in Europa rasant aus.</p>
-  <p>Es ist von grosser Bedeutung, die Verdachtsfälle von Covid-19 frühzeitig zu erkennen um die Infoktionsausbreitung zu minimieren.</p>
-  <p><b>Mit dem Ausfüllen dieses Formulars tragen Sie einen bedeutenden Teil bei, zum Kampf gegen Corona. Sie werden nicht namentlich identifiziert.</b></p>"
+  <p>Es ist von grosser Bedeutung, die Verdachtsfälle von Covid-19 frühzeitig zu erkennen um die Infektionsausbreitung zu minimieren.</p>
+  <p><b>Mit dem Ausfüllen dieses Formulars tragen Sie einen bedeutenden Teil bei, zum Kampf gegen Corona. Sie werden nicht namentlich identifiziert.</b></p>
+  <p><a href=\"https://bag-coronavirus.ch/\" target=\"_blank\">Weitere Infos zum Coronavirus</a><br>
+  Infoline des BAG: +41 58 463 00 00</p>"
   toform: "Zum Formular"

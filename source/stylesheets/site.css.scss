@@ -108,6 +108,9 @@ p {
         border-color: #000;
         background: #fafafa;
       }
+      &--short {
+        max-width: 12rem;
+      }
     }
   }
   &--radio {

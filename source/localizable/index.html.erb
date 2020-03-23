@@ -19,31 +19,31 @@ title: COVID-19 Tracking
 
 <div class="form" id="form">
   <div class="container">
-    <form action="">
+    <form action="#" id="covid-form">
       <div class="input-wrap input-wrap--radio">
         <span class="label">Geschlecht</span>
         <div class="radio-wrap">
           <label class="radio-item" for="gender-1">
-            <input class="input" type="radio" name="gender" id="gender-1" value="male">
+            <input class="input" type="radio" name="gender" id="gender-1" value="male" checked>
             <span>Männlich</span>
           </label>
           <label class="radio-item" for="gender-2">
-            <input class="input" type="radio" name="gender" id="gender-2" value="female" checked>
+            <input class="input" type="radio" name="gender" id="gender-2" value="female">
             <span>Weiblich</span>
           </label>
         </div>
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="age">Alter</label>
-        <input id="age" name="age" class="input" type="text">
+        <input id="age" name="age" class="input input--short" type="number" required>
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="zip">Postleitzahl</label>
-        <input id="zip" name="zip" class="input" type="text">
+        <input id="zip" name="zip" class="input input--short" type="number" required>
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="phoneDigits">Letzte 4 Ziffern der Handynummer</label>
-        <input id="phoneDigits" name="phoneDigits" class="input" type="text">
+        <input id="phoneDigits" name="phoneDigits" class="input input--short" type="number">
       </div>
       <div class="input-wrap input-wrap--radio">
         <span class="label">Wurden Sie auf COVID-19 getestet?</span>
@@ -60,7 +60,7 @@ title: COVID-19 Tracking
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="dateTested">Falls Ja, wann wurden Sie getestet?</label>
-        <input id="dateTested" class="input" type="date">
+        <input id="dateTested" class="input input--short" type="date">
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="placeTested">Falls Ja, wo wurden Sie getestet?</label>
@@ -153,7 +153,7 @@ title: COVID-19 Tracking
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="dateContacted">Si oui: quand?</label>
-        <input id="dateContacted" name="dateContacted" class="input" type="date">
+        <input id="dateContacted" name="dateContacted" class="input input--short" type="date">
       </div>
       <div class="input-wrap input-wrap--radio">
         <span class="label">Souffrez-vous d’une affection chronique?</span>
@@ -205,7 +205,7 @@ title: COVID-19 Tracking
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="feverSince">Si oui: depuis combien de jours?</label>
-        <input id="feverSince" name="feverSince" class="input" type="text">
+        <input id="feverSince" name="feverSince" class="input input--short" type="number">
       </div>
       <div class="input-wrap input-wrap--radio">
         <span class="label">Toux</span>
@@ -222,7 +222,7 @@ title: COVID-19 Tracking
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="coughingSince">Si oui: depuis combien de jours?</label>
-        <input id="coughingSince" name="coughingSince" class="input" type="text">
+        <input id="coughingSince" name="coughingSince" class="input input--short" type="number">
       </div>
       <div class="input-wrap input-wrap--radio">
         <span class="label">Difficultés respiratoires</span>
@@ -239,7 +239,7 @@ title: COVID-19 Tracking
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="dyspneaSince">Si oui: depuis combien de jours?</label>
-        <input id="dyspneaSince" name="dyspneaSince" class="input" type="text">
+        <input id="dyspneaSince" name="dyspneaSince" class="input input--short" type="number">
       </div>
       <div class="input-wrap input-wrap--radio">
         <span class="label">Grande fatigue</span>
@@ -256,7 +256,7 @@ title: COVID-19 Tracking
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="fatigueSince">Si oui: depuis combien de jours?</label>
-        <input id="fatigueSince" name="fatigueSince" class="input" type="text">
+        <input id="fatigueSince" name="fatigueSince" class="input input--short" type="number">
       </div>
       <div class="input-wrap input-wrap--radio">
         <span class="label">Maux de gorge</span>
@@ -273,9 +273,9 @@ title: COVID-19 Tracking
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="soreThroatSince">Si oui: depuis combien de jours?</label>
-        <input id="soreThroatSince" name="soreThroatSince" class="input" type="text">
+        <input id="soreThroatSince" name="soreThroatSince" class="input input--short" type="number">
       </div>
-      <button class="btn">Formular absenden</button>
+      <button type="submit" class="btn" id="btn-send">Formular absenden</button>
     </form>
   </div>
 </div>

@@ -46,6 +46,7 @@ p {
   text-decoration: none;
   margin: 2rem 0;
   cursor: pointer;
+  box-shadow: 0 4px 20px -5px rgba(#000, .2);
 
   &--inv {
     background-color: #fff;
@@ -65,11 +66,15 @@ p {
   background: $c-highlight;
   background-image: linear-gradient(#f74141, #e53e3e);
   color: #fff;
-  box-shadow: 0 4px 50px 0 rgba(#f00, .3);
+  box-shadow: 0 4px 50px 0 rgba(#f00, .25);
+  border-bottom: 1px solid #a00;
   
   .container {
     padding: 6rem 1rem 6rem 1rem;
 
+  }
+  &__headline {
+    text-shadow: 0 2px 2px rgba(#000, .2);
   }
   &__logo {
     display: block;
@@ -111,6 +116,14 @@ p {
   padding: 2rem 0 6rem 0;
 }
 
+#form-expanded {
+  //display: none;
+
+  &.visible {
+    display: block;
+  }
+}
+
 .input-wrap {
   margin: 2.5rem 0;
 
@@ -131,7 +144,7 @@ p {
       width: 100%;
       font-size: 1rem;
       font-family: $f-main;
-      border-radius: 2px;
+      border-radius: 3px;
       padding: .5rem;
       box-sizing: border-box;
 

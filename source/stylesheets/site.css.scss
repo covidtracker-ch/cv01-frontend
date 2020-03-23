@@ -63,13 +63,27 @@ p {
 
 .hero {
   background: $c-highlight;
+  background-image: linear-gradient(#f74141, #e53e3e);
   color: #fff;
+  box-shadow: 0 4px 50px 0 rgba(#f00, .3);
   
   .container {
-    padding: 8rem 1rem;
+    padding: 6rem 1rem 6rem 1rem;
 
-    @include mobile {
+  }
+  &__logo {
+    display: block;
+    width: 5rem;
+    height: auto;
+    margin-bottom: 2rem;
+    margin-left: -1rem;
+  }
+  @include mobile {
+    .container {
       padding: 4rem 1rem;
+    }
+    &__logo {
+      margin-left: 0;
     }
   }
 }

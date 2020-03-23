@@ -1,9 +1,7 @@
 ---
 de:
   title: "COVID-19 Tracking Schweiz"
-  introduction: "<p>L’épidémie actuelle liée au corona-virus se dissémine rapidement dans toute l’Europe. Les mesures de distanciation sont promulguées partout et devraient permettre de limiter la contagion aussi dans notre pays. Le contact tracing (identifier la chaine de transmission dans un groupe, une famille, une entreprise) est très utile au début d’une épidémie, mais est devenu impraticable par le nombre de cas diagnostiqués en suisse.</p>
-  <p>Le corona-tracker que nous avons développé permet d’analyser la répartition géographie (via le code postal) des cas suspects, et ainsi d’identifier des foyers infectieux. Ceci permettra alors de concentrer les efforts de prévention de la contagion sur les zones identifiées avec un risque accru.</p>
-  <p>Les données que nous récoltons (âge, sexe, code postal) ne permettent pas de vous identifier nominalement. Ainsi, vous n’avez pas de souci concernant la protection des données. Nous utiliserons les 4 derniers chiffres de votre numéro de téléphone afin de reconnaître les personnes qui remplissent à plusieurs reprises le formulaire, ce qui sera très utile pour évaluer l’évolution dans le temps de l’épidémie.</p>
-  <p>Ce corona-tracker ne sera utile que si un très grand nombre de personnes le remplissent et nous fournissent les informations. Merci de le distribuer le plus largement possible dans votre entourage !</p>
-  <p>Nous vous remercions sincèrement pour votre aide ! C’est une contribution significative à la solidarité pour la lutte contre cette grave épidémie.</p>"
+  introduction: "<p>Die aktuelle Coronavirus-Epidemie breitet sich in Europa rasant aus.</p>
+  <p>Es ist von grosser Bedeutung, die Verdachtsfälle von Covid-19 frühzeitig zu erkennen um die Infoktionsausbreitung zu minimieren.</p>
+  <p><b>Mit dem Ausfüllen dieses Formulars tragen Sie einen bedeutenden Teil bei, zum Kampf gegen Corona. Sie werden nicht namentlich identifiziert.</b></p>"
   toform: "Zum Formular"

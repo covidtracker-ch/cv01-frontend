@@ -1,0 +1,281 @@
+---
+title: COVID-19 Tracking
+---
+
+<div class="hero">
+  <div class="container">
+    <ul class="lang-nav">
+      <li><a href="/" class="langlink ml-4">Deutsch</a></li>
+      <li><a href="/fr" class="langlink ml-4">Français</a></li>
+      <li><a href="/it" class="langlink ml-4">Italiano</a></li>
+    </ul>
+    <div>
+      <h1><%= t(:title) %></h1>
+      <%= t(:introduction) %>
+      <a href="#form" class="btn btn--inv"><%= t(:toform) %></a>
+    </div>
+  </div>
+</div>
+
+<div class="form" id="form">
+  <div class="container">
+    <form action="">
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Geschlecht</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="gender-1">
+            <input class="input" type="radio" name="gender" id="gender-1" value="male">
+            <span>Männlich</span>
+          </label>
+          <label class="radio-item" for="gender-2">
+            <input class="input" type="radio" name="gender" id="gender-2" value="female" checked>
+            <span>Weiblich</span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="age">Alter</label>
+        <input id="age" name="age" class="input" type="text">
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="zip">Postleitzahl</label>
+        <input id="zip" name="zip" class="input" type="text">
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="phoneDigits">Letzte 4 Ziffern der Handynummer</label>
+        <input id="phoneDigits" name="phoneDigits" class="input" type="text">
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Wurden Sie auf COVID-19 getestet?</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="hasBeenTested-1">
+            <input class="input" type="radio" name="hasBeenTested" id="hasBeenTested-1" value="1">
+            <span>Ja</span>
+          </label>
+          <label class="radio-item" for="hasBeenTested-0">
+            <input class="input" type="radio" name="hasBeenTested" id="hasBeenTested-0" value="0" checked>
+            <span>Nein</span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="dateTested">Falls Ja, wann wurden Sie getestet?</label>
+        <input id="dateTested" class="input" type="date">
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="placeTested">Falls Ja, wo wurden Sie getestet?</label>
+        <input id="placeTested" class="input" type="text">
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Travaillez-vous dans le système de santé avec des patients?</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="worksInHealth-1">
+            <input class="input" type="radio" name="worksInHealth" id="worksInHealth-1" value="1">
+            <span>Ja</span>
+          </label>
+          <label class="radio-item" for="worksInHealth-0">
+            <input class="input" type="radio" name="worksInHealth" id="worksInHealth-0" value="0" checked>
+            <span>Nein</span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Si ou: où?</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="workWhere-1">
+            <input class="input" type="radio" name="workWhere" id="workWhere-1" value="hospital">
+            <span>Hôpital</span>
+          </label>
+          <label class="radio-item" for="workWhere-2">
+            <input class="input" type="radio" name="workWhere" id="workWhere-2" value="private">
+            <span>Pratique privée</span>
+          </label>
+          <label class="radio-item" for="workWhere-3">
+            <input class="input" type="radio" name="workWhere" id="workWhere-3" value="ems">
+            <span>EMS</span>
+          </label>
+          <label class="radio-item" for="workWhere-4">
+            <input class="input" type="radio" name="workWhere" id="workWhere-4" value="other" checked>
+            <span>Autre</span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Avez-vous été à l’étranger durant ces 14 derniers jours?</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="travelled-1">
+            <input class="input" type="radio" name="travelled" id="travelled-1" value="1">
+            <span>Ja</span>
+          </label>
+          <label class="radio-item" for="travelled-0">
+            <input class="input" type="radio" name="travelled" id="travelled-0" value="0" checked>
+            <span>Nein</span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Si ou: où?</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="travelledWhere-1">
+            <input class="input" type="radio" name="travelledWhere" id="travelledWhere-1" value="italy">
+            <span>Italie</span>
+          </label>
+          <label class="radio-item" for="travelledWhere-2">
+            <input class="input" type="radio" name="travelledWhere" id="travelledWhere-2" value="spain">
+            <span>Espagne</span>
+          </label>
+          <label class="radio-item" for="travelledWhere-3">
+            <input class="input" type="radio" name="travelledWhere" id="travelledWhere-3" value="france">
+            <span>France</span>
+          </label>
+          <label class="radio-item" for="travelledWhere-4">
+            <input class="input" type="radio" name="travelledWhere" id="travelledWhere-4" value="germany">
+            <span>Allemagne</span>
+          </label>
+          <label class="radio-item" for="travelledWhere-5">
+            <input class="input" type="radio" name="travelledWhere" id="travelledWhere-5" value="other" checked>
+            <span>Autre</span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Avez-vous été en contact avec un cas positif pour le covid-19?</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="contacted-1">
+            <input class="input" type="radio" name="contacted" id="contacted-1" value="1">
+            <span>Ja</span>
+          </label>
+          <label class="radio-item" for="contacted-0">
+            <input class="input" type="radio" name="contacted" id="contacted-0" value="0" checked>
+            <span>Nein</span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="dateContacted">Si oui: quand?</label>
+        <input id="dateContacted" name="dateContacted" class="input" type="date">
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Souffrez-vous d’une affection chronique?</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="chronicalDisease-1">
+            <input class="input" type="radio" name="chronicalDisease" id="chronicalDisease-1" value="1">
+            <span>Ja</span>
+          </label>
+          <label class="radio-item" for="chronicalDisease-0">
+            <input class="input" type="radio" name="chronicalDisease" id="chronicalDisease-0" value="0" checked>
+            <span>Nein</span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Si oui:</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="chronicalDiseaseType-1">
+            <input class="input" type="radio" name="chronicalDiseaseType" id="chronicalDiseaseType-1" value="cardiac">
+            <span>Affection cardiaque</span>
+          </label>
+          <label class="radio-item" for="chronicalDiseaseType-2">
+            <input class="input" type="radio" name="chronicalDiseaseType" id="chronicalDiseaseType-2" value="pulmonary">
+            <span>Pulmonaire</span>
+          </label>
+          <label class="radio-item" for="chronicalDiseaseType-3">
+            <input class="input" type="radio" name="chronicalDiseaseType" id="chronicalDiseaseType-3" value="dabetic">
+            <span>Diabéte</span>
+          </label>
+          <label class="radio-item" for="chronicalDiseaseType-4">
+            <input class="input" type="radio" name="chronicalDiseaseType" id="chronicalDiseaseType-4" value="other" checked>
+            <span>Autre</span>
+          </label>
+        </div>
+      </div>
+      <span class="section-title">Souffrez-vous actuellement des symptômes suivants:</span>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Fièvre de plus de 38 degrés</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="fever-1">
+            <input class="input" type="radio" name="fever" id="fever-1" value="1">
+            <span>Ja</span>
+          </label>
+          <label class="radio-item" for="fever-0">
+            <input class="input" type="radio" name="fever" id="fever-0" value="0" checked>
+            <span>Nein</span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="feverSince">Si oui: depuis combien de jours?</label>
+        <input id="feverSince" name="feverSince" class="input" type="text">
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Toux</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="coughing-1">
+            <input class="input" type="radio" name="coughing" id="coughing-1" value="1">
+            <span>Ja</span>
+          </label>
+          <label class="radio-item" for="coughing-0">
+            <input class="input" type="radio" name="coughing" id="coughing-0" value="0" checked>
+            <span>Nein</span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="coughingSince">Si oui: depuis combien de jours?</label>
+        <input id="coughingSince" name="coughingSince" class="input" type="text">
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Difficultés respiratoires</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="dyspnea-1">
+            <input class="input" type="radio" name="dyspnea" id="dyspnea-1" value="1">
+            <span>Ja</span>
+          </label>
+          <label class="radio-item" for="dyspnea-0">
+            <input class="input" type="radio" name="dyspnea" id="dyspnea-0" value="0" checked>
+            <span>Nein</span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="dyspneaSince">Si oui: depuis combien de jours?</label>
+        <input id="dyspneaSince" name="dyspneaSince" class="input" type="text">
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Grande fatigue</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="fatigue-1">
+            <input class="input" type="radio" name="fatigue" id="fatigue-1" value="1">
+            <span>Ja</span>
+          </label>
+          <label class="radio-item" for="fatigue-0">
+            <input class="input" type="radio" name="fatigue" id="fatigue-0" value="0" checked>
+            <span>Nein</span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="fatigueSince">Si oui: depuis combien de jours?</label>
+        <input id="fatigueSince" name="fatigueSince" class="input" type="text">
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label">Maux de gorge</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="soreThroat-1">
+            <input class="input" type="radio" name="soreThroat" id="soreThroat-1" value="1">
+            <span>Ja</span>
+          </label>
+          <label class="radio-item" for="soreThroat-0">
+            <input class="input" type="radio" name="soreThroat" id="soreThroat-0" value="0" checked>
+            <span>Nein</span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="soreThroatSince">Si oui: depuis combien de jours?</label>
+        <input id="soreThroatSince" name="soreThroatSince" class="input" type="text">
+      </div>
+      <button class="btn">Formular absenden</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,137 @@
+$f-main: "Helvetica Neue", Helvetica, sans-serif;
+$c-highlight: #e53e3e;
+
+html {
+  font-size: 20px;
+}
+body {
+  background-color: #fff;
+  color: #222;
+  font-family: $f-main;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  line-height: 1.3;
+}
+
+.btn {
+  --webkit-appearance: none;
+  display: inline-block;
+  padding: .75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  background-color: $c-highlight;
+  color: #fff;
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 2rem 0;
+  cursor: pointer;
+
+  &--inv {
+    background-color: #fff;
+    color: $c-highlight;
+  }
+}
+
+.container {
+  max-width: 900px;
+  padding: 0 1rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.hero {
+  background: $c-highlight;
+  color: #fff;
+  
+  .container {
+    padding: 8rem 1rem;
+  }
+}
+
+.lang-nav {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline;
+    margin-left: 1rem;
+    font-size: .8rem;
+  }
+}
+
+.form {
+  padding: 6rem 0;
+}
+
+.input-wrap {
+  margin: 2.5rem 0;
+
+  .label {
+    display: block;
+    font-size: .8rem;
+    color: #aaa;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    letter-spacing: .02rem;
+  }
+  &--text {
+
+    .input {
+      --webkit-appearance: none;
+      border: 1px solid #aaa;
+      display: block;
+      width: 100%;
+      font-size: 1rem;
+      font-family: $f-main;
+      border-radius: 2px;
+      padding: .5rem;
+      box-sizing: border-box;
+
+      &:focus {
+        outline: none;
+        border-color: #000;
+        background: #fafafa;
+      }
+    }
+  }
+  &--radio {
+    .radio-wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .radio-item {
+      display: flex;
+      align-items: center;
+      margin-right: 1.5rem;
+      margin-top: .25rem;
+    }
+    .input {
+      margin-right: .5rem;
+    }
+    span {
+      // font-size: .8rem;
+    }
+  }
+}
+.section-title {
+  display: block;
+  margin-top: 6rem;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: .5rem;
+}

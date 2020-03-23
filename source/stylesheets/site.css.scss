@@ -127,7 +127,7 @@ p {
 }
 
 #form-expanded {
-  display: none;
+  // display: none;
 
   &.visible {
     display: block;
@@ -144,6 +144,11 @@ p {
     font-weight: bold;
     margin-bottom: .5rem;
     letter-spacing: .02rem;
+  }
+  &--child {
+    padding-left: 1rem;
+    margin-top: -1rem;
+    border-left: 4px solid #eee;
   }
   &--text {
 
@@ -252,4 +257,8 @@ section.partners {
     width: 100%;
     max-width: 7rem;
   }
+}
+
+.hidden {
+  display: none;
 }

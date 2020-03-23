@@ -42,15 +42,15 @@ title: COVID-19 Tracking
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="age"><%= t(:age) %></label>
-        <input id="age" name="age" class="input input--short" type="number" required>
+        <input id="age" name="age" class="input input--short" type="number" max="120" min="0" step="1" required>
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="zip"><%= t(:zip) %></label>
-        <input id="zip" name="zip" class="input input--short" type="number" required>
+        <input id="zip" name="zip" class="input input--short" type="number" max="9999" min="1000" step="1" required>
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="phoneDigits"><%= t(:phoneDigits) %></label>
-        <input id="phoneDigits" name="phoneDigits" class="input input--short" type="number">
+        <input id="phoneDigits" name="phoneDigits" class="input input--short" type="number" step="1">
       </div>
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:feelsHealthy) %></span>
@@ -81,11 +81,11 @@ title: COVID-19 Tracking
         </div>
         <div class="input-wrap input-wrap--text">
           <label class="label" for="whenTested"><%= t(:whenTested) %></label>
-          <input id="whenTested" class="input input--short" type="date">
+          <input id="whenTested" name="whenTested" class="input input--short" type="date">
         </div>
         <div class="input-wrap input-wrap--text">
           <label class="label" for="whereTested"><%= t(:whereTested) %></label>
-          <input id="whereTested" class="input" type="text">
+          <input id="whereTested" name="whereTested" class="input" type="text">
         </div>
         <div class="input-wrap input-wrap--radio">
           <span class="label"><%= t(:worksInHealth) %></span>
@@ -155,7 +155,7 @@ title: COVID-19 Tracking
           </div>
         </div>
         <div class="input-wrap input-wrap--text">
-          <label class="label" for="dateContacted">{ WHEN }</label>
+          <label class="label" for="dateContacted"><%= t(:dateContacted) %></label>
           <input id="dateContacted" name="dateContacted" class="input input--short" type="date">
         </div>
         <div class="input-wrap input-wrap--radio">
@@ -188,85 +188,85 @@ title: COVID-19 Tracking
           <span class="label"><%= t(:fever) %></span>
           <div class="radio-wrap">
             <label class="radio-item" for="fever-1">
-              <input class="input" type="radio" name="fever" id="fever-1" value="1">
+              <input class="js-toggle input" type="radio" name="fever" id="fever-1" value="1" data-show="wrap-feverSince">
               <span><%= t(:yesAnswer) %></span>
             </label>
             <label class="radio-item" for="fever-0">
-              <input class="input" type="radio" name="fever" id="fever-0" value="0">
+              <input class="js-toggle input" type="radio" name="fever" id="fever-0" value="0" data-hide="wrap-feverSince">
               <span><%= t(:noAnswer) %></span>
             </label>
           </div>
         </div>
-        <div class="input-wrap input-wrap--text">
-          <label class="label" for="feverSince">{ SINCE HOW MANY DAYS }</label>
+        <div class="input-wrap input-wrap--text input-wrap--child hidden" id="wrap-feverSince">
+          <label class="label" for="feverSince"><%= t(:sinceHowManyDays) %></label>
           <input id="feverSince" name="feverSince" class="input input--short" type="number">
         </div>
         <div class="input-wrap input-wrap--radio">
           <span class="label"><%= t(:coughing) %></span>
           <div class="radio-wrap">
             <label class="radio-item" for="coughing-1">
-              <input class="input" type="radio" name="coughing" id="coughing-1" value="1">
+              <input class="js-toggle input" type="radio" name="coughing" id="coughing-1" value="1" data-show="wrap-coughingSince">
               <span><%= t(:yesAnswer) %></span>
             </label>
             <label class="radio-item" for="coughing-0">
-              <input class="input" type="radio" name="coughing" id="coughing-0" value="0">
+              <input class="js-toggle input" type="radio" name="coughing" id="coughing-0" value="0" data-hide="wrap-coughingSince">
               <span><%= t(:noAnswer) %></span>
             </label>
           </div>
         </div>
-        <div class="input-wrap input-wrap--text">
-          <label class="label" for="coughingSince">{ SINCE HOW MANY DAYS }</label>
+        <div class="input-wrap input-wrap--text input-wrap--child hidden" id="wrap-coughingSince">
+          <label class="label" for="coughingSince"><%= t(:sinceHowManyDays) %></label>
           <input id="coughingSince" name="coughingSince" class="input input--short" type="number">
         </div>
         <div class="input-wrap input-wrap--radio">
           <span class="label"><%= t(:dyspnea) %></span>
           <div class="radio-wrap">
             <label class="radio-item" for="dyspnea-1">
-              <input class="input" type="radio" name="dyspnea" id="dyspnea-1" value="1">
+              <input class="js-toggle input" type="radio" name="dyspnea" id="dyspnea-1" value="1" data-show="wrap-dyspneaSince">
               <span><%= t(:yesAnswer) %></span>
             </label>
             <label class="radio-item" for="dyspnea-0">
-              <input class="input" type="radio" name="dyspnea" id="dyspnea-0" value="0">
+              <input class="js-toggle input" type="radio" name="dyspnea" id="dyspnea-0" value="0" data-hide="wrap-dyspneaSince">
               <span><%= t(:noAnswer) %></span>
             </label>
           </div>
         </div>
-        <div class="input-wrap input-wrap--text">
-          <label class="label" for="dyspneaSince">{ SINCE HOW MANY DAYS }</label>
+        <div class="input-wrap input-wrap--text input-wrap--child hidden" id="wrap-dyspneaSince">
+          <label class="label" for="dyspneaSince"><%= t(:sinceHowManyDays) %></label>
           <input id="dyspneaSince" name="dyspneaSince" class="input input--short" type="number">
         </div>
         <div class="input-wrap input-wrap--radio">
           <span class="label"><%= t(:tiredness) %></span>
           <div class="radio-wrap">
             <label class="radio-item" for="tiredness-1">
-              <input class="input" type="radio" name="tiredness" id="tiredness-1" value="1">
+              <input class="js-toggle input" type="radio" name="tiredness" id="tiredness-1" value="1" data-show="wrap-tirednessSince">
               <span><%= t(:yesAnswer) %></span>
             </label>
             <label class="radio-item" for="tiredness-0">
-              <input class="input" type="radio" name="tiredness" id="tiredness-0" value="0">
+              <input class="js-toggle input" type="radio" name="tiredness" id="tiredness-0" value="0" data-hide="wrap-tirednessSince">
               <span><%= t(:noAnswer) %></span>
             </label>
           </div>
         </div>
-        <div class="input-wrap input-wrap--text">
-          <label class="label" for="tirednessSince">{ SINCE HOW MANY DAYS }</label>
+        <div class="input-wrap input-wrap--text input-wrap--child hidden" id="wrap-tirednessSince">
+          <label class="label" for="tirednessSince"><%= t(:sinceHowManyDays) %></label>
           <input id="tirednessSince" name="tirednessSince" class="input input--short" type="number">
         </div>
         <div class="input-wrap input-wrap--radio">
           <span class="label"><%= t(:throat) %></span>
           <div class="radio-wrap">
             <label class="radio-item" for="throat-1">
-              <input class="input" type="radio" name="throat" id="throat-1" value="1">
+              <input class="js-toggle input" type="radio" name="throat" id="throat-1" value="1" data-show="wrap-throatSince">
               <span><%= t(:yesAnswer) %></span>
             </label>
             <label class="radio-item" for="throat-0">
-              <input class="input" type="radio" name="throat" id="throat-0" value="0">
+              <input class="js-toggle input" type="radio" name="throat" id="throat-0" value="0" data-hide="wrap-throatSince">
               <span><%= t(:noAnswer) %></span>
             </label>
           </div>
         </div>
-        <div class="input-wrap input-wrap--text">
-          <label class="label" for="throatSince">{ SINCE HOW MANY DAYS }</label>
+        <div class="input-wrap input-wrap--text input-wrap--child hidden" id="wrap-throatSince">
+          <label class="label" for="throatSince"><%= t(:sinceHowManyDays) %></label>
           <input id="throatSince" name="throatSince" class="input input--short" type="number">
         </div>
       </div>

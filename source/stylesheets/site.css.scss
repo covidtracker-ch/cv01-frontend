@@ -78,10 +78,11 @@ p {
   }
   &__logo {
     display: block;
-    width: 5rem;
+    width: 6rem;
     height: auto;
     margin-bottom: 2rem;
     margin-left: -1rem;
+    animation: 60s infinite linear rotate-logo;
   }
   @include mobile {
     .container {
@@ -90,6 +91,15 @@ p {
     &__logo {
       margin-left: 0;
     }
+  }
+}
+
+@keyframes rotate-logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -117,7 +127,7 @@ p {
 }
 
 #form-expanded {
-  //display: none;
+  display: none;
 
   &.visible {
     display: block;

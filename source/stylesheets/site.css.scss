@@ -30,6 +30,10 @@ a {
   }
 }
 
+h2 {
+  margin: 3rem 0 1rem 0;
+}
+
 p {
   line-height: 1.4;
 }
@@ -231,7 +235,7 @@ p {
   }
 }
 
-section.imprint {
+section.subpage {
   padding: 4rem 0;
 }
 
@@ -302,6 +306,42 @@ section.social {
   }
   &:hover {
     background-color: #f0f0f0;
+  }
+}
+
+.faq__question {
+  font-size: 1rem;
+  margin-top: 2rem;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 4px;
+}
+
+.partner-grid {
+  ul {
+    list-style-type: none;
+    margin: 0 -.5rem;
+    width: calc(100% + 1rem);
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      display: block;
+      width: calc(33.3% - 1rem);
+      margin: .5rem .5rem;
+      border: 1px solid #ddd;
+      box-sizing: border-box;
+
+      @include mobile {
+        width: calc(50% - .5rem);
+        margin: .5rem .25rem;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
   }
 }
 

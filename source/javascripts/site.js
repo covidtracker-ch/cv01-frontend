@@ -25,7 +25,6 @@ function sendForm() {
   });
   
   xhr.open('POST', form.action);
-  xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
   xhr.send(fd);
 }
 

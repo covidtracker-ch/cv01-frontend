@@ -47,10 +47,18 @@ p {
   margin: 2rem 0;
   cursor: pointer;
   box-shadow: 0 4px 20px -5px rgba(#000, .2);
+  transition: .2s background-color;
 
   &--inv {
     background-color: #fff;
     color: $c-highlight;
+
+    &:hover {
+      background-color: #fee;
+    }
+  }
+  &:hover {
+    background-color: #c00;
   }
 }
 
@@ -281,7 +289,7 @@ section.social {
   background-repeat: no-repeat;
   padding-left: 2.5rem;
   text-decoration: none;
-  margin: 0 .5rem;
+  margin: .5rem .5rem;
   
   &--fb {
     border-color: #3A559F;

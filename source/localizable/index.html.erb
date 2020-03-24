@@ -53,6 +53,123 @@ title: COVID-19 Tracking
         <input id="phoneDigits" name="phoneDigits" class="input input--short" type="number" step="1">
       </div>
       <div class="input-wrap input-wrap--radio">
+        <span class="label"><%= t(:hasBeenTested) %></span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="hasBeenTested-1">
+            <input class="input" type="radio" name="hasBeenTested" id="hasBeenTested-1" value="1">
+            <span><%= t(:yesAnswer) %></span>
+          </label>
+          <label class="radio-item" for="hasBeenTested-0">
+            <input class="input" type="radio" name="hasBeenTested" id="hasBeenTested-0" value="0">
+            <span><%= t(:noAnswer) %></span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="whenTested"><%= t(:whenTested) %></label>
+        <input id="whenTested" name="whenTested" class="input input--short" type="date">
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="whereTested"><%= t(:whereTested) %></label>
+        <input id="whereTested" name="whereTested" class="input" type="text">
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label"><%= t(:worksInHealth) %></span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="worksInHealth-0">
+            <input class="input" type="radio" name="worksInHealth" id="worksInHealth-0" value="no">
+            <span><%= t(:noAnswer) %></span>
+          </label>
+          <label class="radio-item" for="worksInHealth-1">
+            <input class="input" type="radio" name="worksInHealth" id="worksInHealth-1" value="hospital">
+            <span><%= t(:hospital) %></span>
+          </label>
+          <label class="radio-item" for="worksInHealth-2">
+            <input class="input" type="radio" name="worksInHealth" id="worksInHealth-2" value="private_practice">
+            <span><%= t(:privatePractice) %></span>
+          </label>
+          <label class="radio-item" for="worksInHealth-3">
+            <input class="input" type="radio" name="worksInHealth" id="worksInHealth-3" value="ems">
+            <span><%= t(:ems) %></span>
+          </label>
+          <label class="radio-item" for="worksInHealth-4">
+            <input class="input" type="radio" name="worksInHealth" id="worksInHealth-4" value="other">
+            <span><%= t(:other) %></span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label"><%= t(:wasAbroad) %></span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="wasAbroad-0">
+            <input class="input" type="radio" name="wasAbroad" id="wasAbroad-0" value="no">
+            <span><%= t(:noAnswer) %></span>
+          </label>
+          <label class="radio-item" for="wasAbroad-1">
+            <input class="input" type="radio" name="wasAbroad" id="wasAbroad-1" value="italy">
+            <span><%= t(:italy) %></span>
+          </label>
+          <label class="radio-item" for="wasAbroad-2">
+            <input class="input" type="radio" name="wasAbroad" id="wasAbroad-2" value="spain">
+            <span><%= t(:spain) %></span>
+          </label>
+          <label class="radio-item" for="wasAbroad-3">
+            <input class="input" type="radio" name="wasAbroad" id="wasAbroad-3" value="france">
+            <span><%= t(:france) %></span>
+          </label>
+          <label class="radio-item" for="wasAbroad-4">
+            <input class="input" type="radio" name="wasAbroad" id="wasAbroad-4" value="germany">
+            <span><%= t(:germany) %></span>
+          </label>
+          <label class="radio-item" for="wasAbroad-5">
+            <input class="input" type="radio" name="wasAbroad" id="wasAbroad-5" value="other">
+            <span><%= t(:other) %></span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label"><%= t(:wasInContactWithCase) %></span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="wasInContactWithCase-1">
+            <input class="input" type="radio" name="wasInContactWithCase" id="wasInContactWithCase-1" value="1">
+            <span><%= t(:yesAnswer) %></span>
+          </label>
+          <label class="radio-item" for="wasInContactWithCase-0">
+            <input class="input" type="radio" name="wasInContactWithCase" id="wasInContactWithCase-0" value="0">
+            <span><%= t(:noAnswer) %></span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--text">
+        <label class="label" for="dateContacted"><%= t(:dateContacted) %></label>
+        <input id="dateContacted" name="dateContacted" class="input input--short" type="date">
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label"><%= t(:chronicCondition) %></span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="chronicConditionType-0">
+            <input class="input" type="radio" name="chronicConditionType" id="chronicConditionType-0" value="no">
+            <span><%= t(:noAnswer) %></span>
+          </label>
+          <label class="radio-item" for="chronicConditionType-1">
+            <input class="input" type="radio" name="chronicConditionType" id="chronicConditionType-1" value="heart">
+            <span><%= t(:heart) %></span>
+          </label>
+          <label class="radio-item" for="chronicConditionType-2">
+            <input class="input" type="radio" name="chronicConditionType" id="chronicConditionType-2" value="lung">
+            <span><%= t(:lung) %></span>
+          </label>
+          <label class="radio-item" for="chronicConditionType-3">
+            <input class="input" type="radio" name="chronicConditionType" id="chronicConditionType-3" value="dabetes">
+            <span><%= t(:diabetes) %></span>
+          </label>
+          <label class="radio-item" for="chronicConditionType-4">
+            <input class="input" type="radio" name="chronicConditionType" id="chronicConditionType-4" value="other">
+            <span><%= t(:other) %></span>
+          </label>
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:feelsHealthy) %></span>
         <div class="radio-wrap">
           <label class="radio-item" for="feelsHealthy-1">
@@ -65,124 +182,7 @@ title: COVID-19 Tracking
           </label>
         </div>
       </div>
-      <div id="form-expanded">
-        <div class="input-wrap input-wrap--radio">
-          <span class="label"><%= t(:hasBeenTested) %></span>
-          <div class="radio-wrap">
-            <label class="radio-item" for="hasBeenTested-1">
-              <input class="input" type="radio" name="hasBeenTested" id="hasBeenTested-1" value="1">
-              <span><%= t(:yesAnswer) %></span>
-            </label>
-            <label class="radio-item" for="hasBeenTested-0">
-              <input class="input" type="radio" name="hasBeenTested" id="hasBeenTested-0" value="0">
-              <span><%= t(:noAnswer) %></span>
-            </label>
-          </div>
-        </div>
-        <div class="input-wrap input-wrap--text">
-          <label class="label" for="whenTested"><%= t(:whenTested) %></label>
-          <input id="whenTested" name="whenTested" class="input input--short" type="date">
-        </div>
-        <div class="input-wrap input-wrap--text">
-          <label class="label" for="whereTested"><%= t(:whereTested) %></label>
-          <input id="whereTested" name="whereTested" class="input" type="text">
-        </div>
-        <div class="input-wrap input-wrap--radio">
-          <span class="label"><%= t(:worksInHealth) %></span>
-          <div class="radio-wrap">
-            <label class="radio-item" for="worksInHealth-0">
-              <input class="input" type="radio" name="worksInHealth" id="worksInHealth-0" value="no">
-              <span><%= t(:noAnswer) %></span>
-            </label>
-            <label class="radio-item" for="worksInHealth-1">
-              <input class="input" type="radio" name="worksInHealth" id="worksInHealth-1" value="hospital">
-              <span><%= t(:hospital) %></span>
-            </label>
-            <label class="radio-item" for="worksInHealth-2">
-              <input class="input" type="radio" name="worksInHealth" id="worksInHealth-2" value="private_practice">
-              <span><%= t(:privatePractice) %></span>
-            </label>
-            <label class="radio-item" for="worksInHealth-3">
-              <input class="input" type="radio" name="worksInHealth" id="worksInHealth-3" value="ems">
-              <span><%= t(:ems) %></span>
-            </label>
-            <label class="radio-item" for="worksInHealth-4">
-              <input class="input" type="radio" name="worksInHealth" id="worksInHealth-4" value="other">
-              <span><%= t(:other) %></span>
-            </label>
-          </div>
-        </div>
-        <div class="input-wrap input-wrap--radio">
-          <span class="label"><%= t(:wasAbroad) %></span>
-          <div class="radio-wrap">
-            <label class="radio-item" for="wasAbroad-0">
-              <input class="input" type="radio" name="wasAbroad" id="wasAbroad-0" value="no">
-              <span><%= t(:noAnswer) %></span>
-            </label>
-            <label class="radio-item" for="wasAbroad-1">
-              <input class="input" type="radio" name="wasAbroad" id="wasAbroad-1" value="italy">
-              <span><%= t(:italy) %></span>
-            </label>
-            <label class="radio-item" for="wasAbroad-2">
-              <input class="input" type="radio" name="wasAbroad" id="wasAbroad-2" value="spain">
-              <span><%= t(:spain) %></span>
-            </label>
-            <label class="radio-item" for="wasAbroad-3">
-              <input class="input" type="radio" name="wasAbroad" id="wasAbroad-3" value="france">
-              <span><%= t(:france) %></span>
-            </label>
-            <label class="radio-item" for="wasAbroad-4">
-              <input class="input" type="radio" name="wasAbroad" id="wasAbroad-4" value="germany">
-              <span><%= t(:germany) %></span>
-            </label>
-            <label class="radio-item" for="wasAbroad-5">
-              <input class="input" type="radio" name="wasAbroad" id="wasAbroad-5" value="other">
-              <span><%= t(:other) %></span>
-            </label>
-          </div>
-        </div>
-        <div class="input-wrap input-wrap--radio">
-          <span class="label"><%= t(:wasInContactWithCase) %></span>
-          <div class="radio-wrap">
-            <label class="radio-item" for="wasInContactWithCase-1">
-              <input class="input" type="radio" name="wasInContactWithCase" id="wasInContactWithCase-1" value="1">
-              <span><%= t(:yesAnswer) %></span>
-            </label>
-            <label class="radio-item" for="wasInContactWithCase-0">
-              <input class="input" type="radio" name="wasInContactWithCase" id="wasInContactWithCase-0" value="0">
-              <span><%= t(:noAnswer) %></span>
-            </label>
-          </div>
-        </div>
-        <div class="input-wrap input-wrap--text">
-          <label class="label" for="dateContacted"><%= t(:dateContacted) %></label>
-          <input id="dateContacted" name="dateContacted" class="input input--short" type="date">
-        </div>
-        <div class="input-wrap input-wrap--radio">
-          <span class="label"><%= t(:chronicCondition) %></span>
-          <div class="radio-wrap">
-            <label class="radio-item" for="chronicConditionType-0">
-              <input class="input" type="radio" name="chronicConditionType" id="chronicConditionType-0" value="no">
-              <span><%= t(:noAnswer) %></span>
-            </label>
-            <label class="radio-item" for="chronicConditionType-1">
-              <input class="input" type="radio" name="chronicConditionType" id="chronicConditionType-1" value="heart">
-              <span><%= t(:heart) %></span>
-            </label>
-            <label class="radio-item" for="chronicConditionType-2">
-              <input class="input" type="radio" name="chronicConditionType" id="chronicConditionType-2" value="lung">
-              <span><%= t(:lung) %></span>
-            </label>
-            <label class="radio-item" for="chronicConditionType-3">
-              <input class="input" type="radio" name="chronicConditionType" id="chronicConditionType-3" value="dabetes">
-              <span><%= t(:diabetes) %></span>
-            </label>
-            <label class="radio-item" for="chronicConditionType-4">
-              <input class="input" type="radio" name="chronicConditionType" id="chronicConditionType-4" value="other">
-              <span><%= t(:other) %></span>
-            </label>
-          </div>
-        </div>
+      <div id="form-expanded" class="js-hide">
         <span class="section-title"><%= t(:followingSymptoms) %></span>
         <div class="input-wrap input-wrap--radio">
           <span class="label"><%= t(:fever) %></span>
@@ -197,7 +197,7 @@ title: COVID-19 Tracking
             </label>
           </div>
         </div>
-        <div class="input-wrap input-wrap--text input-wrap--child hidden" id="wrap-feverSince">
+        <div class="input-wrap input-wrap--text input-wrap--child js-hide" id="wrap-feverSince">
           <label class="label" for="feverSince"><%= t(:sinceHowManyDays) %></label>
           <input id="feverSince" name="feverSince" class="input input--short" type="number">
         </div>
@@ -214,7 +214,7 @@ title: COVID-19 Tracking
             </label>
           </div>
         </div>
-        <div class="input-wrap input-wrap--text input-wrap--child hidden" id="wrap-coughingSince">
+        <div class="input-wrap input-wrap--text input-wrap--child js-hide" id="wrap-coughingSince">
           <label class="label" for="coughingSince"><%= t(:sinceHowManyDays) %></label>
           <input id="coughingSince" name="coughingSince" class="input input--short" type="number">
         </div>
@@ -231,7 +231,7 @@ title: COVID-19 Tracking
             </label>
           </div>
         </div>
-        <div class="input-wrap input-wrap--text input-wrap--child hidden" id="wrap-dyspneaSince">
+        <div class="input-wrap input-wrap--text input-wrap--child js-hide" id="wrap-dyspneaSince">
           <label class="label" for="dyspneaSince"><%= t(:sinceHowManyDays) %></label>
           <input id="dyspneaSince" name="dyspneaSince" class="input input--short" type="number">
         </div>
@@ -248,7 +248,7 @@ title: COVID-19 Tracking
             </label>
           </div>
         </div>
-        <div class="input-wrap input-wrap--text input-wrap--child hidden" id="wrap-tirednessSince">
+        <div class="input-wrap input-wrap--text input-wrap--child js-hide" id="wrap-tirednessSince">
           <label class="label" for="tirednessSince"><%= t(:sinceHowManyDays) %></label>
           <input id="tirednessSince" name="tirednessSince" class="input input--short" type="number">
         </div>
@@ -265,7 +265,7 @@ title: COVID-19 Tracking
             </label>
           </div>
         </div>
-        <div class="input-wrap input-wrap--text input-wrap--child hidden" id="wrap-throatSince">
+        <div class="input-wrap input-wrap--text input-wrap--child js-hide" id="wrap-throatSince">
           <label class="label" for="throatSince"><%= t(:sinceHowManyDays) %></label>
           <input id="throatSince" name="throatSince" class="input input--short" type="number">
         </div>

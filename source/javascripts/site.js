@@ -4,6 +4,12 @@ var formExpansion = document.getElementById('form-expanded');
 var healthyRadio = document.getElementById('feelsHealthy-1');
 var sickRadio = document.getElementById('feelsHealthy-0');
 var toggles = document.querySelectorAll('.js-toggle');
+var hiddens = document.querySelectorAll('.js-hide');
+
+for(var hidden of hiddens) {
+  hidden.classList.remove('js-hide');
+  hidden.classList.add('hidden');
+}
 
 function sendForm() {
   var fd = new FormData(form);
@@ -18,10 +24,10 @@ if(form) {
   });
   
   sickRadio.addEventListener('change', e => {
-    formExpansion.classList.add('visible');
+    formExpansion.classList.remove('hidden');
   });
   healthyRadio.addEventListener('change', e => {
-    formExpansion.classList.remove('visible');
+    formExpansion.classList.add('hidden');
   });
 
   for(var toggle of toggles) {

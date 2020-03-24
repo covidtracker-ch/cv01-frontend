@@ -53,7 +53,7 @@
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="phoneDigits"><%= t(:phoneDigits) %></label>
-        <input id="phoneDigits" name="phoneDigits" class="input input--short" type="number" step="1">
+        <input id="phoneDigits" name="phoneDigits" class="input input--short" type="number" step="1" pattern=".{4}" required>
       </div>
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:hasBeenTested) %></span>

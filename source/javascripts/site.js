@@ -1,54 +1,15 @@
-var formBtn = document.getElementById('btn-send');
-var form = document.getElementById('covid-form');
-var formExpansion = document.getElementById('form-expanded');
-var healthyRadio = document.getElementById('feelsHealthy-1');
-var sickRadio = document.getElementById('feelsHealthy-0');
 var toggles = document.querySelectorAll('.js-toggle');
 var hiddens = document.querySelectorAll('.js-hide');
 
-for(var hidden of hiddens) {
-  hidden.classList.remove('js-hide');
-  hidden.classList.add('hidden');
-}
 
-function serialize_form(form) {
-  return JSON.stringify(Array.from(new FormData(form).entries()).reduce((m, [ key, value ]) => Object.assign(m, { [key]: value }), {}));
-}
-
-function sendForm() {
-  var xhr = new XMLHttpRequest();
-  var fd = new FormData(form);
-  console.log(...fd);
+if(form) {    
+  for(var i=0; i < hiddens.length; i++) {
+    hiddens[i].classList.remove('js-hide');
+    hiddens[i].classList.add('hidden');
+  }
   
-  xhr.addEventListener('load', function(e) {
-    console.log(e.target.responseText);
-  });
-  
-  xhr.addEventListener('error', function(e) {
-    console.log(e);
-  });
-  
-  // xhr.open('POST', form.dataset.url);
-  xhr.open('POST', form.action);
-  xhr.send(fd);
-}
-
-if(form) {  
-  form.addEventListener('submit', function(e) {
-    //e.preventDefault();
-  
-    //sendForm();
-  });
-  
-  sickRadio.addEventListener('change', function(e) {
-    formExpansion.classList.remove('hidden');
-  });
-  healthyRadio.addEventListener('change', function(e) {
-    formExpansion.classList.add('hidden');
-  });
-
-  for(var toggle of toggles) {
-    toggle.addEventListener('change', function(e) {
+  for(var i=0; i < toggles.length; i++) {
+    toggles[i].addEventListener('change', function(e) {
       if(e.target.dataset.hide) {
         document.getElementById(e.target.dataset.hide).classList.add('hidden');
       }

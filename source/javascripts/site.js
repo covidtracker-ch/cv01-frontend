@@ -10,7 +10,7 @@ function checkLang() {
   if(lang == 'fr') {
     //window.location.assign(window.location.protocol + '//' + window.location.hostname + '/fr' + window.location.pathname);
   }else if(lang == 'it') {
-    window.location.assign(window.location.protocol + '//' + window.location.hostname + '/it' + window.location.pathname);
+    // window.location.assign(window.location.protocol + '//' + window.location.hostname + '/it' + window.location.pathname);
   }
 }
 //checkLang();

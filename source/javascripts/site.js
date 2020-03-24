@@ -25,7 +25,6 @@ function checkLang() {
     goToLang(overwrittenLang);
     return;
   }
-  console.log('hey');
 
   if(userLang == 'fr') {
     localStorage.setItem('languageOverwrite', 'fr');

@@ -32,6 +32,10 @@ a {
 
 h2 {
   margin: 3rem 0 1rem 0;
+
+  @include mobile {
+    margin: 2rem 0 1rem 0;
+  }
 }
 
 p {
@@ -224,19 +228,32 @@ p {
 .header {
   background-color: $c-highlight;
   color: #fff;
-  padding: 1rem 0;
+  padding: .5rem 0;
 
   h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    padding-left: 4rem;
 
     a {
       text-decoration: none;
     }
   }
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    width: auto;
+    height: 3rem;
+    transform: translateY(-50%);
+  }
 }
 
 section.subpage {
   padding: 4rem 0;
+
+  @include mobile {
+    padding: 1rem 0;
+  }
 }
 
 section.partners, section.social {

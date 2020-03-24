@@ -1,6 +1,17 @@
+var form = document.getElementById('covid-form');
 var toggles = document.querySelectorAll('.js-toggle');
 var hiddens = document.querySelectorAll('.js-hide');
 
+function checkLang() {
+  var lang = window.navigator.language.slice(0, 2);
+
+  if(lang == 'fr') {
+    window.location.assign(window.location.hostname + '/fr' + window.location.pathname);
+  }else if(lang == 'it') {
+    window.location.assign(window.location.hostname + '/it' + window.location.pathname);
+  }
+}
+checkLang();
 
 if(form) {    
   for(var i=0; i < hiddens.length; i++) {

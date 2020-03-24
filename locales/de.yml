@@ -1,10 +1,10 @@
 ---
 de:
   title: "COVID-19 Tracking Schweiz"
-  introduction: "<p>Die Coronavirus-Epidemie breitet sich in Europa rasant aus.</p>
-  <p>Es ist von grosser Bedeutung, Verdachtsfälle von Covid-19 frühzeitig zu erkennen um die weitere Infektionsausbreitung zu minimieren.</p>
-  <p><b>Mit dem Ausfüllen dieses Formulars tragen Sie einen bedeutenden Teil bei, diese Krise effizient und zielgerichtet zu meistern.</b></p>
-  <p>Ihre Daten werden anonym erfasst. Sie werden nicht namentlich identifiziert.</p>"
+  introduction: "<p>Das Coronavirus breitet sich in Europa rasant aus.</p>
+  <p>Um die Krankheit einzudämmen, müssen Verdachtsfälle möglichst früh identifiziert werden. Dazu dient diese Kampagne.</p>
+  <p><b>Ihre Daten können helfen, Leben zu retten. Wenn Sie das untenstehende Formular ausfüllen, tragen Sie dazu bei, dass wir diese Krise gemeinsam meistern können.</b></p>
+  <p>Wichtig: Die Daten werden anonym erfasst und erlauben keinen Rückschluss auf Personen.</p>"
   toform: "Zum Formular"
   sex: "Geschlecht"
   male: "Männlich"
@@ -44,3 +44,9 @@ de:
   followingSymptoms: "Leiden Sie derzeit an folgenden Symptomen:"
   sendForm: "Formular absenden"
   sinceHowManyDays: "Seit wievielen Tagen?"
+  partners: "Partner"
+  implementation: "Umsetzung"
+  imprint: "Impressum"
+  seemore: "Mehr erfahren"
+  shareon: "Teilen auf"
+  shareby: "Teilen via"

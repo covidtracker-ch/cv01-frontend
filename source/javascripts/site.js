@@ -20,7 +20,8 @@ function goToLang(lang) {
   }
 }
 function checkLang() {
-  var userLang = window.navigator.language.slice(0, 2);
+  var userLang = navigator.language || navigator.userLanguage;
+  userLang = userLang.slice(0,2);
   var currentLang = document.body.dataset.lang;
   var overwrittenLang = localStorage.getItem('languageOverwrite');
   

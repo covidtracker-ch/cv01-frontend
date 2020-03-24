@@ -28,6 +28,9 @@ a {
   &:hover {
     text-decoration: none;
   }
+  img {
+    border: none;
+  }
 }
 
 h2 {
@@ -252,7 +255,7 @@ p {
 }
 
 section.subpage {
-  padding: 4rem 0;
+  padding: 2rem 0 4rem 0;
 
   @include mobile {
     padding: 1rem 0;
@@ -358,6 +361,24 @@ section.subpage {
         display: block;
         width: 100%;
       }
+    }
+  }
+}
+
+.homelink {
+  margin-top: 1rem;
+  margin-bottom: -1rem;
+  position: relative;
+  z-index: 1;
+
+  a {
+    text-decoration: none;
+
+    &:before {
+      content: "← ";
+    }
+    &:hover {
+      color: $c-highlight;
     }
   }
 }

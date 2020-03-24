@@ -4,9 +4,7 @@
     introduction: "<p>L'épidémie de coronavirus se propage rapidement en Europe.</p>
     <p>Il est très important de détecter les cas suspects de Covid-19 à un stade précoce afin d'endiguer la propagation de l'infection.</p>
     <p><b>En remplissant ce formulaire, vous contribuez de manière significative à surmonter cette crise de manière efficace et ciblée.</b></p>
-    <p>Vos données seront collectées de manière anonyme. Vous ne serez pas identifié par votre nom.</p>
-    <p><a href=\"https://bag-coronavirus.ch/\" target=\"_blank\">Weitere Infos zum Coronavirus</a><br>
-    Infoline des BAG: +41 58 463 00 00</p>"
+    <p>Vos données seront collectées de manière anonyme. Vous ne serez pas identifié par votre nom.</p>"
     toform: "Au formulaire"
     sex: "Sexe"
     male: "Homme"

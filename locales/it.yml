@@ -4,9 +4,7 @@
     introduction: "<p>L'epidemia di coronavirus si sta diffondendo rapidamente in Europa.</p>
     <p>È di grande importanza individuare i casi sospetti di Covid-19 in una fase iniziale per contenere l'ulteriore diffusione dell'infezione.</p>
     <p><b>Compilando questo modulo, contribuite in modo significativo al superamento di questa crisi in modo efficiente e mirato.</b></p>
-    <p>I vostri dati saranno raccolti in forma anonima. Non sarete identificati per nome.</p>
-    <p><a href=\"https://bag-coronavirus.ch/\" target=\"_blank\">Weitere Infos zum Coronavirus</a><br>
-    Infoline des BAG: +41 58 463 00 00</p>"
+    <p>I vostri dati saranno raccolti in forma anonima. Non sarete identificati per nome.</p>"
     toform: "~ Al modulo"
     sex: "Sesso"
     male: "Uomo"

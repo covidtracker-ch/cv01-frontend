@@ -4,9 +4,7 @@ de:
   introduction: "<p>Die Coronavirus-Epidemie breitet sich in Europa rasant aus.</p>
   <p>Es ist von grosser Bedeutung, Verdachtsfälle von Covid-19 frühzeitig zu erkennen um die weitere Infektionsausbreitung zu minimieren.</p>
   <p><b>Mit dem Ausfüllen dieses Formulars tragen Sie einen bedeutenden Teil bei, diese Krise effizient und zielgerichtet zu meistern.</b></p>
-  <p>Ihre Daten werden anonym erfasst. Sie werden nicht namentlich identifiziert.</p>
-  <p><a href=\"https://bag-coronavirus.ch/\" target=\"_blank\">Weitere Infos zum Coronavirus</a><br>
-  Infoline des BAG: +41 58 463 00 00</p>"
+  <p>Ihre Daten werden anonym erfasst. Sie werden nicht namentlich identifiziert.</p>"
   toform: "Zum Formular"
   sex: "Geschlecht"
   male: "Männlich"
@@ -34,7 +32,7 @@ de:
   noAnswer: "Nein"
   hospital: "Krankenhaus"
   privatePractice: "Privatpraxis"
-  ems: "Alters- und Pflegeheim"
+  ems: "Alters- und Pflegeheim "
   italy: "Italien"
   spain: "Spanien"
   germany: "Deutschland"

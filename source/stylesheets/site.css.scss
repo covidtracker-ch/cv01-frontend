@@ -202,6 +202,11 @@ p {
     list-style-type: none;
     margin: 0;
     padding: 0;
+
+    li {
+      display: inline;
+      margin: 0 .5rem;
+    }
   }
 }
 
@@ -223,11 +228,14 @@ section.imprint {
   padding: 4rem 0;
 }
 
-section.partners {
+section.partners, section.social {
   padding: 2rem 1rem 2rem 1rem;
   border-bottom: 1px solid #ddd;
 }
-.partners-wrap {
+section.social {
+  // padding: 1rem 1rem 1rem 1rem;
+}
+.partners-wrap, .social-wrap {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
@@ -247,6 +255,46 @@ section.partners {
   @include mobile {
     width: 100%;
     max-width: 7rem;
+  }
+}
+
+.social {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline;
+    }
+  }
+}
+.social-btn {
+  display: inline-block;
+  font-size: .8rem;
+  padding: .5rem 1rem;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  background-image: url('../images/social-fb.svg');
+  background-size: auto 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  padding-left: 2.5rem;
+  text-decoration: none;
+  margin: 0 .5rem;
+  
+  &--fb {
+    border-color: #3A559F;
+  }
+  &--twitter {
+    background-image: url('../images/social-twitter.svg');
+    border-color: #03A9F4;
+  }
+  &--mail {
+    background-image: url('../images/social-mail.svg');
+  }
+  &:hover {
+    background-color: #f0f0f0;
   }
 }
 

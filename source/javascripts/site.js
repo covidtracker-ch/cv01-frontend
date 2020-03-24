@@ -4,7 +4,7 @@ var hiddens = document.querySelectorAll('.js-hide');
 var langLinks = document.querySelectorAll('.js-setLang');
 
 function goToLang(lang) {
-  window.location.assign(window.location.origin + '/' + lang + window.location.pathname);
+  //window.location.assign(window.location.origin + '/' + lang + window.location.pathname);
 }
 function checkLang() {
   var lang = window.navigator.language.slice(0, 2);

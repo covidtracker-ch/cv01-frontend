@@ -11,28 +11,33 @@ for(var hidden of hiddens) {
   hidden.classList.add('hidden');
 }
 
+function serialize_form(form) {
+  return JSON.stringify(Array.from(new FormData(form).entries()).reduce((m, [ key, value ]) => Object.assign(m, { [key]: value }), {}));
+}
+
 function sendForm() {
   var xhr = new XMLHttpRequest();
   var fd = new FormData(form);
   console.log(...fd);
   
   xhr.addEventListener('load', function(e) {
-    console.log(e.target.responsText);
+    console.log(e.target.responseText);
   });
   
   xhr.addEventListener('error', function(e) {
     console.log(e);
   });
   
+  // xhr.open('POST', form.dataset.url);
   xhr.open('POST', form.action);
   xhr.send(fd);
 }
 
 if(form) {  
   form.addEventListener('submit', function(e) {
-    e.preventDefault();
+    //e.preventDefault();
   
-    sendForm();
+    //sendForm();
   });
   
   sickRadio.addEventListener('change', function(e) {

@@ -1,3 +1,9 @@
+<div class="message hidden" id="msg-error">
+  <div class="container">
+    Error
+  </div>
+</div>
+
 <div class="hero">
   <div class="container">
     <ul class="lang-nav">
@@ -53,7 +59,7 @@
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="phoneDigits"><%= t(:phoneDigits) %></label>
-        <input id="phoneDigits" name="phoneDigits" class="input input--short" type="number" step="1" pattern=".{4}" required>
+        <input id="phoneDigits" name="phoneDigits" class="input input--short" type="number" step="1" required>
       </div>
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:hasBeenTested) %></span>

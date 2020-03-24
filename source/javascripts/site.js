@@ -3,6 +3,14 @@ var toggles = document.querySelectorAll('.js-toggle');
 var hiddens = document.querySelectorAll('.js-hide');
 var langLinks = document.querySelectorAll('.js-setLang');
 
+function checkError() {
+  var param = window.location.search.substr(1);
+  if(param == 'error=true') {
+    document.getElementById('msg-error').classList.remove('hidden');
+  }
+}
+checkError();
+
 function goToLang(lang) {
   var path = window.location.pathname.split("/").pop();
   if(lang == 'de') {

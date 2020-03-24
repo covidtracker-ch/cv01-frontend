@@ -1,9 +1,9 @@
 <div class="hero">
   <div class="container">
     <ul class="lang-nav">
-      <li><a href="/" class="langlink ml-4">Deutsch</a></li>
-      <li><a href="/fr" class="langlink ml-4">Français</a></li>
-      <li><a href="/it" class="langlink ml-4">Italiano</a></li>
+      <li><a href="/" data-lang="de" class="js-setLang langlink ml-4">Deutsch</a></li>
+      <li><a href="/fr" data-lang="fr" class="js-setLang langlink ml-4">Français</a></li>
+      <li><a href="/it" data-lang="it" class="js-setLang langlink ml-4">Italiano</a></li>
     </ul>
     <div>
       <img class="hero__logo" src="/images/covid-icon.png" alt="COVID-19">
@@ -178,11 +178,11 @@
         <span class="label"><%= t(:feelsHealthy) %> *</span>
         <div class="radio-wrap">
           <label class="radio-item" for="feelsHealthy-1">
-            <input class="input" type="radio" name="feelsHealthy" id="feelsHealthy-1" value="1" required>
+            <input class="js-toggle input" type="radio" name="feelsHealthy" id="feelsHealthy-1" value="1" required data-hide="form-expanded">
             <span><%= t(:yesAnswer) %></span>
           </label>
           <label class="radio-item" for="feelsHealthy-0">
-            <input class="input" type="radio" name="feelsHealthy" id="feelsHealthy-0" value="0" required>
+            <input class="js-toggle input" type="radio" name="feelsHealthy" id="feelsHealthy-0" value="0" required data-show="form-expanded">
             <span><%= t(:noAnswer) %></span>
           </label>
         </div>

@@ -4,15 +4,34 @@ var hiddens = document.querySelectorAll('.js-hide');
 var langLinks = document.querySelectorAll('.js-setLang');
 
 function goToLang(lang) {
-  //window.location.assign(window.location.origin + '/' + lang + window.location.pathname);
+  var path = window.location.pathname.split("/").pop();
+  if(lang == 'de') {
+    window.location.assign(window.location.origin + '/' + path);
+  }else{
+    window.location.assign(window.location.origin + '/' + lang + '/' + path);
+  }
 }
 function checkLang() {
-  var lang = window.navigator.language.slice(0, 2);
-  console.log(window.location);
+  var userLang = window.navigator.language.slice(0, 2);
+  var currentLang = document.body.dataset.lang;
+  var overwrittenLang = localStorage.getItem('languageOverwrite');
   
-  if(lang == 'fr') {
+  if(userLang == currentLang) {
+    return;
+  }
+  
+  if(overwrittenLang) {
+    if(overwrittenLang == currentLang) return;
+    goToLang(overwrittenLang);
+    return;
+  }
+  console.log('hey');
+
+  if(userLang == 'fr') {
+    localStorage.setItem('languageOverwrite', 'fr');
     goToLang('fr');
-  }else if(lang == 'it') {
+  }else if(userLang == 'it') {
+    localStorage.setItem('languageOverwrite', 'it');
     goToLang('it');
   }
 }
@@ -37,7 +56,7 @@ if(form) {
 
   for(var i=0; i < langLinks.length; i++) {
     langLinks[i].addEventListener('click', function(e) {
-      console.log('lang');
+      localStorage.setItem('languageOverwrite', e.currentTarget.dataset.lang);
     });
   }
 }

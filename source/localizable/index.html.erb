@@ -27,25 +27,25 @@ title: COVID-19 Tracking
   <div class="container">
     <form action="https://covid.apps-customer.210235761750.ninegcp.ch/form" data-url="https://covid.apps-customer.210235761750.ninegcp.ch/form" method="post" id="covid-form">
       <div class="input-wrap input-wrap--radio">
-        <span class="label"><%= t(:sex) %></span>
+        <span class="label"><%= t(:sex) %> *</span>
         <div class="radio-wrap">
           <label class="radio-item" for="sex-1">
-            <input class="input" type="radio" name="sex" id="sex-1" value="male">
+            <input class="input" type="radio" name="sex" id="sex-1" value="male" required>
             <span><%= t(:male) %></span>
           </label>
           <label class="radio-item" for="sex-2">
-            <input class="input" type="radio" name="sex" id="sex-2" value="female">
+            <input class="input" type="radio" name="sex" id="sex-2" value="female" required>
             <span><%= t(:female) %></span>
           </label>
           <label class="radio-item" for="sex-3">
-            <input class="input" type="radio" name="sex" id="sex-3" value="other">
+            <input class="input" type="radio" name="sex" id="sex-3" value="other" required>
             <span><%= t(:other) %></span>
           </label>
         </div>
       </div>
       <div class="input-wrap input-wrap--text">
-        <label class="label" for="age"><%= t(:age) %> *</label>
-        <input id="age" name="age" class="input input--short" type="number" max="120" min="0" step="1" required>
+        <label class="label" for="birthyear"><%= t(:birthyear) %> *</label>
+        <input id="birthyear" name="birthyear" class="input input--short" type="number" max="2020" min="1900" step="1" required>
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="zip"><%= t(:zip) %> *</label>
@@ -173,14 +173,14 @@ title: COVID-19 Tracking
         </div>
       </div>
       <div class="input-wrap input-wrap--radio">
-        <span class="label"><%= t(:feelsHealthy) %></span>
+        <span class="label"><%= t(:feelsHealthy) %> *</span>
         <div class="radio-wrap">
           <label class="radio-item" for="feelsHealthy-1">
-            <input class="input" type="radio" name="feelsHealthy" id="feelsHealthy-1" value="1">
+            <input class="input" type="radio" name="feelsHealthy" id="feelsHealthy-1" value="1" required>
             <span><%= t(:yesAnswer) %></span>
           </label>
           <label class="radio-item" for="feelsHealthy-0">
-            <input class="input" type="radio" name="feelsHealthy" id="feelsHealthy-0" value="0">
+            <input class="input" type="radio" name="feelsHealthy" id="feelsHealthy-0" value="0" required>
             <span><%= t(:noAnswer) %></span>
           </label>
         </div>

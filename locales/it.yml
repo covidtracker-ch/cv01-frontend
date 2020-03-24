@@ -11,6 +11,7 @@
     female: "Donna"
     noinformation: "Nessuna informazione"
     age: "Età"
+    birthyear: "Geburtsjahr"
     zip: "Codice Postale"
     other: "Altro"
     phoneDigits: "Le ultime quattro cifre del vostro numero di telefono"

@@ -11,6 +11,7 @@ de:
   female: "Weiblich"
   noinformation: "Keine Angabe"
   age: "Alter"
+  birthyear: "Geburtsjahr"
   zip: "Postleitzahl"
   other: "Andere"
   phoneDigits: "Letzte vier Ziffern Ihrer Telefonnummer"

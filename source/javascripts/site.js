@@ -3,17 +3,20 @@ var toggles = document.querySelectorAll('.js-toggle');
 var hiddens = document.querySelectorAll('.js-hide');
 var langLinks = document.querySelectorAll('.js-setLang');
 
+function goToLang(lang) {
+  window.location.assign(window.location.origin + '/' + lang + window.location.pathname);
+}
 function checkLang() {
   var lang = window.navigator.language.slice(0, 2);
-  console.log(window.location.protocol);
+  console.log(window.location);
   
   if(lang == 'fr') {
-    //window.location.assign(window.location.protocol + '//' + window.location.hostname + '/fr' + window.location.pathname);
+    goToLang('fr');
   }else if(lang == 'it') {
-    // window.location.assign(window.location.protocol + '//' + window.location.hostname + '/it' + window.location.pathname);
+    goToLang('it');
   }
 }
-//checkLang();
+checkLang();
 
 if(form) {    
   for(var i=0; i < hiddens.length; i++) {

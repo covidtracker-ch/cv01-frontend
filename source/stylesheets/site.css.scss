@@ -104,9 +104,9 @@ p {
   }
   @include mobile {
     .container {
-      padding: 4rem 1rem;
+      padding: 3rem 1rem;
     }
-    &__logo {
+    .logo {
       margin-left: 0;
     }
   }
@@ -291,7 +291,7 @@ section.subpage {
 
   @include mobile {
     width: 100%;
-    max-width: 7rem;
+    max-width: 10rem;
   }
 }
 

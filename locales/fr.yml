@@ -1,10 +1,10 @@
 ---
   fr:
     title: "COVID-19 Tracking Suisse"
-    introduction: "<p>L'épidémie de coronavirus se propage rapidement en Europe.</p>
-    <p>Il est très important de détecter les cas suspects de Covid-19 à un stade précoce afin d'endiguer la propagation de l'infection.</p>
-    <p><b>En remplissant ce formulaire, vous contribuez de manière significative à surmonter cette crise de manière efficace et ciblée.</b></p>
-    <p>Vos données seront collectées de manière anonyme. Vous ne serez pas identifié par votre nom.</p>"
+    introduction: "<p>Le coronavirus se propage en Europe à une vitesse vertigineuse.</p>
+    <p>Pour enrayer la maladie, les cas suspects doivent être identifiés le plus tôt possible. C’est l’objectif de la présente campagne.</p>
+    <p><b>Vos données peuvent aider à sauver des vies. En remplissant le formulaire ci-dessous, vous participez à l’effort commun pour venir à bout de cette crise.</b></p>
+    <p>Important: les données récoltées sont anonyme et ne peuvent pas être associées à des personnes.</p>"
     toform: "Vers le formulaire"
     sex: "Sexe"
     male: "Homme"

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>COVID-Tracker</title>
+    <title><%= t(:title) %></title>
     <%= stylesheet_link_tag "site" %>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/images/meta/apple-touch-icon.png">
@@ -16,6 +16,8 @@
     <meta name="theme-color" content="#ffffff">
 
     <meta name="description" content="<%= t(:description) %>">
+    <meta property="og:title" content="<%= t(:title) %>" />
+    <meta property="og:url" content="https://www.covidtracker.ch" />
     <meta property="og:description" content="<%= t(:description) %>" />
     <meta property="og:image" content="https://www.covidtracker.ch/images/meta/ogimage.png" />
     <meta property="og:image:width" content="1200" />

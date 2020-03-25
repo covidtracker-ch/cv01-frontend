@@ -1,10 +1,10 @@
 # Covid-Tracker Frontned
 
 ## Project Setup
-`gem install middleman``
+`gem install middleman`
 
 ## Local Development
-`middleman serve``
+`middleman serve`
 
 ## Production Build
 `middleman build`

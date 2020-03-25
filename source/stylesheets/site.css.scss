@@ -300,6 +300,7 @@ section.subpage {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-align: center;
 
     li {
       display: inline;
@@ -327,11 +328,15 @@ section.subpage {
     background-image: url('../images/social-twitter.svg');
     border-color: #03A9F4;
   }
+  &--whatsapp {
+    background-image: url('../images/social-whatsapp.svg');
+    border-color: #2CB742;
+  }
   &--mail {
     background-image: url('../images/social-mail.svg');
   }
   &:hover {
-    background-color: #f0f0f0;
+    background-color: #fafafa;
   }
 }
 

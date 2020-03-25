@@ -184,6 +184,11 @@ p {
       align-items: center;
       margin-right: 1.5rem;
       margin-top: .25rem;
+
+      @include mobile {
+        line-height: 1.7;
+        margin-top: .25rem;
+      }
     }
     .input {
       margin-right: .5rem;

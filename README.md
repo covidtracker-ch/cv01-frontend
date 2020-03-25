@@ -11,4 +11,5 @@
 
 ## Deployment
 The master-branch is automatically deployed via Netlify.
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c391990b-f4a6-4ebd-85fe-f1d0263f33e2/deploy-status)](https://app.netlify.com/sites/covidtracker-ch/deploys)

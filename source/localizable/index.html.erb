@@ -77,7 +77,7 @@
       <div id="wrap-tested" class="js-hide">
         <div class="input-wrap input-wrap--text input-wrap--child">
           <label class="label" for="whenTested"><%= t(:whenTested) %></label>
-          <input id="whenTested" name="whenTested" class="input input--short" type="date">
+          <input id="whenTested" name="whenTested" class="input input--short" type="date" min="2019-11-01" max="2020-12-31">
         </div>
         <div class="input-wrap input-wrap--text input-wrap--child">
           <label class="label" for="whereTested"><%= t(:whereTested) %></label>
@@ -153,7 +153,7 @@
       </div>
       <div class="input-wrap input-wrap--text input-wrap--child js-hide" id="wrap-dateContacted">
         <label class="label" for="dateContacted"><%= t(:dateContacted) %></label>
-        <input id="dateContacted" name="dateContacted" class="input input--short" type="date">
+        <input id="dateContacted" name="dateContacted" class="input input--short" type="date" min="2019-11-01" max="2020-12-31">
       </div>
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:chronicCondition) %></span>

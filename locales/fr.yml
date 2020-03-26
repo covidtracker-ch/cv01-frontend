@@ -1,5 +1,6 @@
 ---
   fr:
+    url: "https://www.covidtracker.ch/fr"
     title: "COVID-19-Tracking Suisse"
     description: "Sauve des vies à l’aide du tracker COVID-19."
     introduction: "<p>Le coronavirus se propage en Europe à une vitesse vertigineuse.</p>

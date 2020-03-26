@@ -1,5 +1,6 @@
 ---
   it:
+    url: "https://www.covidtracker.ch/it"
     title: "Tracciamento del COVID-19 in Svizzera"
     description: "Sauve des vies à l’aide du tracker COVID-19."
     introduction: "<p>La diffusione del coronavirus in Europa è molto rapida.</p>

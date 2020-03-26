@@ -1,5 +1,6 @@
 ---
 de:
+  url: "https://www.covidtracker.ch"
   title: "COVID-19 Tracking Schweiz"
   description: "Nur gemeinsam können wir Leben retten! Trage mit Hilfe des Covid-19-Trackers deinen Teil zum Schutz von Risikogruppen bei."
   introduction: "<p>Das Coronavirus breitet sich in Europa rasant aus.</p>

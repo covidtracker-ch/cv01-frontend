@@ -59,7 +59,7 @@
       </div>
       <div class="input-wrap input-wrap--text">
         <label class="label" for="phoneDigits"><%= t(:phoneDigits) %></label>
-        <input id="phoneDigits" name="phoneDigits" class="input input--short" type="number" step="1" required>
+        <input id="phoneDigits" name="phoneDigits" class="input input--short" type="number" step="1" min="0" max="9999" required>
       </div>
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:hasBeenTested) %></span>

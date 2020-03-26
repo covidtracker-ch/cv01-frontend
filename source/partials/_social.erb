@@ -1,8 +1,8 @@
 <div class="social-wrap">
   <ul>
     <li><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://www.covidtracker.ch" rel="noreferrer" class="social-btn social-btn--fb"><%= t(:shareon) %> Facebook</a></li>
-    <li><a target="_blank" href="https://twitter.com/intent/tweet?text=<%= escape_html('Nur gemeinsam können wir Leben retten!%20Trage mit Hilfe des Covid-19-Trackers deinen Teil zum Schutz von Risikogruppen bei. https://www.covidtracker.ch') %>" rel="noreferrer" class="social-btn social-btn--twitter"><%= t(:shareon) %> Twitter</a></li>
-    <li><a target="_blank" href="https://wa.me/?text=https://www.covidtracker.ch" rel="noreferrer" class="social-btn social-btn--whatsapp"><%= t(:shareby) %> Whatsapp</a></li>
-    <li><a target="_blank" href="mailto:?&subject=&body=https://www.covidtracker.ch" rel="noreferrer" class="social-btn social-btn--mail"><%= t(:shareby) %> E-Mail</a></li>
+    <li><a target="_blank" href="https://twitter.com/intent/tweet?text=<%= URI::escape(t(:description)) %><%= URI::escape(' https://www.covidtracker.ch') %>" rel="noreferrer" class="social-btn social-btn--twitter"><%= t(:shareon) %> Twitter</a></li>
+    <li><a target="_blank" href="https://wa.me/?text=<%= URI::escape(t(:description)) %><%= URI::escape(' https://www.covidtracker.ch') %>" rel="noreferrer" class="social-btn social-btn--whatsapp"><%= t(:shareby) %> Whatsapp</a></li>
+    <li><a target="_blank" href="mailto:?&subject=&body=<%= escape_html(t(:description)) %>%20https://www.covidtracker.ch" rel="noreferrer" class="social-btn social-btn--mail"><%= t(:shareby) %> E-Mail</a></li>
   </ul>
 </div>

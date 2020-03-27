@@ -5,7 +5,7 @@ de:
   description: "Nur gemeinsam können wir Leben retten! Trage mit Hilfe des Covid-19-Trackers deinen Teil zum Schutz von Risikogruppen bei."
   introduction: "<p>Das Coronavirus breitet sich in Europa rasant aus.</p>
   <p>Um die Krankheit einzudämmen, müssen Verdachtsfälle möglichst früh identifiziert werden. Dazu dient diese Kampagne.</p>
-  <p><b>Ihre Daten können helfen, Leben zu retten. Wenn Sie das untenstehende Formular ausfüllen, tragen Sie dazu bei, dass wir diese Krise gemeinsam meistern können.</b></p>
+  <p><b>Egal ob Sie krank sind oder gesund, infiziert oder nicht: Ihre Daten können helfen, Leben zu retten.</b> Wenn Sie das untenstehende Formular ausfüllen, tragen Sie dazu bei, dass wir diese Krise gemeinsam meistern können.  Im Idealfall wiederholen Sie Ihre Teilnahme im Wochentakt (<a href=\"/images/covidtracker.ics\">Kalendererinnerung einrichten</a>).</p>
   <p>Wichtig: Die Daten werden anonym erfasst und erlauben keinen Rückschluss auf Personen.</p>"
   toform: "Zum Formular"
   sex: "Geschlecht"
@@ -56,3 +56,4 @@ de:
   generalinfo: "Allgemeine Informationen"
   technology: "Technik"
   supportedBy: "Unterstützt durch"
+  phoneInfo: "Wird benötigt, um Missbräuche zu verhindern sowie Daten von Personen, die den Fragebogen mehrmals ausfüllen, einander zuzuordnen."

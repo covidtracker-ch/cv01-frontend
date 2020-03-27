@@ -197,6 +197,34 @@ p {
       // font-size: .8rem;
     }
   }
+
+  &__info {
+    display: block;
+    font-size: .7rem;
+    line-height: 1.1rem;
+    max-width: 500px;
+    margin-top: .5rem;
+    color: #888;
+    padding-left: 1.5rem;
+    position: relative;
+    
+    &::before {
+      content: "i";
+      position: absolute;
+      top: .05rem;
+      left: 0;
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      background-color: #bbb;
+      text-shadow: 0 1px 1px rgba(#000, .5);
+      color: #fff;
+      text-align: center;
+      font-weight: bold;
+      border-radius: 99%;
+      line-height: 1rem;
+    }
+  }
 }
 .section-title {
   display: block;

@@ -73,6 +73,19 @@
         </div>
       </div>
       <div id="wrap-tested" class="js-hide">
+        <div class="input-wrap input-wrap--child input-wrap--radio">
+          <span class="label"><%= t(:testResult) %></span>
+          <div class="radio-wrap">
+            <label class="radio-item" for="testResult-1">
+              <input class="input" type="radio" name="testResult" id="testResult-1" value="1">
+              <span><%= t(:positive) %></span>
+            </label>
+            <label class="radio-item" for="testResult-0">
+              <input class="input" type="radio" name="testResult" id="testResult-0" value="0">
+              <span><%= t(:negative) %></span>
+            </label>
+          </div>
+        </div>
         <div class="input-wrap input-wrap--text input-wrap--child">
           <label class="label" for="whenTested"><%= t(:whenTested) %></label>
           <input id="whenTested" name="whenTested" class="input input--short" type="date" min="2019-11-01" max="2020-12-31">

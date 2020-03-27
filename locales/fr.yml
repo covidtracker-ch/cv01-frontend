@@ -56,3 +56,6 @@
     technology: "Technologie"
     supportedBy: "Soutenu par"
     phoneInfo: "Wird benötigt, um Missbräuche zu verhindern sowie Daten von Personen, die den Fragebogen mehrmals ausfüllen, einander zuzuordnen."
+    testResult: "Falls ja, wie war Ihr Testresultat?"
+    positive: "Positiv"
+    negative: "Negativ"

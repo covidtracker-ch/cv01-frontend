@@ -448,3 +448,18 @@ section.subpage {
 .hidden {
   display: none;
 }
+
+.map-container {
+  width: 100%;
+  height: 0;
+  margin-top: 3rem;
+  padding-bottom: 70%;
+  box-sizing: border-box;
+  position: relative;
+
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%,
+  }
+}

@@ -5,7 +5,7 @@
     description: "Sauve des vies à l’aide du tracker COVID-19."
     introduction: "<p>Le coronavirus se propage en Europe à une vitesse vertigineuse.</p>
     <p>Pour enrayer la maladie, les cas suspects doivent être identifiés le plus tôt possible. C’est l’objectif de la présente campagne.</p>
-    <p><b>Vos données peuvent aider à sauver des vies. En remplissant le formulaire ci-dessous, vous participez à l’effort commun pour venir à bout de cette crise.</b></p>
+    <p><b>Que vous soyez malade ou en bonne santé, infecté-e ou non : Vos données peuvent aider à sauver des vies.</b> En remplissant le formulaire ci-dessous, vous participez à l’effort commun pour venir à bout de cette crise. L’idéal serait que vous renouveliez votre participation chaque semaine.</p>
     <p>Important: les données récoltées sont anonyme et ne peuvent pas être associées à des personnes.</p>"
     toform: "Vers le formulaire"
     sex: "Sexe"

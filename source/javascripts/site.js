@@ -12,6 +12,7 @@ function checkError() {
 checkError();
 
 function goToLang(lang) {
+  console.log('go to',lang)
   var path = window.location.pathname.split("/").pop();
   if(lang == 'de') {
     window.location.assign(window.location.origin + '/' + path);
@@ -22,11 +23,14 @@ function goToLang(lang) {
 function checkLang() {
   var userLang = navigator.language || navigator.userLanguage;
   userLang = userLang.slice(0,2);
+  console.log('userLang',userLang)
   var currentLang = document.body.dataset.lang;
+  console.log('current lang', currentLang)
   var overwrittenLang = localStorage.getItem('languageOverwrite');
+  console.log(overwrittenLang)
   
   if(userLang == currentLang) {
-    return;
+    // return;
   }
   
   if(overwrittenLang) {
@@ -38,9 +42,12 @@ function checkLang() {
   if(userLang == 'fr') {
     localStorage.setItem('languageOverwrite', 'fr');
     goToLang('fr');
-  }else if(userLang == 'it') {
+  } else if(userLang == 'it') {
     localStorage.setItem('languageOverwrite', 'it');
     goToLang('it');
+  } else if(userLang == 'en') {
+    localStorage.setItem('languageOverwrite', 'en');
+    goToLang('en');
   }
 }
 checkLang();

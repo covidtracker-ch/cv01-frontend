@@ -12,7 +12,6 @@ function checkError() {
 checkError();
 
 function goToLang(lang) {
-  console.log('go to',lang)
   var path = window.location.pathname.split("/").pop();
   if(lang == 'de') {
     window.location.assign(window.location.origin + '/' + path);
@@ -30,7 +29,7 @@ function checkLang() {
   console.log(overwrittenLang)
   
   if(userLang == currentLang) {
-    // return;
+    return;
   }
   
   if(overwrittenLang) {

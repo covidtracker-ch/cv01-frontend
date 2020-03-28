@@ -1,8 +1,8 @@
 ---
-de:
+en  :
   url: "https://www.covidtracker.ch"
   title: "COVID-19 Tracking Switzerland"
-  description: "Nur gemeinsam können wir Leben retten! Trage mit Hilfe des Covid-19-Trackers deinen Teil zum Schutz von Risikogruppen bei."
+  description: "Only together can we save lives! Do your part to protect risk groups with the Covid-19 tracker."
   introduction: "<p>The coronavirus is spreading rapidly in Europe.</p>
   <p>In order to contain the disease, suspected cases must be identified as early as possible. This is the purpose of this campaign.</p>
   <p><b>Whether you are sick or healthy, infected or not, your data can help save lives.</b> By filling out the form below, you are helping us to overcome this crisis together. Ideally, repeat your participation weekly (<a href=\"/images/covidtracker.ics\">set up calendar event</a>).</p>
@@ -36,7 +36,7 @@ de:
   maybe: "Probably"
   hospital: "Hospital"
   privatePractice: "Private Practice"
-  ems: "Retirement home "
+  ems: "Retirement home"
   italy: "Italy"
   spain: "Spain"
   germany: "Germany"

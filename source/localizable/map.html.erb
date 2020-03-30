@@ -3,24 +3,19 @@
 <div class="container">
   <section class="subpage">
     <h2>Map</h2>
-    <p>We have so far</p>
-    <ul>
-      <li><b><span id="totalsubs">150k (todo)</span></b> total submissions clinical potential positives </li>
-      <li><b>860 (todo)</b>  </li>
-    </ul>
     <div class="map-container">
-      <p>Fraction of clinical positive submissions</p>
+      <p>Anteil klinischer Verdachtsfälle</p>
       <iframe src="https://script.google.com/a/macros/astina.ch/s/AKfycbyJ6R3G59HfS5YzkQvmY9xSbf-PsmZbAHDEA6ZwYAO_MkuCRo6v/exec?type=fraction " width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
     <br>
     <div class="map-container">
-      <p>Total Submissions </p>
+      <p>Einreichungen total </p>
       <iframe src="https://script.google.com/a/macros/astina.ch/s/AKfycbyJ6R3G59HfS5YzkQvmY9xSbf-PsmZbAHDEA6ZwYAO_MkuCRo6v/exec?type=submissions " width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
   </section>
   <script>
     const http = new XMLHttpRequest()
-    http.open("GET", "https://covid-export.apps-customer.210235761750.ninegcp.ch/count")
+    http.open("GET", "https://covid-export.apps-customer.21023576175   0.ninegcp.ch/count")
     http.send()
     http.onload = () => { 
       console.log(http.responseText)

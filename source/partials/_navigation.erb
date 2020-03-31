@@ -1,0 +1,18 @@
+<div class="navigation">
+  <div class="navigation__inner">
+    <ul class="lang-nav">
+      <li><a href="/" data-lang="de" class="js-setLang langlink ml-4<% if I18n.locale == :de %> active<% end %>">Deutsch</a></li>
+      <li><a href="/fr" data-lang="fr" class="js-setLang langlink ml-4<% if I18n.locale == :fr %> active<% end %>">Français</a></li>
+      <li><a href="/it" data-lang="it" class="js-setLang langlink ml-4<% if I18n.locale == :it %> active<% end %>">Italiano</a></li>
+      <li><a href="/en" data-lang="en" class="js-setLang langlink ml-4<% if I18n.locale == :en %> active<% end %>">English</a></li>
+    </ul>
+    <nav class="main-nav">
+      <ul>
+        <li><%= link_to 'Home', '/index.html' %></li>
+        <li><%= link_to 'Map', '/map.html' %></li>
+        <li><%= link_to 'FAQ', '/faq.html' %></li>
+        <li><%= link_to 'Blog', '/index.html' %></li>
+      </ul>
+    </nav>
+  </div>
+</div>

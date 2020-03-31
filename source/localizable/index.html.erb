@@ -5,13 +5,8 @@
 </div>
 
 <div class="hero">
+  <%= partial "partials/navigation" %>
   <div class="container">
-    <ul class="lang-nav">
-      <li><a href="/" data-lang="de" class="js-setLang langlink ml-4">Deutsch</a></li>
-      <li><a href="/fr" data-lang="fr" class="js-setLang langlink ml-4">Français</a></li>
-      <li><a href="/it" data-lang="it" class="js-setLang langlink ml-4">Italiano</a></li>
-      <li><a href="/en" data-lang="en" class="js-setLang langlink ml-4">English</a></li>
-    </ul>
     <div>
       <%= partial "partials/icon" %>
       <h1 class="hero__headline"><%= t(:title) %></h1>

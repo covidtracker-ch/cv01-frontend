@@ -1,4 +1,4 @@
-# Covid-Tracker Frontned
+# Covid-Tracker Frontend
 
 ## Project Setup
 `gem install middleman`

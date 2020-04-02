@@ -28,6 +28,6 @@ DTSTART;TZID=Europe/Berlin:20200327T120000
 RRULE:FREQ=DAILY
 DTEND;TZID=Europe/Berlin:20200327T120000
 SUMMARY:COVID-Tracker
-URL:https%3A%2F%2Fwww.covidtracker.ch
+URL:https://www.covidtracker.ch
 END:VEVENT
 END:VCALENDAR

@@ -24,7 +24,7 @@
     worksInHealth: "Travaillez-vous dans le système de santé avec des patients ?"
     wasAbroad: "Avez-vous été à l’étranger durant ces 14 derniers jours ?"
     wasInContactWithCase: "Avez-vous été en contact avec un cas positif pour le covid-19 ?"
-    dateContacted: "Si oui, quand avez-vous été contaminé-e?"
+    dateContacted: "Si oui, quand étiez-vous en contact ?"
     chronicCondition: "Souffrez-vous d’une affection chronique ?"
     fever: "Fièvre de plus de 38 degrés"
     coughing: "Toux"

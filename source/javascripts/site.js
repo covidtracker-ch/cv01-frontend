@@ -82,7 +82,6 @@ function persistForm() {
     // first, check if they consented to saving their responses; bail on saving if not
     var saveResponses = document.querySelector('input[name="saveResponses"]:checked').value;
     if (saveResponses != 1) {
-      console.warn("Not saving responses due to lack of consent");
       localStorage.removeItem('formData');
       return;
     }
@@ -122,8 +121,6 @@ function persistForm() {
         payload[elem.name] = elem.value;
       }
     }
-
-    console.log("Persisting: ", JSON.stringify(payload, null, 2));
 
     localStorage.setItem('formData', JSON.stringify(payload));
   }

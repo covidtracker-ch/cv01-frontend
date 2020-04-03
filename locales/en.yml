@@ -15,7 +15,7 @@ en:
   age: "Age"
   birthyear: "Year of Birth"
   zip: "Postal code"
-  other: "other"
+  other: "Other"
   phoneDigits: "Last four digits of your phone number"
   feelsHealthy: "To the best of your knowledge right now, do you feel healthy?"
   hasBeenTested: "Have you been tested for COVID-19?"

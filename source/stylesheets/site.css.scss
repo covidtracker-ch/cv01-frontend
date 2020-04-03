@@ -88,6 +88,10 @@ ul.list {
   margin: 0 auto;
   box-sizing: border-box;
   position: relative;
+
+  &--wide {
+    max-width: 1500px;
+  }
 }
 
 .hero {
@@ -525,5 +529,13 @@ section.subpage {
 
   @include mobile {
     top: 1rem;
+  }
+}
+
+section.map {
+  padding: 2rem 0 2rem 0;
+
+  @include mobile {
+    padding: 1rem 0;
   }
 }

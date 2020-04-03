@@ -22,11 +22,8 @@ function goToLang(lang) {
 function checkLang() {
   var userLang = navigator.language || navigator.userLanguage;
   userLang = userLang.slice(0,2);
-  console.log('userLang',userLang)
   var currentLang = document.body.dataset.lang;
-  console.log('current lang', currentLang)
   var overwrittenLang = localStorage.getItem('languageOverwrite');
-  console.log(overwrittenLang)
   
   if(userLang == currentLang) {
     return;

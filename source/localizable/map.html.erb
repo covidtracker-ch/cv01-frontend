@@ -1,32 +1,35 @@
 <%= partial "partials/header" %>
 <%= partial "partials/homelink" %>
 <div class="container">
-  <section class="subpage">
+  <section class="map">
     <h2>Map</h2>
     <p>Total Antworten: <b><span id="totalsubs">lade...</span></b></p>
     <h3>Anteil klinischer Verdachtsfälle</h3>
     <p>Verhältnis zwischen den nach unserer "case definition" klassifizierten Fällen und der totalen Anzahl an Antworten, pro Postleitzahl.</p>
     <div class="map-container">
-      <iframe src="https://script.google.com/a/macros/astina.ch/s/AKfycbyJ6R3G59HfS5YzkQvmY9xSbf-PsmZbAHDEA6ZwYAO_MkuCRo6v/exec?type=fraction " width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
-    <br>
-    <h3>Einreichungen total</h3>
-    <p>Totale Anzahl von Antworten, pro Postleitzahl.</p>
-    <div class="map-container">
-      <iframe src="https://script.google.com/a/macros/astina.ch/s/AKfycbyJ6R3G59HfS5YzkQvmY9xSbf-PsmZbAHDEA6ZwYAO_MkuCRo6v/exec?type=submissions " width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <iframe src="https://script.google.com/a/macros/astina.ch/s/AKfycbyJ6R3G59HfS5YzkQvmY9xSbf-PsmZbAHDEA6ZwYAO_MkuCRo6v/exec?type=fraction" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
   </section>
-  <script>
-    
-    const http = new XMLHttpRequest()
-    http.open("GET", "https://api.covidtracker.ch/count")
-    http.send()
-    http.onload = () => { 
-      let s = http.responseText;
-      s = s.slice(0, 3) + "'" + s.slice(3);
-      document.getElementById('totalsubs').innerHTML = s
-    }
-
-
-  </script>
 </div>
+
+<div class="container container--wide">
+  <section class="map">
+    <h3>Detailkarte</h3>
+    <div class="map-container">
+      <iframe src="https://experience.arcgis.com/experience/e2059f05649442dd943bddfaf5ce1bb8/page/page_2/?views=view_3" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+  </section>
+</div>
+
+<script>
+    
+const http = new XMLHttpRequest()
+http.open("GET", "https://api.covidtracker.ch/count")
+http.send()
+http.onload = () => { 
+  let s = http.responseText;
+  s = s.slice(0, 3) + "'" + s.slice(3);
+  document.getElementById('totalsubs').innerHTML = s;
+}
+
+</script>

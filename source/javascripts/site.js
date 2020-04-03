@@ -97,12 +97,23 @@ function persistForm() {
       var pageElems = document.getElementsByName(elem.name);
 
       if (pageElems.length > 1) {
+        var isCheckboxList = pageElems[0].getAttribute('type') == 'checkbox';
+
+        if (isCheckboxList) {
+          payload[elem.name] = [];
+        }
+
         // if there are multiple elements with this name, figure out which one is enabled
         for (var j = 0; j < pageElems.length; j++) {
           var option = pageElems[j];
 
           if (option.checked) {
-            payload[elem.name] = option.value;
+            if (isCheckboxList) {
+              payload[elem.name].push(option.value)
+            }
+            else {
+              payload[elem.name] = option.value;
+            }
           }
         }
       }
@@ -111,6 +122,8 @@ function persistForm() {
         payload[elem.name] = elem.value;
       }
     }
+
+    console.log("Persisting: ", JSON.stringify(payload, null, 2));
 
     localStorage.setItem('formData', JSON.stringify(payload));
   }
@@ -130,17 +143,23 @@ function rehydrateForm() {
 
       var pageElems = document.getElementsByName(elem.name);
 
-      // if there are multiple elements, it's probably a radio button
+      // if there are multiple elements, it's a radio button or checkbox list
       if (pageElems.length > 1) {
         for (var j = 0; j < pageElems.length; j++) {
           var option = pageElems[j];
 
-          // ensure that only the matched radio button is set and all others are unset
-          // option.checked = (payload[elem.name] === option.value) || undefined;
-
-          // actually, we have to trigger an actual click to get the handlers to fire...
-          if ((payload[elem.name] === option.value)) {
-            option.click();
+          if (option.getAttribute('type') == 'checkbox') {
+            if (payload[elem.name].includes(option.value)) {
+              // FIXME: unfortunately click() isn't supported on checkboxes,
+              // so if there are change handlers they won't fire
+              option.checked = true
+            }
+          }
+          else {
+            if ((payload[elem.name] === option.value)) {
+              // click the element to get change handlers to fire
+              option.click();
+            }
           }
         }
       }

@@ -98,17 +98,15 @@ ul.list {
   border-bottom: 1px solid #a00;
   
   .container {
-    padding: 6rem 1rem 6rem 1rem;
+    padding: 5rem 1rem 6rem 1rem;
   }
   &__headline {
-    text-shadow: 0 2px 2px rgba(#000, .2);
   }
   .logo {
     display: block;
     width: 6rem;
     height: auto;
     margin-bottom: 2rem;
-    margin-left: -1rem;
   }
   @include mobile {
     .container {
@@ -117,25 +115,6 @@ ul.list {
     .logo {
       margin-left: 0;
     }
-  }
-}
-
-.lang-nav {
-  position: absolute;
-  top: 2rem;
-  right: 1rem;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  li {
-    display: inline;
-    margin-left: 1rem;
-    font-size: .8rem;
-  }
-
-  @include mobile {
-    top: 1rem;
   }
 }
 
@@ -265,8 +244,13 @@ ul.list {
   background-color: $c-highlight;
   color: #fff;
   padding: .5rem 0;
+  height: 4rem;
+  position: relative;
   box-shadow: 0 2px 80px 0 rgba(#f00, .2);
 
+  .container {
+    height: 100%;
+  }
   h1 {
     font-size: 1.5rem;
     padding-left: 4rem;
@@ -288,7 +272,7 @@ ul.list {
     transform: translateY(-50%);
 
     @include mobile {
-      height: 2rem;
+      height: 2.5rem;
     }
   }
   @include mobile {
@@ -468,5 +452,77 @@ section.subpage {
     position: absolute;
     width: 100%;
     height: 100%,
+  }
+}
+
+.navigation {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+
+  &__inner {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+
+  @include mobile {
+    top: 1rem;
+  }
+
+  .header & {
+    top: 1rem;
+  }
+}
+
+.main-nav {
+  margin-top: .5rem;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+
+    li {
+      display: inline;
+      margin-left: 1rem;
+      font-weight: bold;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.lang-nav {
+  display: block;
+  width: 100%;
+  text-align: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: inline;
+    margin-left: 1rem;
+    font-size: .8rem;
+
+    a {
+      text-decoration: none;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @include mobile {
+    top: 1rem;
   }
 }

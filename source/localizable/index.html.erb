@@ -47,14 +47,17 @@
           </label>
         </div>
       </div>
+
       <div class="input-wrap input-wrap--text">
         <label class="label" for="yearOfBirth"><%= t(:birthyear) %> *</label>
         <input id="yearOfBirth" name="yearOfBirth" class="input input--short" type="number" max="2020" min="1900" step="1" required>
       </div>
+
       <div class="input-wrap input-wrap--text">
         <label class="label" for="zip"><%= t(:zip) %> *</label>
         <input id="zip" name="zip" class="input input--short" type="number" max="9999" min="1000" step="1" required>
       </div>
+
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:hasBeenTested) %></span>
         <div class="radio-wrap">
@@ -68,6 +71,7 @@
           </label>
         </div>
       </div>
+
       <div id="wrap-tested" class="js-hide">
         <div class="input-wrap input-wrap--child input-wrap--radio">
           <span class="label"><%= t(:testResult) %></span>
@@ -91,6 +95,7 @@
           <input id="whereTested" name="whereTested" class="input" type="text" maxlength="30">
         </div>
       </div>
+
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:worksInHealth) %></span>
         <div class="radio-wrap">
@@ -116,6 +121,7 @@
           </label>
         </div>
       </div>
+
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:wasAbroad) %></span>
         <div class="radio-wrap">
@@ -145,6 +151,7 @@
           </label>
         </div>
       </div>
+
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:wasInContactWithCase) %></span>
         <div class="radio-wrap">
@@ -158,10 +165,12 @@
           </label>
         </div>
       </div>
+
       <div class="input-wrap input-wrap--text input-wrap--child js-hide" id="wrap-dateContacted">
         <label class="label" for="dateContacted"><%= t(:dateContacted) %></label>
         <input id="dateContacted" name="dateContacted" class="input input--short" type="date" min="2019-11-01" max="2020-12-31">
       </div>
+
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:chronicCondition) %></span>
         <div class="radio-wrap">
@@ -187,6 +196,7 @@
           </label>
         </div>
       </div>
+
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:feelsHealthy) %> *</span>
         <div class="radio-wrap">
@@ -200,6 +210,7 @@
           </label>
         </div>
       </div>
+
       <div id="form-expanded" class="js-hide">
         <span class="section-title"><%= t(:followingSymptoms) %></span>
         <div class="input-wrap input-wrap--radio">
@@ -288,19 +299,21 @@
           <input id="throatSince" name="throatSince" class="input input--short" type="number">
         </div>
       </div>
+
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:saveResponses) %> *</span>
         <div class="radio-wrap">
           <label class="radio-item" for="saveResponses-1">
-            <input class="js-toggle input" type="radio" name="saveResponses" id="saveResponses-1" value="1" required>
+            <input class="input" type="radio" name="saveResponses" id="saveResponses-1" value="1" required>
             <span><%= t(:yesAnswer) %></span>
           </label>
           <label class="radio-item" for="saveResponses-0">
-            <input class="js-toggle input" type="radio" name="saveResponses" id="saveResponses-0" value="0" required>
+            <input class="input" type="radio" name="saveResponses" id="saveResponses-0" value="0" required>
             <span><%= t(:noAnswer) %></span>
           </label>
         </div>
       </div>
+
       <button type="submit" class="btn" id="btn-send"><%= t(:sendForm) %></button>
     </form>
   </div>

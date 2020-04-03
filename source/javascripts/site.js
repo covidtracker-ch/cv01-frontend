@@ -71,3 +71,107 @@ if(form) {
     });
   }
 }
+
+// persist form's current data to localStorage
+function persistForm() {
+  if (form) {
+    var payload = {};
+
+    // first, check if they consented to saving their responses; bail on saving if not
+    var saveResponses = document.querySelector('input[name="saveResponses"]:checked').value;
+    if (saveResponses != 1) {
+      console.warn("Not saving responses due to lack of consent");
+      localStorage.removeItem('formData');
+      return;
+    }
+
+    for (var i = 0; i < form.elements.length; i++) {
+      var elem = form.elements[i];
+
+      if (!elem.name) {
+        continue;
+      }
+
+      var pageElems = document.getElementsByName(elem.name);
+
+      if (pageElems.length > 1) {
+        // if there are multiple elements with this name, figure out which one is enabled
+        for (var j = 0; j < pageElems.length; j++) {
+          var option = pageElems[j];
+
+          if (option.checked) {
+            payload[elem.name] = option.value;
+          }
+        }
+      }
+      else if (pageElems[0]) {
+        // if there's only one element, we can just take its value
+        payload[elem.name] = elem.value;
+      }
+    }
+
+    localStorage.setItem('formData', JSON.stringify(payload));
+  }
+}
+
+// load existing form data from localStorage if present
+function rehydrateForm() {
+  var payload = JSON.parse(localStorage.getItem('formData'));
+
+  if (form && payload) {
+    for (var i = 0; i < form.elements.length; i++) {
+      var elem = form.elements[i];
+
+      if (!elem.name) {
+        continue;
+      }
+
+      var pageElems = document.getElementsByName(elem.name);
+
+      // if there are multiple elements, it's probably a radio button
+      if (pageElems.length > 1) {
+        for (var j = 0; j < pageElems.length; j++) {
+          var option = pageElems[j];
+
+          // ensure that only the matched radio button is set and all others are unset
+          // option.checked = (payload[elem.name] === option.value) || undefined;
+
+          // actually, we have to trigger an actual click to get the handlers to fire...
+          if ((payload[elem.name] === option.value)) {
+            option.click();
+          }
+        }
+      }
+      else if (pageElems[0]) {
+        // it's a simple value
+        pageElems[0].setAttribute('value', payload[elem.name]);
+      }
+    }
+  }
+}
+
+
+// ---------------------------------------------------------------------------------------------
+// --- execute on complete DOM load
+// ---------------------------------------------------------------------------------------------
+
+function run() {
+  rehydrateForm();
+}
+
+if (document.readyState !== 'loading') {
+  // in case the document is already rendered
+  run();
+}
+else if (document.addEventListener) {
+  // for modern browsers
+  document.addEventListener('DOMContentLoaded', run);
+}
+else {
+  // IE <= 8
+  document.attachEvent('onreadystatechange', function() {
+    if (document.readyState === 'complete') {
+      run();
+    }
+  });
+}

@@ -29,7 +29,7 @@
 
 <div class="form" id="form">
   <div class="container">
-    <form action="https://backend.covidtracker.ch/form" method="post" id="covid-form">
+    <form action="https://backend.covidtracker.ch/form" onsubmit="persistForm()" method="post" id="covid-form">
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:sex) %> *</span>
         <div class="radio-wrap">
@@ -286,6 +286,19 @@
         <div class="input-wrap input-wrap--text input-wrap--child js-hide" id="wrap-throatSince">
           <label class="label" for="throatSince"><%= t(:sinceHowManyDays) %></label>
           <input id="throatSince" name="throatSince" class="input input--short" type="number">
+        </div>
+      </div>
+      <div class="input-wrap input-wrap--radio">
+        <span class="label"><%= t(:saveResponses) %> *</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="saveResponses-1">
+            <input class="js-toggle input" type="radio" name="saveResponses" id="saveResponses-1" value="1" required>
+            <span><%= t(:yesAnswer) %></span>
+          </label>
+          <label class="radio-item" for="saveResponses-0">
+            <input class="js-toggle input" type="radio" name="saveResponses" id="saveResponses-0" value="0" required>
+            <span><%= t(:noAnswer) %></span>
+          </label>
         </div>
       </div>
       <button type="submit" class="btn" id="btn-send"><%= t(:sendForm) %></button>

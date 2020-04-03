@@ -245,8 +245,13 @@ ul.list {
   background-color: $c-highlight;
   color: #fff;
   padding: .5rem 0;
+  height: 4rem;
+  position: relative;
   box-shadow: 0 2px 80px 0 rgba(#f00, .2);
 
+  .container {
+    height: 100%;
+  }
   h1 {
     font-size: 1.5rem;
     padding-left: 4rem;
@@ -266,9 +271,10 @@ ul.list {
     width: auto;
     height: 3rem;
     transform: translateY(-50%);
+    z-index: 1;
 
     @include mobile {
-      height: 2rem;
+      height: 2.5rem;
     }
   }
   @include mobile {
@@ -467,6 +473,9 @@ section.subpage {
   }
 
   @include mobile {
+    top: 1rem;
+  }
+  .header & {
     top: 1rem;
   }
 }

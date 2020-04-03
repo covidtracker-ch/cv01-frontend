@@ -270,6 +270,7 @@ ul.list {
     width: auto;
     height: 3rem;
     transform: translateY(-50%);
+    z-index: 1;
 
     @include mobile {
       height: 2.5rem;

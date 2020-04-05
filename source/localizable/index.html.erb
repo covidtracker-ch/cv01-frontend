@@ -29,7 +29,35 @@
 
 <div class="form" id="form">
   <div class="container">
-    <form action="https://backend.covidtracker.ch/form" onsubmit="persistForm()" method="post" id="covid-form">
+
+    <form action="http://localhost:5000/form" onsubmit="persistForm()" method="post" id="covid-form">
+      <div class="input-wrap input-wrap--radio">
+        <span class="label"><%= t(:firstTimeForm) %> *</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="firstTimeSurvey-1">
+            <input class="js-toggle input" type="radio" name="firstTimeSurvey" id="firstTimeSurvey-1" value="1" data-hide="wrap-participantcode" required>
+            <span><%= t(:yesAnswer) %></span>
+          </label>
+          <label class="radio-item" for="firstTimeSurvey-0">
+            <input class="js-toggle input" type="radio" name="firstTimeSurvey" id="firstTimeSurvey-0" value="0" data-show="wrap-participantcode" required>
+            <span><%= t(:noAnswer) %></span>
+          </label>
+        </div>
+      </div>
+
+      <div id="wrap-participantcode" class="input-wrap input-wrap--text js-hide">
+        <label class="label" for="participantCodeList"><%= t(:participantCode) %></label>
+        <select id="participantCodeList" name="participantCodeList" class="dropdown code">
+          <option value="__none__"><%= t(:unlistedCode) %></option>
+        </select>
+        <div id="participantCodeManualBox" class="input-wrap input-wrap--text hidden">
+          <label class="label" for="participantCodeManual"><%= t(:manualParticipantCode) %></label>
+          <input id="participantCodeManual" name="participantCodeManual" class="input input--short">
+        </div>
+
+        <input type="hidden" id="effectiveParticipantCode" name="participantCode" />
+      </div>
+
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:sex) %> *</span>
         <div class="radio-wrap">
@@ -302,6 +330,7 @@
 
       <div class="input-wrap input-wrap--radio">
         <span class="label"><%= t(:saveResponses) %> *</span>
+        <span class="subtext"><%= t(:cookieWarning) %></span>
         <div class="radio-wrap">
           <label class="radio-item" for="saveResponses-1">
             <input class="input" type="radio" name="saveResponses" id="saveResponses-1" value="1" required>
@@ -309,6 +338,20 @@
           </label>
           <label class="radio-item" for="saveResponses-0">
             <input class="input" type="radio" name="saveResponses" id="saveResponses-0" value="0" required>
+            <span><%= t(:noAnswer) %></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="input-wrap input-wrap--radio">
+        <span class="label"><%= t(:consentToStudy) %> *</span>
+        <div class="radio-wrap">
+          <label class="radio-item" for="consentToStudy-1">
+            <input class="input" type="radio" name="consentToStudy" id="consentToStudy-1" value="1" required>
+            <span><%= t(:yesAnswer) %></span>
+          </label>
+          <label class="radio-item" for="consentToStudy-0">
+            <input class="input" type="radio" name="consentToStudy" id="consentToStudy-0" value="0" required>
             <span><%= t(:noAnswer) %></span>
           </label>
         </div>

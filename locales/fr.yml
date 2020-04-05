@@ -8,6 +8,10 @@
     <p><b>Que vous soyez malade ou en bonne santé, infecté-e ou non : Vos données peuvent aider à sauver des vies.</b> En remplissant le formulaire ci-dessous, vous participez à l’effort commun pour venir à bout de cette crise. L’idéal serait que vous renouveliez votre participation chaque semaine.</p>
     <p>Important: les données récoltées sont anonyme et ne peuvent pas être associées à des personnes.</p>"
     toform: "Vers le formulaire"
+    firstTimeForm: "C'est la première fois que vous remplissez ce formulaire?"
+    participantCode: "(Optionnel) Votre code de participation d'avant"
+    manualParticipantCode: "(Optionnel) Entrez votre code de participation"
+    unlistedCode: "Mon code n'est pas répertorié"
     sex: "Sexe"
     male: "Homme"
     female: "Femme"
@@ -65,3 +69,5 @@
     negative: "Négatif"
     dataProtection: "Protection des données"
     saveResponses: "Rappelez-vous mes réponses pour la prochaine fois."
+    cookieWarning: "Si vous sélectionnez 'oui', vous consentez à l'utilisation de cookies. Lors de l'utilisation de cookies, d'autres utilisateurs qui ont accès à cet ordinateur peuvent être en mesure de récupérer les réponses à l'enquête."
+    consentToStudy: "J'accepte les <a href=\"/fr/consent.html\" target=\"_blank\"> conditions de participation </a> à cette étude"

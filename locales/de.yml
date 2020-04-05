@@ -8,6 +8,10 @@ de:
   <p><b>Egal ob Sie krank sind oder gesund, infiziert oder nicht: Ihre Daten können helfen, Leben zu retten.</b> Wenn Sie das untenstehende Formular ausfüllen, tragen Sie dazu bei, dass wir diese Krise gemeinsam meistern können.  Im Idealfall wiederholen Sie Ihre Teilnahme im Wochentakt (<a href=\"/images/covidtracker.ics\">Kalendererinnerung einrichten</a>).</p>
   <p>Wichtig: Wir verwenden die erfassten Daten nicht, um Rückschlüsse auf einzelne Personen zu ziehen.</p>"
   toform: "Zum Formular"
+  firstTimeForm: "Füllen Sie dieses Formular zum ersten Mal aus?"
+  participantCode: "(Optional) Ihr Teilnahmecode"
+  manualParticipantCode: "(Optional) Geben Sie Ihren Teilnahmecode ein"
+  unlistedCode: "Mein Code ist nicht aufgeführt"
   sex: "Geschlecht"
   male: "Männlich"
   female: "Weiblich"
@@ -65,3 +69,5 @@ de:
   negative: "Negativ"
   dataProtection: "Datenschutz"
   saveResponses: "Erinnere dich an meine Antworten für das nächste Mal."
+  cookieWarning: "Wenn Sie 'Ja' auswählen, stimmen Sie der Verwendung von Cookies zu. Wenn Sie Cookies verwenden, können andere Benutzer, die Zugriff auf diesen Computer haben, möglicherweise die Antworten auf die Umfrage abrufen."
+  consentToStudy: "Ich stimme den <a href=\"/de/consent.html\" target=\"_blank\"> Teilnahmebedingungen </a> für diese Studie zu."

@@ -72,6 +72,9 @@ ul.list {
   &:hover {
     background-color: #c00;
   }
+  &:disabled {
+    background-color: #f5b8b8;
+  }
   &--inv {
     background-color: #fff;
     color: $c-highlight-dark;
@@ -131,6 +134,15 @@ ul.list {
     font-size: .8rem;
     color: #666;
     font-weight: bold;
+    margin-bottom: .5rem;
+    letter-spacing: .02rem;
+  }
+  .subtext {
+    display: block;
+    font-size: .8rem;
+    color: #999;
+    font-style: oblique;
+    font-weight: normal;
     margin-bottom: .5rem;
     letter-spacing: .02rem;
   }
@@ -214,6 +226,17 @@ ul.list {
     }
   }
 }
+
+.dropdown {
+  font-family: $f-main;
+  border-radius: 3px;
+}
+
+.code {
+  font-size: 1rem;
+  font-family: monospace;
+}
+
 .section-title {
   display: block;
   margin-top: 6rem;

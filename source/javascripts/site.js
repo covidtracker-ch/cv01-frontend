@@ -3,13 +3,52 @@ var toggles = document.querySelectorAll('.js-toggle');
 var hiddens = document.querySelectorAll('.js-hide');
 var langLinks = document.querySelectorAll('.js-setLang');
 
-function checkError() {
-  var param = window.location.search.substr(1);
-  if(param == 'error=true') {
-    document.getElementById('msg-error').classList.remove('hidden');
+function searchParams() {
+  var pairs = window.location.search.substring(1).split("&"), obj = {}, pair, i;
+  for (i in pairs) {
+    if ( pairs[i] === "" ) { continue }
+    pair = pairs[i].split("=");
+    obj[ decodeURIComponent( pair[0] ) ] = decodeURIComponent( pair[1] );
+  }
+  return obj;
+}
+
+checkError();
+checkLang();
+
+function checkForCode() {
+  var params = searchParams();
+  var lastCode;
+
+  if (params['code']) {
+    // set this code as the last-used code
+    lastCode = params['code'];
+    localStorage.setItem('lastCode', lastCode);
+
+    // search through formData and replace any keys we deferred with the new code
+    replaceKeyInStore(REPLACE_SENTINEL, lastCode);
+  }
+  else {
+    lastCode = localStorage.getItem('lastCode');
+  }
+
+  // if there's an element that displays a code, fill it with the current one
+  var yourCodeHere = document.getElementById('yourCodeHere');
+  if (yourCodeHere) {
+    yourCodeHere.innerText = lastCode;
   }
 }
-checkError();
+
+function checkError() {
+  var params = searchParams();
+  if (params['error'] === 'true') {
+    document.getElementById('msg-error').classList.remove('hidden');
+
+    // clean up the unfinished form data, since we don't have a code for it
+    // FIXME: is this the right behavior, or should we just reload the form with this data?
+    deleteKeyInStore(REPLACE_SENTINEL);
+  }
+}
 
 function goToLang(lang) {
   var path = window.location.pathname.split("/").pop();
@@ -24,11 +63,11 @@ function checkLang() {
   userLang = userLang.slice(0,2);
   var currentLang = document.body.dataset.lang;
   var overwrittenLang = localStorage.getItem('languageOverwrite');
-  
+
   if(userLang == currentLang) {
     return;
   }
-  
+
   if(overwrittenLang) {
     if(overwrittenLang == currentLang) return;
     goToLang(overwrittenLang);
@@ -46,7 +85,6 @@ function checkLang() {
     goToLang('en');
   }
 }
-checkLang();
 
 function setupForm() {
   if(form) {
@@ -56,7 +94,7 @@ function setupForm() {
     }
 
     for(var i=0; i < toggles.length; i++) {
-      toggles[i].addEventListener('change', function(e) {
+      toggles[i].addEventListener('input', function(e) {
         if(e.target.dataset.hide) {
           document.getElementById(e.target.dataset.hide).classList.add('hidden');
         }
@@ -74,111 +112,124 @@ function setupForm() {
   }
 }
 
-// persist form's current data to localStorage
-function persistForm() {
-  if (form) {
-    var payload = {};
 
-    // first, check if they consented to saving their responses; bail on saving if not
-    var saveResponses = document.querySelector('input[name="saveResponses"]:checked').value;
-    if (saveResponses != 1) {
-      localStorage.removeItem('formData');
-      return;
-    }
+// ---------------------------------------------------------------------------------------------
+// --- participant code handling
+// ---------------------------------------------------------------------------------------------
 
-    for (var i = 0; i < form.elements.length; i++) {
-      var elem = form.elements[i];
+function getLastCode() {
+  var lastCode = localStorage.getItem('lastCode');
 
-      if (!elem.name) {
+  if (!lastCode) {
+    var allResponses = JSON.parse(localStorage.getItem('formData'));
+
+    // since no code was specified, fetch the first entry in formData
+    // (i'm using this silly for loop b/c Object.values() doesn't exist in IE*)
+    for (var code in allResponses) {
+      if (!allResponses.hasOwnProperty(code))
         continue;
-      }
-
-      var pageElems = document.getElementsByName(elem.name);
-
-      if (pageElems.length > 1) {
-        var isCheckboxList = pageElems[0].getAttribute('type') == 'checkbox';
-
-        if (isCheckboxList) {
-          payload[elem.name] = [];
-        }
-
-        // if there are multiple elements with this name, figure out which one is enabled
-        for (var j = 0; j < pageElems.length; j++) {
-          var option = pageElems[j];
-
-          if (option.checked) {
-            if (isCheckboxList) {
-              payload[elem.name].push(option.value)
-            }
-            else {
-              payload[elem.name] = option.value;
-            }
-          }
-        }
-      }
-      else if (pageElems[0]) {
-        // if there's only one element, we can just take its value
-        payload[elem.name] = elem.value;
-      }
+      lastCode = code;
+      break;
     }
-
-    localStorage.setItem('formData', JSON.stringify(payload));
   }
+
+  return lastCode;
 }
 
-// load existing form data from localStorage if present
-function rehydrateForm() {
-  var payload = JSON.parse(localStorage.getItem('formData'));
+function bindParticipantsList(lastCode) {
+  // populate the participant dropdown with values
+  var partElem = document.getElementById('participantCodeList'), code, newOption;
 
-  if (form && payload) {
-    for (var i = 0; i < form.elements.length; i++) {
-      var elem = form.elements[i];
+  if (!partElem) {return;}
 
-      if (!elem.name) {
+  var allResponses = JSON.parse(localStorage.getItem('formData'));
+
+  if (allResponses) {
+    for (code in allResponses) {
+      if (!allResponses.hasOwnProperty(code))
         continue;
-      }
 
-      var pageElems = document.getElementsByName(elem.name);
+      newOption = document.createElement("option");
+      newOption.innerText = code;
+      newOption.setAttribute('value', code);
+      partElem.appendChild(newOption);
 
-      // if there are multiple elements, it's a radio button or checkbox list
-      if (pageElems.length > 1) {
-        for (var j = 0; j < pageElems.length; j++) {
-          var option = pageElems[j];
-
-          if (option.getAttribute('type') == 'checkbox') {
-            if (payload[elem.name].includes(option.value)) {
-              // FIXME: unfortunately click() isn't supported on checkboxes,
-              // so if there are change handlers they won't fire
-              option.checked = true
-            }
-          }
-          else {
-            if ((payload[elem.name] === option.value)) {
-              // click the element to get change handlers to fire
-              option.click();
-            }
-          }
-        }
-      }
-      else if (pageElems[0]) {
-        // it's a simple value
-        pageElems[0].setAttribute('value', payload[elem.name]);
+      if (lastCode && code === lastCode) {
+        newOption.selected = true;
       }
     }
   }
+
+  // applies the participant code selection to the form's contents
+  function updateDropdownBinding(code) {
+    var manualCode = document.getElementById('participantCodeManualBox');
+
+    if (code === "__none__") {
+      clearForm();
+      manualCode.classList.remove("hidden");
+    }
+    else {
+      rehydrateForm(code);
+      manualCode.classList.add("hidden");
+    }
+  }
+
+  // and run the selection logic once to sync the form
+  updateDropdownBinding(partElem.value);
+
+  partElem.addEventListener('input', function(ev) {
+    updateDropdownBinding(ev.target.value);
+  });
+
+  // make selecting the 'yes' response for the "first time?" prompt clear the form
+  // make selecting the 'no' response reload the form if there's a selection
+
+  var yesResponse = document.getElementById('firstTimeSurvey-1');
+  var noResponse = document.getElementById('firstTimeSurvey-0');
+  if (yesResponse && noResponse) {
+    yesResponse.addEventListener('click', function() {
+      clearForm();
+    });
+    noResponse.addEventListener('click', function() {
+      updateDropdownBinding(partElem.value);
+    });
+  }
 }
 
+function bindConsentButtons() {
+  var yesResponse = document.getElementById('consentToStudy-1');
+  var noResponse = document.getElementById('consentToStudy-0');
+  var submitBtn = document.getElementById('btn-send');
+
+  function syncSubmit() {
+    submitBtn.disabled = !(yesResponse.checked);
+  }
+
+  if (submitBtn && yesResponse && noResponse) {
+    syncSubmit();
+    yesResponse.addEventListener('click', syncSubmit);
+    noResponse.addEventListener('click', syncSubmit);
+  }
+}
 
 // ---------------------------------------------------------------------------------------------
 // --- execute on complete DOM load
 // ---------------------------------------------------------------------------------------------
 
 function run() {
+  checkForCode();
+
   setupForm();
-  rehydrateForm();
+
+  var lastCode = getLastCode();
+
+  // binding the participants' list will rehydrate
+  // the form when it preselects the last participant
+  bindParticipantsList(lastCode);
+  bindConsentButtons();
 }
 
-if (document.readyState !== 'loading') {
+if (document.readyState != 'loading') {
   // in case the document is already rendered
   run();
 }

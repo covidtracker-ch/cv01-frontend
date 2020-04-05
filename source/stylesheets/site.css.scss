@@ -145,8 +145,12 @@ ul.list {
     margin-bottom: .5rem;
     letter-spacing: .02rem;
 
-    &--inset {
+    &--rb-inset {
       margin-left: 1.5em;
+      margin-top: 5px;
+    }
+
+    &--inset {
       margin-top: 5px;
     }
   }

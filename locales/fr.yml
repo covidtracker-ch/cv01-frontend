@@ -84,22 +84,41 @@ fr:
   hideMoreComorbidities: "hide more"
   comorbidities:
     main:
-      highBloodPressure: "High Blood Pressure"
-      diabetes1: "Diabetes (Type 1)"
-      diabetes2: "Diabetes (Type 2)"
-      obesity: "Obesity"
-      pregnancy: "Currently pregnant"
-      immuneSystem: "Weakened immune system or on immunosuppressants (Cancer patient currently undergoing chemo/radiotherapy)"
+      highBloodPressure:
+        label: "High Blood Pressure"
+      diabetes1:
+        label: "Diabetes (Type 1)"
+      diabetes2:
+        label: "Diabetes (Type 2)"
+      obesity:
+        label: "Obesity"
+      pregnancy:
+        label: "Currently pregnant"
+      immuneSystem:
+        label: "Weakened immune system or on immunosuppressants"
+        subtext: "(i.e., cancer patient currently undergoing chemo/radiotherapy)"
     extended:
-      bloodCancer: "Blood cancer patient (such as leukemia) at any stage of treatment"
-      hiv: "HIV/AIDS"
-      spleen: "Chronic spleen disease (i.e., sickle cell disease or spleen removed)"
-      kidney: "Chronic kidney disease"
-      heartDisease: "Long-term heart disease, like heart failure."
-      liver: "Chronic liver disease (i.e., hepatitis)"
-      respiratory: "Chronic respiratory disease (i.e., COPD, asthma, emphysema, bronchitis, cystic fibrosis.)"
-      neurological: "Chronic neurological disease (i.e., Parkinson’s disease, motor neuron disease, multiple sclerosis or cerebral palsy)"
-      organTranslplant: "I've had an organ transplant"
+      bloodCancer:
+        label: "Blood cancer patient (such as leukemia) at any stage of treatment"
+      hiv:
+        label: "HIV/AIDS"
+      spleen:
+        label: "Chronic spleen disease"
+        subtext: "(i.e., sickle cell disease or spleen removed)"
+      kidney:
+        label: "Chronic kidney disease"
+      heartDisease:
+        label: "Long-term heart disease, like heart failure."
+      liver:
+        label: "Chronic liver disease (i.e., hepatitis)"
+      respiratory:
+        label: "Chronic respiratory disease"
+        subtext: "(i.e., COPD, asthma, emphysema, bronchitis, cystic fibrosis.)"
+      neurological:
+        label: "Chronic neurological disease"
+        subtext: "(i.e., Parkinson’s disease, motor neuron disease, multiple sclerosis or cerebral palsy)"
+      organTranslplant:
+        label: "I've had an organ transplant"
 
   smokeOrVape: "Do you smoke or vape?"
 

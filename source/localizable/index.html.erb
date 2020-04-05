@@ -115,10 +115,13 @@
       <div class="input-wrap input-wrap--checkboxlist">
         <span class="label"><%= t(:comorbiditiesPrompt) %></span>
         <div class="radio-wrap">
-          <% t(:'comorbidities.main').each do | key, text | %>
+          <% t(:'comorbidities.main').each do | key, entry | %>
             <label class="checkboxlist-item">
               <input type="checkbox" name="comorbidity_<%= key %>" value="<%= key %>" />
-              <span><%= text %></span>
+              <span><%= entry[:label] %></span>
+              <% if entry[:subtext] %>
+                <div class="subtext subtext--inset"><%= entry[:subtext] %></div>
+              <% end %>
             </label>
           <% end %>
 
@@ -129,12 +132,16 @@
             </a>
           </div>
           <div id="wrap-extended-comorbidities" class="js-hide">
-            <% t(:'comorbidities.extended').each do | key, text | %>
+            <% t(:'comorbidities.extended').each do | key, entry | %>
               <label class="checkboxlist-item">
                 <input type="checkbox" name="comorbidity_<%= key %>" value="<%= key %>" />
-                <span><%= text %></span>
+                <span><%= entry[:label] %></span>
+                <% if entry[:subtext] %>
+                  <div class="subtext subtext--inset"><%= entry[:subtext] %></div>
+                <% end %>
               </label>
             <% end %>
+
             <a href="#" class="js-toggle" data-show="wrap-main-comorbidities-expander" data-hide="wrap-extended-comorbidities">
               <%= t(:hideMoreComorbidities) %>
             </a>
@@ -368,7 +375,7 @@
                 <input class="input" type="radio" name="behavior" id="behavior-<%= key %>" value="<%= key %>" required>
                 <span><%= entry[:label] %></span>
                 <% if entry[:subtext] %>
-                  <div class="subtext subtext--inset"><%= entry[:subtext] %></div>
+                  <div class="subtext subtext--rb-inset"><%= entry[:subtext] %></div>
                 <% end %>
               </label>
             </div>

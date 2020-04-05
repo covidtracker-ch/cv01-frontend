@@ -13,9 +13,6 @@ function searchParams() {
   return obj;
 }
 
-checkError();
-checkLang();
-
 function checkForCode() {
   var params = searchParams();
   var lastCode;
@@ -94,11 +91,17 @@ function setupForm() {
     }
 
     for(var i=0; i < toggles.length; i++) {
-      toggles[i].addEventListener('input', function(e) {
-        if(e.target.dataset.hide) {
+      var event = toggles[i].tagName === 'A' ? 'click' : 'input';
+
+      toggles[i].addEventListener(event, function(e) {
+        if (e.type === 'click') {
+          e.preventDefault();
+        }
+
+        if (e.target.dataset.hide) {
           document.getElementById(e.target.dataset.hide).classList.add('hidden');
         }
-        if(e.target.dataset.show) {
+        if (e.target.dataset.show) {
           document.getElementById(e.target.dataset.show).classList.remove('hidden');
         }
       });
@@ -217,6 +220,8 @@ function bindConsentButtons() {
 // ---------------------------------------------------------------------------------------------
 
 function run() {
+  checkError();
+  checkLang();
   checkForCode();
 
   setupForm();

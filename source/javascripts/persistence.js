@@ -173,7 +173,7 @@ function rehydrateForm(fromCode) {
         var option = pageElems[j];
 
         if (option.getAttribute('type') === 'checkbox') {
-          if (payload[elem.name].includes(option.value)) {
+          if (payload[elem.name] && payload[elem.name].includes(option.value)) {
             option.checked = true
           }
         }

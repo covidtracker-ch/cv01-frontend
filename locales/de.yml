@@ -20,6 +20,7 @@ de:
   birthyear: "Geburtsjahr"
   zip: "Postleitzahl"
   other: "Andere"
+  householdSize: "Size of your household"
   phoneDigits: "Letzte vier Ziffern Ihrer Telefonnummer"
   feelsHealthy: "Fühlen Sie sich gesund?"
   hasBeenTested: "Sind Sie auf Covid-19 getestet worden?"
@@ -30,13 +31,10 @@ de:
   wasInContactWithCase: "Hatten Sie Kontakt zu einem positiven Fall von Covid-19?"
   dateContacted: "Falls ja, wann hatten Sie den Kontakt?"
   chronicCondition: "Leiden Sie an einer chronischen Erkrankung?"
-  fever: "Fieber über 38 Grad"
-  coughing: "Husten"
-  dyspnea: "Atembeschwerden"
-  tiredness: "Grosse Müdigkeit"
-  throat: "Halsschmerzen"
   yesAnswer: "Ja"
+  probablyAnswer: "Probably"
   noAnswer: "Nein"
+  notKnownAnswer: "Not that I know of"
   maybe: "Vermutlich"
   hospital: "Krankenhaus"
   privatePractice: "Privatpraxis"
@@ -45,9 +43,6 @@ de:
   spain: "Spanien"
   germany: "Deutschland"
   france: "Frankreich"
-  heart: "Herz"
-  lung: "Lunge"
-  diabetes: "Diabetes"
   followingSymptoms: "Leiden Sie derzeit an folgenden Symptomen:"
   sendForm: "Formular absenden"
   sinceHowManyDays: "Seit wievielen Tagen?"
@@ -71,3 +66,59 @@ de:
   saveResponses: "Erinnere dich an meine Antworten für das nächste Mal."
   cookieWarning: "Wenn Sie 'Ja' auswählen, stimmen Sie der Verwendung von Cookies zu. Wenn Sie Cookies verwenden, können andere Benutzer, die Zugriff auf diesen Computer haben, möglicherweise die Antworten auf die Umfrage abrufen."
   consentToStudy: "Ich stimme den <a href=\"/de/consent.html\" target=\"_blank\"> Teilnahmebedingungen </a> für diese Studie zu."
+
+  symptoms:
+    fever: "Fieber über 38 Grad"
+    coughing: "Husten"
+    dyspnea: "Atembeschwerden"
+    tiredness: "Grosse Müdigkeit"
+    throat: "Halsschmerzen"
+    nausea: "Nausea"
+    headache: "Headache"
+    musclePain: "Muscle Pain"
+    runnyNose: "Runny Nose"
+    diarrhea: "Diarrhea"
+    lostTaste: "Loss of smell or taste"
+
+  comorbiditiesPrompt: "Comorbidities (Check all that apply)"
+  showMoreComorbidities: "show more..."
+  hideMoreComorbidities: "hide more"
+  comorbidities:
+    main:
+      highBloodPressure: "High Blood Pressure"
+      diabetes1: "Diabetes (Type 1)"
+      diabetes2: "Diabetes (Type 2)"
+      obesity: "Obesity"
+      pregnancy: "Currently pregnant"
+      immuneSystem: "Weakened immune system or on immunosuppressants (Cancer patient currently undergoing chemo/radiotherapy)"
+    extended:
+      bloodCancer: "Blood cancer patient (such as leukemia) at any stage of treatment"
+      hiv: "HIV/AIDS"
+      spleen: "Chronic spleen disease (i.e., sickle cell disease or spleen removed)"
+      kidney: "Chronic kidney disease"
+      heartDisease: "Long-term heart disease, like heart failure."
+      liver: "Chronic liver disease (i.e., hepatitis)"
+      respiratory: "Chronic respiratory disease (i.e., COPD, asthma, emphysema, bronchitis, cystic fibrosis.)"
+      neurological: "Chronic neurological disease (i.e., Parkinson’s disease, motor neuron disease, multiple sclerosis or cerebral palsy)"
+      organTranslplant: "I've had an organ transplant"
+
+  smokeOrVape: "Do you smoke or vape?"
+
+  leavingHomeForWork: "Are you currently leaving your home for work?"
+
+  behaviorPrompt: "Please select the option that most resembles your current situation:"
+  behaviors:
+    isolation:
+      label: "Isolation"
+      subtext: "Presumed sick. Not leaving home."
+    self_isolation:
+      label: "Self-Isolation"
+      subtext: "Do not have symptoms, but I may have been exposed. Not Leaving home."
+    precaution_isolation:
+      label: "Precautionary Self-Isolation"
+      subtext: "No known exposure but limiting all contacts. Only leaving for essential activities. For instance, shopping or pharmacy"
+    social_distancing:
+      label: "Social Distancing"
+      subtext: "No handshakes, keeping a distance from others"
+    typical_activity:
+      label: "Maintaining Typical Activities"

@@ -8,6 +8,10 @@
     <p><b>Indipendentemente dal fatto che sia sano o ammalato, che sia infetto o meno: I suoi dati possono contribuire a salvare vite umane.</b> Con la compilazione del modulo sottostante, può fornire il suo contributo, affinché possiamo superare insieme questa crisi. L’ideale sarebbe poter partecipare a cadenza settimanale.</p>
     <p>Importante: il rilevamento dei dati garantisce l’anonimato e non consente di trarre conclusioni sulla sua identità.</p>"
     toform: "Al modulo"
+    firstTimeForm: "È la prima volta che compili questo modulo?"
+    participantCode: "(Opzionale) Il codice di partecipazione di prima"
+    manualParticipantCode: "(Opzionale) Inserisci il tuo codice di partecipazione"
+    unlistedCode: "Il mio codice non è elencato"
     sex: "Sesso"
     male: "Uomo"
     female: "Donna"
@@ -64,3 +68,6 @@
     positive: "Positivo"
     negative: "Negativo"
     dataProtection: "Protezione dei dati"
+    saveResponses: "Ricorda le mie risposte per la prossima volta."
+    cookieWarning: "Se si seleziona 'sì', si acconsente all'utilizzo dei cookie. Quando si utilizzano i cookie, altri utenti che hanno accesso a questo computer potrebbero essere in grado di recuperare le risposte al sondaggio."
+    consentToStudy: "Acconsento ai <a href=\"/it/consent.html\" target=\"_blank\"> termini di partecipazione </a> in questo studio"

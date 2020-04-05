@@ -144,6 +144,11 @@ ul.list {
     font-weight: normal;
     margin-bottom: .5rem;
     letter-spacing: .02rem;
+
+    &--inset {
+      margin-left: 1.5em;
+      margin-top: 5px;
+    }
   }
   &--child {
     padding-left: 1rem;
@@ -194,6 +199,19 @@ ul.list {
     }
     span {
       // font-size: .8rem;
+    }
+  }
+
+  &--checkboxlist {
+    .checkboxlist-item {
+      display: block;
+      margin-bottom: 0.5em;
+
+      margin-left: 26px;
+      input {
+        margin-left: -26px;
+        font-size: 24px;
+      }
     }
   }
 

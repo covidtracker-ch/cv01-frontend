@@ -59,8 +59,7 @@ function excludeField(fieldName) {
       !fieldName ||
       fieldName === "firstTimeSurvey" ||
       fieldName === "participantCodeList" ||
-      fieldName === "participantCodeManual" ||
-      fieldName === "consentToStudy"
+      fieldName === "participantCodeManual"
   );
 }
 

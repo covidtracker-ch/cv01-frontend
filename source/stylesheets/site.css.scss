@@ -460,8 +460,12 @@ section.subpage {
   }
 
   .map--detail & {
-    padding-bottom: 140%;
+    padding-bottom: 65%;
     margin-bottom: 4rem;
+
+    @include mobile {
+      padding-bottom: 140%;
+    }
   }
 }
 

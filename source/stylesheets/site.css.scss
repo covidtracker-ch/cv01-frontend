@@ -458,6 +458,11 @@ section.subpage {
     width: 100%;
     height: 100%,
   }
+
+  .map--detail & {
+    padding-bottom: 140%;
+    margin-bottom: 4rem;
+  }
 }
 
 .navigation {

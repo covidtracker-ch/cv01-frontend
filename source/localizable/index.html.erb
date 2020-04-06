@@ -29,7 +29,8 @@
 
 <div class="form" id="form">
   <div class="container">
-
+    <div><%= link_to t(:aboutTheStudy), '/study_info.html', target: "_blank" %></div>
+    <div><%= link_to t(:consentInformation), '/consent.html', target: "_blank" %></div>
     <form action="http://localhost:5000/form" onsubmit="persistForm()" method="post" id="covid-form">
       <!-- ---------------------------------------------------------
       --- first-time survey?

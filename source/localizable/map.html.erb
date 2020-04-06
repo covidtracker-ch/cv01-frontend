@@ -1,9 +1,19 @@
 <%= partial "partials/header" %>
 <%= partial "partials/homelink" %>
+
+<div class="container container--wide">
+  <section class="map map--detail">
+    <h3>Detailkarte</h3>
+    <p>Total Antworten: <b><span id="totalsubs">lade...</span></b></p>
+    <div class="map-container">
+      <iframe src="https://experience.arcgis.com/experience/e2059f05649442dd943bddfaf5ce1bb8/" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </div>
+  </section>
+</div>
+
 <div class="container">
   <section class="map">
-    <h2>Map</h2>
-    <p>Total Antworten: <b><span id="totalsubs">lade...</span></b></p>
+    <h2>Heatmap</h2>
     <h3>Anteil klinischer Verdachtsfälle</h3>
     <p>Verhältnis zwischen den nach unserer "case definition" klassifizierten Fällen und der totalen Anzahl an Antworten, pro Postleitzahl.</p>
     <div class="map-container">
@@ -12,14 +22,6 @@
   </section>
 </div>
 
-<div class="container container--wide">
-  <section class="map">
-    <h3>Detailkarte</h3>
-    <div class="map-container">
-      <iframe src="https://experience.arcgis.com/experience/e2059f05649442dd943bddfaf5ce1bb8/page/page_2/?views=view_3" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
-  </section>
-</div>
 
 <script>
     

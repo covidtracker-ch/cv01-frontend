@@ -91,6 +91,10 @@ ul.list {
   margin: 0 auto;
   box-sizing: border-box;
   position: relative;
+
+  &--wide {
+    max-width: 1500px;
+  }
 }
 
 .hero {
@@ -99,7 +103,7 @@ ul.list {
   color: #fff;
   box-shadow: 0 4px 50px 0 rgba(#f00, .25);
   border-bottom: 1px solid #a00;
-  
+
   .container {
     padding: 5rem 1rem 6rem 1rem;
   }
@@ -228,7 +232,7 @@ ul.list {
     color: #888;
     padding-left: 1.5rem;
     position: relative;
-    
+
     &::before {
       content: "i";
       position: absolute;
@@ -395,7 +399,7 @@ section.subpage {
   padding-left: 2.5rem;
   text-decoration: none;
   margin: .5rem .5rem;
-  
+
   &--fb {
     border-color: #3A559F;
   }
@@ -500,6 +504,15 @@ section.subpage {
     width: 100%;
     height: 100%,
   }
+
+  .map--detail & {
+    padding-bottom: 65%;
+    margin-bottom: 4rem;
+
+    @include mobile {
+      padding-bottom: 140%;
+    }
+  }
 }
 
 .navigation {
@@ -508,7 +521,7 @@ section.subpage {
   left: 0;
   width: 100%;
   z-index: 1;
-  
+
   &__inner {
     max-width: 900px;
     margin: 0 auto;
@@ -602,4 +615,18 @@ section.subpage {
   img {
     width: 400px; min-height: 200px;
   }
+}
+
+section.map {
+  padding: 2rem 0 2rem 0;
+
+  @include mobile {
+    padding: 1rem 0;
+  }
+}
+
+.map-icon {
+  height: 20px;
+  padding: 0px 2px;
+  vertical-align: bottom;
 }

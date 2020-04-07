@@ -68,7 +68,9 @@ de:
   dataProtection: "Datenschutz"
   saveResponses: "Erinnere dich an meine Antworten für das nächste Mal."
   cookieWarning: "Wenn Sie 'Ja' auswählen, stimmen Sie der Verwendung von Cookies zu. Wenn Sie Cookies verwenden, können andere Benutzer, die Zugriff auf diesen Computer haben, möglicherweise die Antworten auf die Umfrage abrufen."
-  consentToStudy: "Ich stimme den <a href=\"/de/consent.html\" target=\"_blank\"> Teilnahmebedingungen </a> für diese Studie zu."
+  consentToStudy: "Ich stimme den <a href=\"/consent.html\" target=\"_blank\"> Teilnahmebedingungen </a> für diese Studie zu."
+  aboutTheStudy: "Über die Studie"
+  consentInformation: "Einverständniserklärung"
 
   symptoms:
     fever: "Fieber über 38 Grad"

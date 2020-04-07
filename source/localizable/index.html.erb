@@ -43,8 +43,10 @@ ageRanges:
 <div class="form" id="form">
   <div class="container">
 
+    <div><%= link_to t(:aboutTheStudy), '/study_info.html', target: "_blank" %></div>
+    <div><%= link_to t(:consentInformation), '/consent.html', target: "_blank" %></div>
+    
     <form action="https://covid-stage.apps-customer.210235761750.ninegcp.ch/form" onsubmit="persistForm()" method="post" id="covid-form">
-
       <div class="boxed code-chooser">
         <!-- ---------------------------------------------------------
         --- first-time survey?

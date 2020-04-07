@@ -3,8 +3,8 @@
 
 <div class="container container--wide">
   <section class="map map--detail">
-    <h3>Detailkarte</h3>
-    <p>Total Antworten: <b><span id="totalsubs">lade...</span></b></p>
+    <h3>Mappa dettagliata</h3>
+    <p>Risposte totali: <b><span id="totalsubs">lade...</span></b></p>
     <div class="map-container">
       <iframe src="https://experience.arcgis.com/experience/e2059f05649442dd943bddfaf5ce1bb8/" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
@@ -13,18 +13,17 @@
 
 <div class="container">
   <section class="map">
-    <h2>Heatmap</h2>
-    <h3>Anteil klinischer Verdachtsfälle</h3>
-    <p>Verhältnis zwischen den nach unserer "case definition" klassifizierten Fällen und der totalen Anzahl an Antworten, pro Postleitzahl.</p>
+    <h2>Mappa di calore</h2>
+    <h3>Frazione di potenziali casi clinici</h3>
+    <p>Frazione di casi classificati positivamente (secondo la nostra definizione di caso) divisa per il numero totale di invii, per codice postale.</p>
     <div class="map-container">
-      <iframe src="https://script.google.com/a/macros/astina.ch/s/AKfycbyJ6R3G59HfS5YzkQvmY9xSbf-PsmZbAHDEA6ZwYAO_MkuCRo6v/exec?type=fraction" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      <iframe src="https://script.google.com/a/macros/astina.ch/s/AKfycbyJ6R3G59HfS5YzkQvmY9xSbf-PsmZbAHDEA6ZwYAO_MkuCRo6v/exec?type=fraction " width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
   </section>
 </div>
 
-
 <script>
-    
+  
 const http = new XMLHttpRequest()
 http.open("GET", "https://api.covidtracker.ch/count")
 http.send()

@@ -87,27 +87,19 @@ function persistForm() {
         var pageElems = document.getElementsByName(elem.name);
 
         if (pageElems.length > 1) {
-          var isCheckboxList = pageElems[0].getAttribute('type') == 'checkbox';
-
-          if (isCheckboxList) {
-            payload[elem.name] = [];
-          }
-
           // if there are multiple elements with this name, figure out which one is enabled
           for (var j = 0; j < pageElems.length; j++) {
             var option = pageElems[j];
 
             if (option.checked) {
-              if (isCheckboxList) {
-                payload[elem.name].push(option.value)
-              } else {
-                payload[elem.name] = option.value;
-              }
+              payload[elem.name] = option.value;
             }
           }
         } else if (pageElems[0]) {
           // if there's only one element, we can just take its value
-          payload[elem.name] = elem.value;
+          payload[elem.name] = (pageElems[0].getAttribute('type') === 'checkbox')
+            ? elem.checked
+            : elem.value;
         }
       }
     }
@@ -116,15 +108,15 @@ function persistForm() {
     // then determine if they specified it somehow
     var code = REPLACE_SENTINEL;
 
-    if (payload["firstTimeSurvey"] == 0) {
+    if (form.elements["firstTimeSurvey"].value == 0) {
       // it's not their first time...
-      if (payload["participantCodeList"].value != "__none__") {
+      if (form.elements["participantCodeList"].value != "__none__") {
         // ...and they've selected an existing code
-        code = payload["participantCodeList"].value
+        code = form.elements["participantCodeList"].value
       }
-      else if (payload["participantCodeManual"].value.trim() != "") {
+      else if (form.elements["participantCodeManual"].value.trim() != "") {
         // ...and they've possibly entered a new code
-        code = payload["participantCodeManual"].value.trim()
+        code = form.elements["participantCodeManual"].value.trim()
       }
 
       // we also need to update the effective participant code the gets sent to the server if
@@ -186,7 +178,22 @@ function rehydrateForm(fromCode) {
     }
     else if (pageElems[0]) {
       // it's a simple value
-      pageElems[0].setAttribute('value', payload[elem.name] ? payload[elem.name].trim()  : '');
+      if (pageElems[0].getAttribute('type') === 'checkbox' && payload[elem.name]) {
+          pageElems[0].setAttribute('checked', 'true');
+      }
+      else if (pageElems[0].tagName.toUpperCase() === 'SELECT') {
+        // iterate through the options to find a match
+        var opts = pageElems[0].options;
+        for (var idx = 0; idx < opts.length; idx++) {
+          if (opts[idx].value === payload[elem.name]) {
+            opts[idx].selected = true;
+            break;
+          }
+        }
+      }
+      else {
+        pageElems[0].setAttribute('value', payload[elem.name] ? payload[elem.name].trim()  : '');
+      }
     }
   }
 

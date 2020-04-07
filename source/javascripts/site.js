@@ -91,7 +91,7 @@ function setupForm() {
     }
 
     for(var i=0; i < toggles.length; i++) {
-      var event = toggles[i].tagName === 'A' ? 'click' : 'input';
+      var event = toggles[i].tagName.toUpperCase() === 'A' ? 'click' : 'input';
 
       toggles[i].addEventListener(event, function(e) {
         if (e.type === 'click') {

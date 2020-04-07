@@ -11,16 +11,16 @@ fr:
       subtext: >-
         Ne présente aucun symptôme, mais j'ai peut-être été exposé. Ne pas quitter
         la maison.
-    precaution_isolation:
-      label: Auto-isolation de précaution
-      subtext: >-
-        Aucune exposition connue mais limitant tous les contacts. Quitter la
-        maison uniquement pour l'épicerie, etc.
     self_isolation:
       label: Auto-isolement
       subtext: >-
         Ne présente aucun symptôme, mais j'ai peut-être été exposé. Ne pas quitter
         la maison.
+    precaution_isolation:
+      label: Auto-isolation de précaution
+      subtext: >-
+        Aucune exposition connue mais limitant tous les contacts. Quitter la
+        maison uniquement pour l'épicerie, etc.
     social_distancing:
       label: Distanciation sociale
       subtext: 'Pas de poignée de main, garder une distance avec les autres.'
@@ -29,44 +29,44 @@ fr:
   birthyear: Année de naissance
   chronicCondition: Avez-vous une maladie chronique?
   comorbidities:
-    extended:
-      bloodCancer:
-        label: >-
-          Patient atteint d'un cancer du sang (comme une leucémie) à n'importe
-          quel stade de traitement
+    main:
+      highBloodPressure:
+        label: Hypertension artérielle
       heartDisease:
         label: 'Maladie cardiaque à long terme, comme l''insuffisance cardiaque.'
-      hiv:
-        label: VIH/SIDA
-      kidney:
-        label: Problèmes rénaux chroniques
+      diabetes2:
+        label: Diabète (Type 2)
+      diabetes1:
+        label: Diabète (Type 1)
       liver:
         label: Problèmes hépatiques chroniques (c.-à-d. Hépatite)
-      neurological:
-        label: Problèmes neurologiques chroniques
-        subtext: >-
-          (c.-à-d. Maladie de Parkinson, maladie des motoneurones, sclérose en
-          plaques, trouble d'apprentissage ou paralysie cérébrale)
-      organTransplant:
-        label: J'ai eu une greffe d'organe
       respiratory:
         label: Problèmes respiratoires chroniques
         subtext: '(c.-à-d. MPOC, asthme, emphysème, bronchite, fibrose kystique)'
-      spleen:
-        label: Problèmes chroniques de la rate
-        subtext: (c.-à-d. Drépanocytose ou ablation de la rate)
-    main:
-      diabetes1:
-        label: Diabète (Type 1)
-      diabetes2:
-        label: Diabète (Type 2)
-      highBloodPressure:
-        label: Hypertension artérielle
+      kidney:
+        label: Problèmes rénaux chroniques
       immuneSystem:
         label: Système immunitaire affaibli ou sous immunosuppresseurs
         subtext: >-
           (c.-à-d. patient atteint d'un cancer qui subit actuellement une chimio /
           radiothérapie)
+    extended:
+      bloodCancer:
+        label: >-
+          Patient atteint d'un cancer du sang (comme une leucémie) à n'importe
+          quel stade de traitement
+      hiv:
+        label: VIH/SIDA
+      spleen:
+        label: Problèmes chroniques de la rate
+        subtext: (c.-à-d. Drépanocytose ou ablation de la rate)
+      organTransplant:
+        label: J'ai eu une greffe d'organe
+      neurological:
+        label: Problèmes neurologiques chroniques
+        subtext: >-
+          (c.-à-d. Maladie de Parkinson, maladie des motoneurones, sclérose en
+          plaques, trouble d'apprentissage ou paralysie cérébrale)
       obesity:
         label: Obésité
       pregnancy:

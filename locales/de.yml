@@ -9,16 +9,16 @@ de:
     isolation:
       label: Isolation
       subtext: Vermutlich erkrankt. Kein Verlassen der Wohnung.
-    precaution_isolation:
-      label: Vorsorgliche Selbst-Isolation
-      subtext: >-
-        Kein Kontakt zu Erkrankten bekannt. Verlassen der Wohnung nur für
-        Lebensmittel, etc.
     self_isolation:
       label: Selbst-Isolation
       subtext: >-
         Keine Symptome, aber möglicher Kontakt mit einem Erkrankten. Kein
         verlassen der Wohnung.
+    precaution_isolation:
+      label: Vorsorgliche Selbst-Isolation
+      subtext: >-
+        Kein Kontakt zu Erkrankten bekannt. Verlassen der Wohnung nur für
+        Lebensmittel, etc.
     social_distancing:
       label: Soziale Distanzierung
       subtext: Kein Händeschütteln. Abstandhalten zu anderen.
@@ -27,42 +27,42 @@ de:
   birthyear: Geburtsjahr
   chronicCondition: Leiden Sie an einer chronischen Erkrankung?
   comorbidities:
-    extended:
-      bloodCancer:
-        label: Blutkrebspatient (wie Leukämie) in jedem Stadium der Behandlung
+    main:
+      highBloodPressure:
+        label: Bluthochdruck
       heartDisease:
         label: Langfristige Herzerkrankungen wie Herzinsuffizienz.
-      hiv:
-        label: HIV/AIDS
-      kidney:
-        label: Chronische Erkrankung der Nieren
+      diabetes2:
+        label: Diabetes (Typ 2)
+      diabetes1:
+        label: Diabetes (Typ 1)
       liver:
         label: Chronische Erkrankung der Leber (bspw. Hepatitis)
-      neurological:
-        label: Chronische neurologische Erkrankung
-        subtext: >-
-          (bspw. Parkinson-Krankheit, Motoneuron-Krankheit, Multiple Sklerose,
-          oder Zerebralparese)
-      organTransplant:
-        label: Ich hatte eine Organtransplantation
       respiratory:
         label: Chronische Erkrankung der Atemwege
         subtext: '(bspw. COPD, Asthma, Emphysem, Bronchitis, Mukoviszidose)'
-      spleen:
-        label: Chronische Erkrankung der Milz
-        subtext: (bspw. Sichelzellenkrankheit oder entfernte Milz)
-    main:
-      diabetes1:
-        label: Diabetes (Typ 1)
-      diabetes2:
-        label: Diabetes (Typ 2)
-      highBloodPressure:
-        label: Bluthochdruck
+      kidney:
+        label: Chronische Erkrankung der Nieren
       immuneSystem:
         label: Geschwächtes Immunsystem oder auf Immunsuppressiva
         subtext: >-
           (d. h. Krebspatient, der sich derzeit einer Chemo- / Strahlentherapie
           unterzieht)
+    extended:
+      bloodCancer:
+        label: Blutkrebspatient (wie Leukämie) in jedem Stadium der Behandlung
+      hiv:
+        label: HIV/AIDS
+      spleen:
+        label: Chronische Erkrankung der Milz
+        subtext: (bspw. Sichelzellenkrankheit oder entfernte Milz)
+      organTransplant:
+        label: Ich hatte eine Organtransplantation
+      neurological:
+        label: Chronische neurologische Erkrankung
+        subtext: >-
+          (bspw. Parkinson-Krankheit, Motoneuron-Krankheit, Multiple Sklerose,
+          oder Zerebralparese)
       obesity:
         label: Fettleibigkeit
       pregnancy:

@@ -7,14 +7,14 @@ it:
     isolation:
       label: Isolamento
       subtext: Presunto malato. Non esco di casa.
+    self_isolation:
+      label: Autoisolamento
+      subtext: ''
     precaution_isolation:
       label: Autoisolamento precauzionale
       subtext: >-
         Nessuna esposizione nota ma limitazione di tutti i contatti. Partenza da
         casa solo per generi alimentari, ecc.
-    self_isolation:
-      label: Autoisolamento
-      subtext: ''
     social_distancing:
       label: Distanziamento sociale
       subtext: 'Nessuna stretta di mano, allontanamento dagli altri'
@@ -23,44 +23,44 @@ it:
   birthyear: Anno di nascita
   chronicCondition: Hai una condizione cronica?
   comorbidities:
-    extended:
-      bloodCancer:
-        label: >-
-          Paziente con tumore del sangue (come la leucemia) in qualsiasi fase del
-          trattamento
+    main:
+      highBloodPressure:
+        label: Alta pressione sanguigna
       heartDisease:
         label: 'Malattie cardiache a lungo termine, come l''insufficienza cardiaca.'
-      hiv:
-        label: HIV/AIDS
-      kidney:
-        label: Problemi renali cronici
+      diabetes2:
+        label: Diabete (Tipo 2)
+      diabetes1:
+        label: Diabete (Tipo 1)
       liver:
         label: 'Problemi al fegato cronici (ad es., epatite)'
-      neurological:
-        label: Problemi neurologici cronici
-        subtext: >-
-          (ad es., morbo di Parkinson, malattia dei motoneuroni, sclerosi
-          multipla, o paralisi cerebrale)
-      organTransplant:
-        label: Ho avuto un trapianto di organi
       respiratory:
         label: Problemi respiratori cronici
         subtext: '(ad es., BPCO, asma, enfisema, bronchite, fibrosi cistica)'
-      spleen:
-        label: Problemi cronici della milza
-        subtext: '(cioè, malattia da anemia falciforme o milza rimossa)'
-    main:
-      diabetes1:
-        label: Diabete (Tipo 1)
-      diabetes2:
-        label: Diabete (Tipo 2)
-      highBloodPressure:
-        label: Alta pressione sanguigna
+      kidney:
+        label: Problemi renali cronici
       immuneSystem:
         label: Sistema immunitario indebolito o immunosoppressori
         subtext: >-
           (vale a dire, un malato di cancro attualmente sottoposto a chemioterapia
           / radioterapia)
+    extended:
+      bloodCancer:
+        label: >-
+          Paziente con tumore del sangue (come la leucemia) in qualsiasi fase del
+          trattamento
+      hiv:
+        label: HIV/AIDS
+      spleen:
+        label: Problemi cronici della milza
+        subtext: '(cioè, malattia da anemia falciforme o milza rimossa)'
+      organTransplant:
+        label: Ho avuto un trapianto di organi
+      neurological:
+        label: Problemi neurologici cronici
+        subtext: >-
+          (ad es., morbo di Parkinson, malattia dei motoneuroni, sclerosi
+          multipla, o paralisi cerebrale)
       obesity:
         label: Obesità
       pregnancy:

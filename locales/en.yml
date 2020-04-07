@@ -7,14 +7,14 @@ en:
     isolation:
       label: Isolation
       subtext: Presumed sick. Not leaving home.
+    self_isolation:
+      label: Self-Isolation
+      subtext: 'Do not have symptoms, but I may have been exposed. Not leaving home.'
     precaution_isolation:
       label: Precautionary Self-Isolation
       subtext: >-
         No known exposure but limiting all contacts. Only leaving for essential
         activities. For instance, shopping or pharmacy
-    self_isolation:
-      label: Self-Isolation
-      subtext: 'Do not have symptoms, but I may have been exposed. Not leaving home.'
     social_distancing:
       label: Social Distancing
       subtext: 'No handshakes, keeping a distance from others.'
@@ -23,40 +23,40 @@ en:
   birthyear: Year of Birth
   chronicCondition: Do you have a chronic condition?
   comorbidities:
+    main:
+      highBloodPressure:
+        label: High Blood Pressure
+      heartDisease:
+        label: 'Long-term heart disease, like heart failure.'
+      diabetes2:
+        label: Diabetes (Type 2)
+      diabetes1:
+        label: Diabetes (Type 1)
+      liver:
+        label: 'Chronic liver disease (i.e., hepatitis)'
+      respiratory:
+        label: Chronic respiratory disease
+        subtext: '(i.e., COPD, asthma, emphysema, bronchitis, cystic fibrosis.)'
+      kidney:
+        label: Chronic kidney disease
+      immuneSystem:
+        label: Weakened immune system or on immunosuppressants
+        subtext: '(i.e., cancer patient currently undergoing chemo/radiotherapy)'
     extended:
       bloodCancer:
         label: Blood cancer patient (such as leukemia) at any stage of treatment
-      heartDisease:
-        label: 'Long-term heart disease, like heart failure.'
       hiv:
         label: HIV/AIDS
-      kidney:
-        label: Chronic kidney disease
-      liver:
-        label: 'Chronic liver disease (i.e., hepatitis)'
+      spleen:
+        label: Chronic spleen disease
+        subtext: '(i.e., sickle cell disease or spleen removed)'
+      organTransplant:
+        label: I've had an organ transplant
       neurological:
         label: Chronic neurological disease
         subtext: >-
           (i.e., Parkinson’s disease, motor neuron disease, multiple sclerosis or
           cerebral palsy)
-      organTransplant:
-        label: I've had an organ transplant
-      respiratory:
-        label: Chronic respiratory disease
-        subtext: '(i.e., COPD, asthma, emphysema, bronchitis, cystic fibrosis.)'
-      spleen:
-        label: Chronic spleen disease
-        subtext: '(i.e., sickle cell disease or spleen removed)'
-    main:
-      diabetes1:
-        label: Diabetes (Type 1)
-      diabetes2:
-        label: Diabetes (Type 2)
-      highBloodPressure:
-        label: High Blood Pressure
-      immuneSystem:
-        label: Weakened immune system or on immunosuppressants
-        subtext: '(i.e., cancer patient currently undergoing chemo/radiotherapy)'
       obesity:
         label: Obesity
       pregnancy:

@@ -1,148 +1,169 @@
 ---
 de:
-  url: "https://www.covidtracker.ch"
-  title: "COVID-19 Tracking Schweiz"
-  description: "Nur gemeinsam können wir Leben retten! Trage mit Hilfe des Covid-19-Trackers deinen Teil zum Schutz von Risikogruppen bei."
-  introduction: "<p>Das Coronavirus breitet sich in Europa rasant aus.</p>
-  <p>Um die Krankheit einzudämmen, müssen Verdachtsfälle möglichst früh identifiziert werden. Dazu dient diese Kampagne.</p>
-  <p><b>Egal ob Sie krank sind oder gesund, infiziert oder nicht: Ihre Daten können helfen, Leben zu retten.</b> Wenn Sie das untenstehende Formular ausfüllen, tragen Sie dazu bei, dass wir diese Krise gemeinsam meistern können.  Im Idealfall wiederholen Sie Ihre Teilnahme im Wochentakt (<a href=\"/images/covidtracker.ics\">Kalendererinnerung einrichten</a>).</p>
-  <p>Wichtig: Wir verwenden die erfassten Daten nicht, um Rückschlüsse auf einzelne Personen zu ziehen.</p>"
-  toform: "Zum Formular"
-  firstTimeForm: "Füllen Sie dieses Formular zum ersten Mal aus?"
-  participantCode: "(Optional) Ihr Teilnahmecode"
-  manualParticipantCode: "(Optional) Geben Sie Ihren Teilnahmecode ein"
-  unlistedCode: "Mein Code ist nicht aufgeführt"
-  sex: "Geschlecht"
-  male: "Männlich"
-  female: "Weiblich"
-  noinformation: "Keine Angabe"
-  age: "Alter"
-  birthyear: "Geburtsjahr"
-  zip: "Postleitzahl"
-  other: "Andere"
-  householdSize: "Size of your household"
-  phoneDigits: "Letzte vier Ziffern Ihrer Telefonnummer"
-  feelsUnhealthy: "Do you have any unusual symptoms?"
-  previouslyUnhealthy: "Since February 1st, did you have any symptoms from which you have recovered?"
-  hasBeenTested: "Sind Sie auf Covid-19 getestet worden?"
-  whereTested: "Falls ja, wo wurden Sie getestet?"
-  whenTested: "Falls Ja, wann wurden Sie getestet?"
-  worksInHealth: "Arbeiten Sie im Gesundheitssystem mit PatientInnen?"
-  wasAbroad: "Waren Sie in den letzten 14 Tagen im Ausland?"
-  wasInContactWithCase: "Hatten Sie Kontakt zu einem positiven Fall von Covid-19?"
-  dateContacted: "Falls ja, wann hatten Sie den Kontakt?"
-  chronicCondition: "Leiden Sie an einer chronischen Erkrankung?"
-  yesAnswer: "Ja"
-  probablyAnswer: "Probably"
-  noAnswer: "Nein"
-  notKnownAnswer: "Not that I know of"
-  maybe: "Vermutlich"
-  hospital: "Krankenhaus"
-  privatePractice: "Privatpraxis"
-  ems: "Alters- und Pflegeheim "
-  italy: "Italien"
-  spain: "Spanien"
-  germany: "Deutschland"
-  france: "Frankreich"
-  followingSymptoms: "Leiden Sie derzeit an folgenden Symptomen:"
-  followingPreviousSymptoms: "Did you suffer from any of the following symptoms:"
-  sendForm: "Formular absenden"
-  sinceHowManyDays: "Seit wievielen Tagen?"
-  partners: "Partner"
-  implementation: "Umsetzung"
-  imprint: "Impressum"
-  seemore: "Mehr erfahren"
-  shareon: "Teilen auf"
-  shareby: "Teilen via"
-  press: "Presse"
-  generalinfo: "Allgemeine Informationen"
-  technology: "Technik"
-  supportedBy: "In Zusammenarbeit mit"
-  pressRelease: "Pressemitteilung Kanton Bern"
-  pressReleaseLink: "https://www.be.ch/portal/de/index/mediencenter/medienmitteilungen.meldungNeu.html/portal/de/meldungen/mm/2020/03/20200326_1115_gruppe_von_jungenforschernstartetlandesweitgeografischedatensamm"
-  phoneInfo: "Wird benötigt, um Missbräuche zu verhindern sowie Daten von Personen, die den Fragebogen mehrmals ausfüllen, einander zuzuordnen."
-  testResult: "Falls ja, wie war Ihr Testresultat?"
-  nonTestReason: "Did you seek medical advice?"
-  positive: "Positiv"
-  negative: "Negativ"
-  dataProtection: "Datenschutz"
-  saveResponses: "Erinnere dich an meine Antworten für das nächste Mal."
-  cookieWarning: "Wenn Sie 'Ja' auswählen, stimmen Sie der Verwendung von Cookies zu. Wenn Sie Cookies verwenden, können andere Benutzer, die Zugriff auf diesen Computer haben, möglicherweise die Antworten auf die Umfrage abrufen."
-  consentToStudy: "Ich stimme den <a href=\"/consent.html\" target=\"_blank\"> Teilnahmebedingungen </a> für diese Studie zu."
-  aboutTheStudy: "Über die Studie"
-  consentInformation: "Einverständniserklärung"
-
-  symptoms:
-    fever: "Fieber über 38 Grad"
-    coughing: "Husten"
-    dyspnea: "Atembeschwerden"
-    tiredness: "Grosse Müdigkeit"
-    throat: "Halsschmerzen"
-    nausea: "Nausea"
-    headache: "Headache"
-    musclePain: "Muscle Pain"
-    runnyNose: "Runny Nose"
-    diarrhea: "Diarrhea"
-    lostTaste: "Loss of smell or taste"
-
-  comorbiditiesPrompt: "Comorbidities (Check all that apply)"
-  showMoreComorbidities: "show more..."
-  hideMoreComorbidities: "hide more"
-  comorbidities:
-    main:
-      highBloodPressure:
-        label: "High Blood Pressure"
-      diabetes1:
-        label: "Diabetes (Type 1)"
-      diabetes2:
-        label: "Diabetes (Type 2)"
-      obesity:
-        label: "Obesity"
-      pregnancy:
-        label: "Currently pregnant"
-      immuneSystem:
-        label: "Weakened immune system or on immunosuppressants"
-        subtext: "(i.e., cancer patient currently undergoing chemo/radiotherapy)"
-    extended:
-      bloodCancer:
-        label: "Blood cancer patient (such as leukemia) at any stage of treatment"
-      hiv:
-        label: "HIV/AIDS"
-      spleen:
-        label: "Chronic spleen disease"
-        subtext: "(i.e., sickle cell disease or spleen removed)"
-      kidney:
-        label: "Chronic kidney disease"
-      heartDisease:
-        label: "Long-term heart disease, like heart failure."
-      liver:
-        label: "Chronic liver disease (i.e., hepatitis)"
-      respiratory:
-        label: "Chronic respiratory disease"
-        subtext: "(i.e., COPD, asthma, emphysema, bronchitis, cystic fibrosis.)"
-      neurological:
-        label: "Chronic neurological disease"
-        subtext: "(i.e., Parkinson’s disease, motor neuron disease, multiple sclerosis or cerebral palsy)"
-      organTransplant:
-        label: "I've had an organ transplant"
-
-  smokeOrVape: "Do you smoke or vape?"
-
-  leavingHomeForWork: "Are you currently leaving your home for work?"
-
-  behaviorPrompt: "Please select the option that most resembles your current situation:"
+  aboutTheStudy: Über die Studie
+  age: Alter
+  behaviorPrompt: >-
+    Bitten wählen Sie die Option aus, welche am besten Ihre derzeitige Situation
+    beschreibt:
   behaviors:
     isolation:
-      label: "Isolation"
-      subtext: "Presumed sick. Not leaving home."
-    self_isolation:
-      label: "Self-Isolation"
-      subtext: "Do not have symptoms, but I may have been exposed. Not Leaving home."
+      label: Isolation
+      subtext: Vermutlich erkrankt. Kein Verlassen der Wohnung.
     precaution_isolation:
-      label: "Precautionary Self-Isolation"
-      subtext: "No known exposure but limiting all contacts. Only leaving for essential activities. For instance, shopping or pharmacy"
+      label: Vorsorgliche Selbst-Isolation
+      subtext: >-
+        Kein Kontakt zu Erkrankten bekannt. Verlassen der Wohnung nur für
+        Lebensmittel, etc.
+    self_isolation:
+      label: Selbst-Isolation
+      subtext: >-
+        Keine Symptome, aber möglicher Kontakt mit einem Erkrankten. Kein
+        verlassen der Wohnung.
     social_distancing:
-      label: "Social Distancing"
-      subtext: "No handshakes, keeping a distance from others"
+      label: Soziale Distanzierung
+      subtext: Kein Händeschütteln. Abstandhalten zu anderen.
     typical_activity:
-      label: "Maintaining Typical Activities"
+      label: Normales Weiterführen aller Aktivitäten
+  birthyear: Geburtsjahr
+  chronicCondition: Leiden Sie an einer chronischen Erkrankung?
+  comorbidities:
+    extended:
+      bloodCancer:
+        label: Blutkrebspatient (wie Leukämie) in jedem Stadium der Behandlung
+      heartDisease:
+        label: Langfristige Herzerkrankungen wie Herzinsuffizienz.
+      hiv:
+        label: HIV/AIDS
+      kidney:
+        label: Chronische Erkrankung der Nieren
+      liver:
+        label: Chronische Erkrankung der Leber (bspw. Hepatitis)
+      neurological:
+        label: Chronische neurologische Erkrankung
+        subtext: >-
+          (bspw. Parkinson-Krankheit, Motoneuron-Krankheit, Multiple Sklerose,
+          oder Zerebralparese)
+      organTransplant:
+        label: Ich hatte eine Organtransplantation
+      respiratory:
+        label: Chronische Erkrankung der Atemwege
+        subtext: '(bspw. COPD, Asthma, Emphysem, Bronchitis, Mukoviszidose)'
+      spleen:
+        label: Chronische Erkrankung der Milz
+        subtext: (bspw. Sichelzellenkrankheit oder entfernte Milz)
+    main:
+      diabetes1:
+        label: Diabetes (Typ 1)
+      diabetes2:
+        label: Diabetes (Typ 2)
+      highBloodPressure:
+        label: Bluthochdruck
+      immuneSystem:
+        label: Geschwächtes Immunsystem oder auf Immunsuppressiva
+        subtext: >-
+          (d. h. Krebspatient, der sich derzeit einer Chemo- / Strahlentherapie
+          unterzieht)
+      obesity:
+        label: Fettleibigkeit
+      pregnancy:
+        label: Bestehende Schwangerschaft
+  comorbiditiesPrompt: Gesundheitszustand / weitere Kriterien (Zutreffende auswählen)
+  consentInformation: Einverständniserklärung
+  consentToStudy: >-
+    Ich stimme den <a href="/consent.html" target="_blank"> Teilnahmebedingungen
+    </a> für diese Studie zu.
+  cookieWarning: >-
+    Wenn Sie 'Ja' auswählen, stimmen Sie der Verwendung von Cookies zu. Wenn Sie
+    Cookies verwenden, können andere Benutzer, die Zugriff auf diesen Computer
+    haben, möglicherweise die Antworten auf die Umfrage abrufen.
+  dataProtection: Datenschutz
+  dateContacted: 'Falls ja, wann hatten Sie den Kontakt?'
+  description: >-
+    Nur gemeinsam können wir Leben retten! Trage mit Hilfe des Covid-19-Trackers
+    deinen Teil zum Schutz von Risikogruppen bei.
+  ems: 'Alters- und Pflegeheim '
+  feelsUnhealthy: Haben Sie ungewöhnliche Symptome?
+  female: Weiblich
+  firstTimeForm: Füllen Sie dieses Formular zum ersten Mal aus?
+  followingPreviousSymptoms: 'Haben Sie an einem der folgenden Symptome gelitten:'
+  followingSymptoms: 'Leiden Sie derzeit an folgenden Symptomen:'
+  france: Frankreich
+  generalinfo: Allgemeine Informationen
+  germany: Deutschland
+  hasBeenTested: Sind Sie auf Covid-19 getestet worden?
+  hideMoreComorbidities: Weniger anzeigen
+  hospital: Krankenhaus
+  householdSize: Grösse des Haushalts in dem Sie leben (Anzahl Mitglieder)
+  implementation: Umsetzung
+  imprint: Impressum
+  introduction: >-
+    <p>Das Coronavirus breitet sich in Europa rasant aus.</p> <p>Um die Krankheit
+    einzudämmen, müssen Verdachtsfälle möglichst früh identifiziert werden. Dazu
+    dient diese Kampagne.</p> <p><b>Egal ob Sie krank sind oder gesund, infiziert
+    oder nicht: Ihre Daten können helfen, Leben zu retten.</b> Wenn Sie das
+    untenstehende Formular ausfüllen, tragen Sie dazu bei, dass wir diese Krise
+    gemeinsam meistern können.  Im Idealfall wiederholen Sie Ihre Teilnahme im
+    Wochentakt (<a href="/images/covidtracker.ics">Kalendererinnerung
+    einrichten</a>).</p> <p>Wichtig: Wir verwenden die erfassten Daten nicht, um
+    Rückschlüsse auf einzelne Personen zu ziehen.</p>
+  italy: Italien
+  leavingHomeForWork: Verlassen Sie derzeit Ihr Zuhause um zur Arbeit zu gehen?
+  male: Männlich
+  manualParticipantCode: (Optional) Geben Sie Ihren Teilnahmecode ein
+  maybe: Vermutlich
+  negative: Negativ
+  noAnswer: Nein
+  noinformation: Keine Angabe
+  nonTestReason: Haben Sie ärztlichen Rat eingeholt?
+  notKnownAnswer: 'Nicht, dass ich davon Wüste'
+  other: Andere
+  participantCode: (Optional) Ihr Teilnahmecode
+  partners: Partner
+  phoneDigits: Letzte vier Ziffern Ihrer Telefonnummer
+  phoneInfo: >-
+    Wird benötigt, um Missbräuche zu verhindern sowie Daten von Personen, die den
+    Fragebogen mehrmals ausfüllen, einander zuzuordnen.
+  positive: Positiv
+  press: Presse
+  pressRelease: Pressemitteilung Kanton Bern
+  pressReleaseLink: >-
+    https://www.be.ch/portal/de/index/mediencenter/medienmitteilungen.meldungNeu.html/portal/de/meldungen/mm/2020/03/20200326_1115_gruppe_von_jungenforschernstartetlandesweitgeografischedatensamm
+  previouslyUnhealthy: 'Hatten Sie seit dem 1. Februar Symptome, von denen Sie sich erholt haben?'
+  privatePractice: Privatpraxis
+  probablyAnswer: Wahrscheinlich
+  saveResponses: Erinnere dich an meine Antworten für das nächste Mal.
+  seemore: Mehr erfahren
+  sendForm: Formular absenden
+  sex: Geschlecht (bei der Geburt zugewiesen)
+  shareby: Teilen via
+  shareon: Teilen auf
+  showMoreComorbidities: Mehr anzeigen...
+  sinceHowManyDays: Seit wievielen Tagen?
+  smokeOrVape: Rauchen oder Vapen Sie?
+  spain: Spanien
+  supportedBy: In Zusammenarbeit mit
+  symptoms:
+    coughing: Husten
+    diarrhea: Diarrhea
+    dyspnea: Atembeschwerden
+    fever: Fieber über 38 Grad
+    headache: Kopfschmerzen
+    lostTaste: Verlust des Geruchs-/Geschmackssinns
+    musclePain: Gliederschmerzen
+    nausea: Übelkeit
+    runnyNose: Schnupfen
+    throat: Halsschmerzen
+    tiredness: Grosse Müdigkeit
+  technology: Technik
+  testResult: 'Falls ja, wie war Ihr Testresultat?'
+  title: COVID-19 Tracking Schweiz
+  toform: Zum Formular
+  unlistedCode: Mein Code ist nicht aufgeführt
+  url: 'https://www.covidtracker.ch'
+  wasAbroad: Waren Sie in den letzten 14 Tagen im Ausland?
+  wasInContactWithCase: Hatten Sie Kontakt zu einem positiven Fall von Covid-19?
+  whenTested: 'Falls Ja, wann wurden Sie getestet?'
+  whereTested: 'Falls ja, wo wurden Sie getestet?'
+  worksInHealth: Arbeiten Sie im Gesundheitssystem mit PatientInnen?
+  yesAnswer: Ja
+  zip: Postleitzahl

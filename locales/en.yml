@@ -1,146 +1,161 @@
 ---
 en:
-  url: "https://www.covidtracker.ch"
-  title: "COVID-19 Tracking Switzerland"
-  description: "Only together can we save lives! Do your part to protect risk groups with the Covid-19 tracker."
-  introduction: "<p>The coronavirus COVID-19 is spreading rapidly throughout Europe.</p>
-  <p>In order to contain the disease, suspected cases must be identified as early as possible. This is the purpose of this campaign.</p>
-  <p><b>Whether you are sick or healthy, infected or not, your data can help save lives.</b> By filling out the form below, you are helping us to overcome this crisis together. Ideally, repeat your participation weekly (<a href=\"/images/covidtracker.ics\">set up calendar event</a>).</p>
-  <p>Important: The data is collected anonymously and does not allow identification of individuals.</p>"
-  toform: "Submit your feedback"
-  firstTimeForm: "Is this your first time filling out this form?"
-  participantCode: "(Optional) Your participation code from before"
-  manualParticipantCode: "(Optional) Enter your participation code"
-  unlistedCode: "My code isn't listed"
-  sex: "Sex"
-  male: "Male"
-  female: "Female"
-  noinformation: "Other"
-  age: "Age"
-  birthyear: "Year of Birth"
-  zip: "Postal code"
-  other: "Other"
-  householdSize: "Size of your household"
-  phoneDigits: "Last four digits of your phone number"
-  feelsUnhealthy: "Do you have any unusual symptoms?"
-  previouslyUnhealthy: "Since February 1st, did you have any symptoms from which you have recovered?"
-  hasBeenTested: "Have you been tested for COVID-19?"
-  whereTested: "Where were you tested?"
-  whenTested: "When were you tested?"
-  worksInHealth: "Do you work with patients in the healthcare system?"
-  wasAbroad: "Have you been abroad in the last 14 days?"
-  wasInContactWithCase: "Have you been in contact with a positive case of COVID-19?"
-  dateContacted: "When?"
-  yesAnswer: "Yes"
-  probablyAnswer: "Probably"
-  noAnswer: "No"
-  notKnownAnswer: "Not that I know of"
-  maybe: "I think so"
-  hospital: "Hospital"
-  privatePractice: "Private Practice"
-  ems: "Retirement home"
-  italy: "Italy"
-  spain: "Spain"
-  germany: "Germany"
-  france: "France"
-  followingSymptoms: "Do you suffer from any of the following symptoms:"
-  followingPreviousSymptoms: "Did you suffer from any of the following symptoms:"
-  sendForm: "Submit your feedback"
-  sinceHowManyDays: "Since when?"
-  partners: "Partners"
-  implementation: "Realization"
-  imprint: "Legal Notice"
-  seemore: "Learn more"
-  shareon: "Share on"
-  shareby: "Share on"
-  press: "Press"
-  generalinfo: "General Information"
-  technology: "Tech"
-  supportedBy: "In cooperation with"
-  pressRelease: "Press release Canton of Bern"
-  phoneInfo: "Required to prevent misuse and to correlate data from people who fill out the questionnaire several times."
-  testResult: "What was the result?"
-  nonTestReason: "Did you seek medical advice?"
-  positive: "Positive"
-  negative: "Negative"
-  dataProtection: "Data protection"
-  saveResponses: "Remember my responses for next time"
-  cookieWarning: "If you select 'yes', you are consenting to using cookies. When using cookies, other users who have access to this computer may be able to retrieve the answers to the survey."
-  consentToStudy: "I consent to the <a href=\"/en/consent.html\" target=\"_blank\">terms of participation</a> in this study"
-  aboutTheStudy: "About the study"
-  consentInformation: "Terms of consent"
-
-  symptoms:
-    fever: "Fever above 38 Degrees"
-    coughing: "Coughing"
-    dyspnea: "Shortness of breath"
-    tiredness: "Fatigue"
-    throat: "Sore throat"
-    nausea: "Nausea"
-    headache: "Headache"
-    musclePain: "Muscle Pain"
-    runnyNose: "Runny Nose"
-    diarrhea: "Diarrhea"
-    lostTaste: "Loss of smell or taste"
-
-  comorbiditiesPrompt: "Comorbidities (Check all that apply)"
-  showMoreComorbidities: "show more..."
-  hideMoreComorbidities: "hide more"
-  comorbidities:
-    main:
-      highBloodPressure:
-        label: "High Blood Pressure"
-      diabetes1:
-        label: "Diabetes (Type 1)"
-      diabetes2:
-        label: "Diabetes (Type 2)"
-      obesity:
-        label: "Obesity"
-      pregnancy:
-        label: "Currently pregnant"
-      immuneSystem:
-        label: "Weakened immune system or on immunosuppressants"
-        subtext: "(i.e., cancer patient currently undergoing chemo/radiotherapy)"
-    extended:
-      bloodCancer:
-        label: "Blood cancer patient (such as leukemia) at any stage of treatment"
-      hiv:
-        label: "HIV/AIDS"
-      spleen:
-        label: "Chronic spleen disease"
-        subtext: "(i.e., sickle cell disease or spleen removed)"
-      kidney:
-        label: "Chronic kidney disease"
-      heartDisease:
-        label: "Long-term heart disease, like heart failure."
-      liver:
-        label: "Chronic liver disease (i.e., hepatitis)"
-      respiratory:
-        label: "Chronic respiratory disease"
-        subtext: "(i.e., COPD, asthma, emphysema, bronchitis, cystic fibrosis.)"
-      neurological:
-        label: "Chronic neurological disease"
-        subtext: "(i.e., Parkinson’s disease, motor neuron disease, multiple sclerosis or cerebral palsy)"
-      organTransplant:
-        label: "I've had an organ transplant"
-
-  smokeOrVape: "Do you smoke or vape?"
-
-  leavingHomeForWork: "Are you currently leaving your home for work?"
-
-  behaviorPrompt: "Please select the option that most resembles your current situation:"
+  aboutTheStudy: About the study
+  age: Age
+  behaviorPrompt: 'Please select the option that most resembles your current situation:'
   behaviors:
     isolation:
-      label: "Isolation"
-      subtext: "Presumed sick. Not leaving home."
-    self_isolation:
-      label: "Self-Isolation"
-      subtext: "Do not have symptoms, but I may have been exposed. Not Leaving home."
+      label: Isolation
+      subtext: Presumed sick. Not leaving home.
     precaution_isolation:
-      label: "Precautionary Self-Isolation"
-      subtext: "No known exposure but limiting all contacts. Only leaving for essential activities. For instance, shopping or pharmacy"
+      label: Precautionary Self-Isolation
+      subtext: >-
+        No known exposure but limiting all contacts. Only leaving for essential
+        activities. For instance, shopping or pharmacy
+    self_isolation:
+      label: Self-Isolation
+      subtext: 'Do not have symptoms, but I may have been exposed. Not leaving home.'
     social_distancing:
-      label: "Social Distancing"
-      subtext: "No handshakes, keeping a distance from others"
+      label: Social Distancing
+      subtext: 'No handshakes, keeping a distance from others.'
     typical_activity:
-      label: "Maintaining Typical Activities"
+      label: Maintaining typical activities
+  birthyear: Year of Birth
+  chronicCondition: Do you have a chronic condition?
+  comorbidities:
+    extended:
+      bloodCancer:
+        label: Blood cancer patient (such as leukemia) at any stage of treatment
+      heartDisease:
+        label: 'Long-term heart disease, like heart failure.'
+      hiv:
+        label: HIV/AIDS
+      kidney:
+        label: Chronic kidney disease
+      liver:
+        label: 'Chronic liver disease (i.e., hepatitis)'
+      neurological:
+        label: Chronic neurological disease
+        subtext: >-
+          (i.e., Parkinson’s disease, motor neuron disease, multiple sclerosis or
+          cerebral palsy)
+      organTransplant:
+        label: I've had an organ transplant
+      respiratory:
+        label: Chronic respiratory disease
+        subtext: '(i.e., COPD, asthma, emphysema, bronchitis, cystic fibrosis.)'
+      spleen:
+        label: Chronic spleen disease
+        subtext: '(i.e., sickle cell disease or spleen removed)'
+    main:
+      diabetes1:
+        label: Diabetes (Type 1)
+      diabetes2:
+        label: Diabetes (Type 2)
+      highBloodPressure:
+        label: High Blood Pressure
+      immuneSystem:
+        label: Weakened immune system or on immunosuppressants
+        subtext: '(i.e., cancer patient currently undergoing chemo/radiotherapy)'
+      obesity:
+        label: Obesity
+      pregnancy:
+        label: Currently pregnant
+  comorbiditiesPrompt: Comorbidities (Check all that apply)
+  consentInformation: Terms of consent
+  consentToStudy: >-
+    I consent to the <a href="/en/consent.html" target="_blank">terms of
+    participation</a> in this study
+  cookieWarning: >-
+    If you select 'yes', you are consenting to using cookies. When using cookies,
+    other users who have access to this computer may be able to retrieve the
+    answers to the survey.
+  dataProtection: Data protection
+  dateContacted: When?
+  description: >-
+    Only together can we save lives! Do your part to protect risk groups with the
+    Covid-19 tracker.
+  ems: Retirement home
+  feelsUnhealthy: Do you have any unusual symptoms?
+  female: Female
+  firstTimeForm: Is this your first time filling out this form?
+  followingPreviousSymptoms: 'Did you suffer from any of the following symptoms:'
+  followingSymptoms: 'Do you suffer from any of the following symptoms:'
+  france: France
+  generalinfo: General Information
+  germany: Germany
+  hasBeenTested: Have you been tested for COVID-19?
+  hideMoreComorbidities: Hide more
+  hospital: Hospital
+  householdSize: Size of your household
+  implementation: Realization
+  imprint: Legal Notice
+  introduction: >-
+    <p>The coronavirus COVID-19 is spreading rapidly throughout Europe.</p> <p>In
+    order to contain the disease, suspected cases must be identified as early as
+    possible. This is the purpose of this campaign.</p> <p><b>Whether you are sick
+    or healthy, infected or not, your data can help save lives.</b> By filling out
+    the form below, you are helping us to overcome this crisis together. Ideally,
+    repeat your participation weekly (<a href="/images/covidtracker.ics">set up
+    calendar event</a>).</p> <p>Important: The data is collected anonymously and
+    does not allow identification of individuals.</p>
+  italy: Italy
+  leavingHomeForWork: Are you currently leaving your home for work?
+  male: Male
+  manualParticipantCode: (Optional) Enter your participation code
+  maybe: I think so
+  negative: Negative
+  noAnswer: 'No'
+  noinformation: Other
+  nonTestReason: Did you seek medical advice?
+  notKnownAnswer: Not that I know of
+  other: Other
+  participantCode: (Optional) Your participation code from before
+  partners: Partners
+  phoneDigits: Last four digits of your phone number
+  phoneInfo: >-
+    Required to prevent misuse and to correlate data from people who fill out the
+    questionnaire several times.
+  positive: Positive
+  press: Press
+  pressRelease: Press release Canton of Bern
+  pressReleaseLink: ''
+  previouslyUnhealthy: 'Since February 1st, did you have any symptoms from which you have recovered?'
+  privatePractice: Private Practice
+  probablyAnswer: Probably
+  saveResponses: Remember my responses for next time
+  seemore: Learn more
+  sendForm: Submit your feedback
+  sex: Sex (at birth)
+  shareby: Share on
+  shareon: Share on
+  showMoreComorbidities: Show more...
+  sinceHowManyDays: Since when?
+  smokeOrVape: Do you smoke or vape?
+  spain: Spain
+  supportedBy: In cooperation with
+  symptoms:
+    coughing: Coughing
+    diarrhea: Diarrhea
+    dyspnea: Shortness of breath
+    fever: Fever above 38 Degrees
+    headache: Headache
+    lostTaste: Loss of smell or taste
+    musclePain: Muscle Pain
+    nausea: Nausea
+    runnyNose: Runny Nose
+    throat: Sore throat
+    tiredness: Fatigue
+  technology: Tech
+  testResult: What was the result?
+  title: COVID-19 Tracking Switzerland
+  toform: Submit your feedback
+  unlistedCode: My code isn't listed
+  url: 'https://www.covidtracker.ch/en'
+  wasAbroad: Have you been abroad in the last 14 days?
+  wasInContactWithCase: Have you been in contact with a positive case of COVID-19?
+  whenTested: When were you tested?
+  whereTested: Where were you tested?
+  worksInHealth: Do you work with patients in the healthcare system?
+  yesAnswer: 'Yes'
+  zip: Postal code

@@ -115,6 +115,16 @@ function setupForm() {
   }
 }
 
+function updateTotalSubs(targetID) {
+  var http = new XMLHttpRequest();
+  http.open("GET", "https://api.covidtracker.ch/count");
+  http.send();
+  http.onload = function() {
+    var s = http.responseText;
+    s = s.slice(0, 3) + "'" + s.slice(3);
+    document.getElementById(targetID).innerHTML = s;
+  }
+}
 
 // ---------------------------------------------------------------------------------------------
 // --- participant code handling

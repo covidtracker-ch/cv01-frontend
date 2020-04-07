@@ -24,14 +24,5 @@
 
 
 <script>
-    
-const http = new XMLHttpRequest()
-http.open("GET", "https://api.covidtracker.ch/count")
-http.send()
-http.onload = () => { 
-  let s = http.responseText;
-  s = s.slice(0, 3) + "'" + s.slice(3);
-  document.getElementById('totalsubs').innerHTML = s;
-}
-
+updateTotalSubs('totalsubs');
 </script>

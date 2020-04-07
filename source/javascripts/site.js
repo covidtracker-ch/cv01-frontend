@@ -126,6 +126,40 @@ function updateTotalSubs(targetID) {
   }
 }
 
+// cat API data + methods
+var haired_breeds = [
+  "abys", "aege", "abob", "acur", "asho", "awir", "amau", "amis",
+  "bali", "beng", "birm", "bomb", "bslo", "bsho", "bure", "buri",
+  "cspa", "ctif", "char", "chau", "chee", "csho", "crex", "cymr",
+  "cypr", "drex", "lihu", "emau", "ebur", "esho", "hbro", "hima",
+  "jbob", "java", "khao", "kora", "kuri", "lape", "mcoo", "mala",
+  "manx", "munc", "nebe", "norw", "ocic", "orie", "pers", "pixi",
+  "raga", "ragd", "rblu", "sava", "sfol", "srex", "siam", "sibe",
+  "sing", "snow", "soma", "tonk", "toyg", "tang", "tvan", "ycho"
+];
+
+function randomChoice(samples) {
+  var idx = Math.floor(Math.random() * samples.length);
+  return samples[idx];
+}
+
+function retrieveCatImage(targetID) {
+  var cat_breed = randomChoice(haired_breeds);
+  var http = new XMLHttpRequest();
+  http.open("GET", "https://api.thecatapi.com/v1/images/search?size=thumb&breed_id=" + cat_breed);
+  http.setRequestHeader('x-api-key', '9f8170a1-4a5a-4568-b120-795cd63809d5');
+  http.send();
+  http.onload = function() {
+    var data = JSON.parse(http.responseText);
+    document.getElementById(targetID).innerHTML = "<img " +
+        "alt=\"" + cat_breed + "_cat_img\" " +
+        "src=\"" + data[0].url +"\" " +
+        // "width=\"" + data[0].width + "\" " +
+        // "height=\"" + data[0].width + "\"" +
+        " />"
+  }
+}
+
 // ---------------------------------------------------------------------------------------------
 // --- participant code handling
 // ---------------------------------------------------------------------------------------------
@@ -229,7 +263,7 @@ function bindConsentButtons() {
 // --- execute on complete DOM load
 // ---------------------------------------------------------------------------------------------
 
-function run() {
+onDOMReady(function() {
   checkError();
   checkLang();
   checkForCode();
@@ -242,21 +276,4 @@ function run() {
   // the form when it preselects the last participant
   bindParticipantsList(lastCode);
   bindConsentButtons();
-}
-
-if (document.readyState != 'loading') {
-  // in case the document is already rendered
-  run();
-}
-else if (document.addEventListener) {
-  // for modern browsers
-  document.addEventListener('DOMContentLoaded', run);
-}
-else {
-  // IE <= 8
-  document.attachEvent('onreadystatechange', function() {
-    if (document.readyState === 'complete') {
-      run();
-    }
-  });
-}
+});

@@ -12,8 +12,19 @@
       </ul>
     </p>
     <p>Più persone partecipano al sondaggio, maggiori saranno i benefici della campagna. La preghiamo perciò di diffondere il più possibile il sistema di tracciamento nella cerchia dei suoi conoscenti. Aiuti le persone anziane a compilare il modulo. E stia in salute!</p>
+
+    <p>Ecco un gatto a caso come ringraziamento:</p>
+
+    <div id="randomKittenBox"></div>
+
     <div class="response-share">
       <%= partial "partials/social" %>
     </div>
   </section>
 </div>
+
+<script>
+onDOMReady(function() {
+  retrieveCatImage('randomKittenBox');
+});
+</script>

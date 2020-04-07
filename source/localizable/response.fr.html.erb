@@ -12,8 +12,19 @@
       </ul>
     </p>
     <p>Plus les personnes répondant à ce questionnaire seront nombreuses et plus la campagne démontrera son utilité. Merci de bien vouloir le transmettre à votre entourage, en aidant au besoin les personnes âgées qui auraient des difficultés à le remplir. Et prenez bien soin de vous !</p>
+
+    <p>Voici un chat au hasard en guise de remerciement:</p>
+
+    <div id="randomKittenBox"></div>
+
     <div class="response-share">
       <%= partial "partials/social" %>
     </div>
   </section>
 </div>
+
+<script>
+onDOMReady(function() {
+  retrieveCatImage('randomKittenBox');
+});
+</script>

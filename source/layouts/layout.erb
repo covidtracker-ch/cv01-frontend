@@ -24,6 +24,27 @@
     <meta property="og:image" content="https://www.covidtracker.ch/images/meta/ogimage.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+
+    <script>
+    function onDOMReady(runFunc) {
+      if (document.readyState != 'loading') {
+        // in case the document is already rendered
+        runFunc();
+      }
+      else if (document.addEventListener) {
+        // for modern browsers
+        document.addEventListener('DOMContentLoaded', runFunc);
+      }
+      else {
+        // IE <= 8
+        document.attachEvent('onreadystatechange', function() {
+          if (document.readyState === 'complete') {
+            runFunc();
+          }
+        });
+      }
+    }
+    </script>
   </head>
   <body data-lang="<%= I18n.locale %>">
     <%= yield %>

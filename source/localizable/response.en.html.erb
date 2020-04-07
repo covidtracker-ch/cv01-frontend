@@ -14,8 +14,19 @@
       <li>You are under quarantine</li>
     </ul>
     <p>This campaign will be especially useful if a large number of people fill out the questionnaire. Please spread it as widely as possible. Help older people in particular by filling it out. And stay healthy!</p>
+
+    <p>Here's a random cat as thanks:</p>
+
+    <div id="randomKittenBox"></div>
+
     <div class="response-share">
       <%= partial "partials/social" %>
     </div>
   </section>
 </div>
+
+<script>
+onDOMReady(function() {
+  retrieveCatImage('randomKittenBox');
+});
+</script>

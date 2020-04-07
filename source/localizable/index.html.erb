@@ -48,7 +48,8 @@ ageRanges:
       <li><%= link_to t(:consentInformation), '/consent.html', target: "_blank" %></li>
     </ul>
 
-    <form action="https://covid-stage.apps-customer.210235761750.ninegcp.ch/form" onsubmit="persistForm()" method="post" id="covid-form">
+<!--    <form action="https://covid-stage.apps-customer.210235761750.ninegcp.ch/form" onsubmit="persistForm()" method="post" id="covid-form">-->
+    <form action="http://localhost:5000/form" onsubmit="persistForm()" method="post" id="covid-form">
       <div class="boxed code-chooser">
         <!-- ---------------------------------------------------------
         --- first-time survey?
@@ -223,7 +224,7 @@ ageRanges:
         <span class="label"><%= t(:hasBeenTested) %></span>
         <div class="radio-wrap">
           <label class="radio-item" for="hasBeenTested-1">
-            <input class="js-toggle input" type="radio" name="hasBeenTested" id="hasBeenTested-1" value="1" data-show="wrap-tested" data-hide="wrap-untested">
+            <input class="js-toggle input" type="radio" name="hasBeenTested" id="hasBeenTested-1" value="1" data-show="wrap-tested">
             <span><%= t(:yesAnswer) %></span>
           </label>
           <label class="radio-item" for="hasBeenTested-0">

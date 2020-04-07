@@ -22,7 +22,8 @@ it:
   other: "Altro"
   householdSize: "Size of your household"
   phoneDigits: "Le ultime quattro cifre del vostro numero di telefono"
-  feelsHealthy: "Ti senti in salute?"
+  feelsUnhealthy: "Do you have any unusual symptoms?"
+  previouslyUnhealthy: "Since February 1st, did you have any symptoms from which you have recovered?"
   hasBeenTested: "Siete stati testati per covid-19?"
   whereTested: "In caso di riscontro positivo, dove è stato eseguito il test?"
   whenTested: "In caso di riscontro positivo, quando è stato eseguito il test?"
@@ -43,6 +44,7 @@ it:
   germany: "Germania"
   france: "Francia"
   followingSymptoms: "Attualmente soffre dei seguenti sintomi:"
+  followingPreviousSymptoms: "Did you suffer from any of the following symptoms:"
   sendForm: "Invia modulo"
   sinceHowManyDays: "Quanti giorni?"
   partners: "Partner"
@@ -59,6 +61,7 @@ it:
   pressReleaseLink: "https://www.be.ch/portal/fr/index/mediencenter/medienmitteilungen.meldungNeu.html/portal/fr/meldungen/mm/2020/03/20200326_1115_gruppe_von_jungenforschernstartetlandesweitgeografischedatensamm"
   phoneInfo: "Wird benötigt, um Missbräuche zu verhindern sowie Daten von Personen, die den Fragebogen mehrmals ausfüllen, einander zuzuordnen."
   testResult: "Se sì, qual è stato il risultato?"
+  nonTestReason: "Did you seek medical advice?"
   positive: "Positivo"
   negative: "Negativo"
   dataProtection: "Protezione dei dati"
@@ -117,7 +120,7 @@ it:
       neurological:
         label: "Chronic neurological disease"
         subtext: "(i.e., Parkinson’s disease, motor neuron disease, multiple sclerosis or cerebral palsy)"
-      organTranslplant:
+      organTransplant:
         label: "I've had an organ transplant"
 
   smokeOrVape: "Do you smoke or vape?"

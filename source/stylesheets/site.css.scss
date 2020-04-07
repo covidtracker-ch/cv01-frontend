@@ -572,3 +572,34 @@ section.subpage {
     top: 1rem;
   }
 }
+
+.boxed {
+  border: solid 1px #beccc2; border-radius: 3px;
+  background: #edf7ef;
+  padding: 20px;
+
+  .reduced-margins {
+    margin-top: 1rem;
+  }
+
+  .input-wrap {
+    border-left-color: #93b7a5;
+  }
+}
+.code-chooser.boxed {
+  .input-wrap {
+    margin: 10px;
+  }
+}
+
+#randomKittenBox {
+  padding: 3px; border-radius: 3px;
+  border: solid 1px #ccc;
+  background: white;
+  width: 400px;
+  margin: 0 auto;
+
+  img {
+    width: 400px; min-height: 200px;
+  }
+}

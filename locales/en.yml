@@ -22,7 +22,8 @@ en:
   other: "Other"
   householdSize: "Size of your household"
   phoneDigits: "Last four digits of your phone number"
-  feelsHealthy: "To the best of your knowledge right now, do you feel healthy?"
+  feelsUnhealthy: "Do you have any unusual symptoms?"
+  previouslyUnhealthy: "Since February 1st, did you have any symptoms from which you have recovered?"
   hasBeenTested: "Have you been tested for COVID-19?"
   whereTested: "Where were you tested?"
   whenTested: "When were you tested?"
@@ -43,6 +44,7 @@ en:
   germany: "Germany"
   france: "France"
   followingSymptoms: "Do you suffer from any of the following symptoms:"
+  followingPreviousSymptoms: "Did you suffer from any of the following symptoms:"
   sendForm: "Submit your feedback"
   sinceHowManyDays: "Since when?"
   partners: "Partners"
@@ -58,6 +60,7 @@ en:
   pressRelease: "Press release Canton of Bern"
   phoneInfo: "Required to prevent misuse and to correlate data from people who fill out the questionnaire several times."
   testResult: "What was the result?"
+  nonTestReason: "Did you seek medical advice?"
   positive: "Positive"
   negative: "Negative"
   dataProtection: "Data protection"
@@ -116,7 +119,7 @@ en:
       neurological:
         label: "Chronic neurological disease"
         subtext: "(i.e., Parkinson’s disease, motor neuron disease, multiple sclerosis or cerebral palsy)"
-      organTranslplant:
+      organTransplant:
         label: "I've had an organ transplant"
 
   smokeOrVape: "Do you smoke or vape?"

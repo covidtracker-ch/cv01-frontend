@@ -227,7 +227,7 @@ ageRanges:
             <span><%= t(:yesAnswer) %></span>
           </label>
           <label class="radio-item" for="hasBeenTested-0">
-            <input class="js-toggle input" type="radio" name="hasBeenTested" id="hasBeenTested-0" value="0" data-hide="wrap-tested" data-show="wrap-untested">
+            <input class="js-toggle input" type="radio" name="hasBeenTested" id="hasBeenTested-0" value="0" data-hide="wrap-tested">
             <span><%= t(:noAnswer) %></span>
           </label>
         </div>
@@ -265,6 +265,7 @@ ageRanges:
       <!-- ---------------------------------------------------------
       --- (if untested) why not tested?
       ---------------------------------------------------------- -->
+      <!--
       <div id="wrap-untested" class="js-hide">
         <div class="input-wrap input-wrap--child input-wrap--radio">
           <span class="label"><%= t(:nonTestReason) %></span>
@@ -280,6 +281,7 @@ ageRanges:
           </div>
         </div>
       </div>
+      -->
 
       <!-- ---------------------------------------------------------
       --- works in healthcare

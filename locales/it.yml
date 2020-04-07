@@ -68,6 +68,8 @@ it:
   saveResponses: "Ricorda le mie risposte per la prossima volta."
   cookieWarning: "Se si seleziona 'sì', si acconsente all'utilizzo dei cookie. Quando si utilizzano i cookie, altri utenti che hanno accesso a questo computer potrebbero essere in grado di recuperare le risposte al sondaggio."
   consentToStudy: "Acconsento ai <a href=\"/it/consent.html\" target=\"_blank\"> termini di partecipazione </a> in questo studio"
+  aboutTheStudy: "Informazioni sulla ricerca"
+  consentInformation: "Termini di consenso"
 
   symptoms:
     fever: "Febbre oltre i 38 gradi"

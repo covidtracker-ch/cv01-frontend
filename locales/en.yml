@@ -67,6 +67,8 @@ en:
   saveResponses: "Remember my responses for next time"
   cookieWarning: "If you select 'yes', you are consenting to using cookies. When using cookies, other users who have access to this computer may be able to retrieve the answers to the survey."
   consentToStudy: "I consent to the <a href=\"/en/consent.html\" target=\"_blank\">terms of participation</a> in this study"
+  aboutTheStudy: "About the study"
+  consentInformation: "Terms of consent"
 
   symptoms:
     fever: "Fever above 38 Degrees"

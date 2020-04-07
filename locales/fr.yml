@@ -68,6 +68,8 @@ fr:
   saveResponses: "Rappelez-vous mes réponses pour la prochaine fois."
   cookieWarning: "Si vous sélectionnez 'oui', vous consentez à l'utilisation de cookies. Lors de l'utilisation de cookies, d'autres utilisateurs qui ont accès à cet ordinateur peuvent être en mesure de récupérer les réponses à l'enquête."
   consentToStudy: "J'accepte les <a href=\"/fr/consent.html\" target=\"_blank\"> conditions de participation </a> à cette étude"
+  aboutTheStudy: "À propos de l'étude"
+  consentInformation: "Conditions de Participation"
 
   symptoms:
     fever: "Fièvre de plus de 38 degrés"

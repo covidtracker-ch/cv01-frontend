@@ -47,7 +47,13 @@ ageRanges:
       <li><%= link_to t(:aboutTheStudy), '/study_info.html', target: "_blank" %></li>
       <li><%= link_to t(:consentInformation), '/consent.html', target: "_blank" %></li>
     </ul>
-
+    <div class="survey_additional_header"><%= t(:surveyAdditionalInformationHeader) %>
+    </div>
+    <div class="survey_additional"><%= t(:surveyAdditionalInformation) %>
+    </div>
+    <div class="survey_additional_part2">
+      <%= t(:surveyAdditionalInformationPartTwo) %>
+    </div>
 <!--    <form action="https://covid-stage.apps-customer.210235761750.ninegcp.ch/form" onsubmit="persistForm()" method="post" id="covid-form">-->
     <form action="http://localhost:5000/form" onsubmit="persistForm()" method="post" id="covid-form">
       <div class="boxed code-chooser">

@@ -108,6 +108,7 @@ de:
     Rückschlüsse auf einzelne Personen zu ziehen.</p>
   italy: Italien
   leavingHomeForWork: Verlassen Sie derzeit Ihr Zuhause um zur Arbeit zu gehen?
+  loading: lade...
   male: Männlich
   manualParticipantCode: (Optional) Geben Sie Ihren Teilnahmecode ein
   maybe: Vermutlich
@@ -142,6 +143,9 @@ de:
   smokeOrVape: Rauchen oder Vapen Sie?
   spain: Spanien
   supportedBy: In Zusammenarbeit mit
+  surveyAdditionalInformationHeader: Was du wissen solltest
+  surveyAdditionalInformation: Die in dieser Umfrage gesammelten Daten werden zur Berechnung von zusammenfassenden Statistiken und für die epidemiologische Forschung verwendet. Diese Umfrage richtet sich an alle Einwohner der Schweiz, nicht nur an Personen die sich möglicherweise mit SARS-CoV-2 (COVID-19) angesteckt haben. Falls Sie für ein Mitglied Ihres Haushalts (z. B. Kinder) antworten möchten, füllen Sie bitte eine separate Umfrage pro Person aus.
+  surveyAdditionalInformationPartTwo: Diese Umfrage ist nicht zur Selbstdiagnose von COVID-19 geeignet und eine Teilnahme schließt einen diagnostischen Test bei Bedarf nicht aus. Sollten Sie eines der in unserer Umfrage aufgeführten Symptome bei sich feststellen, ist dies allein noch kein Hinweis auf COVID-19. Wenn eine Vorerkrankung unserer Umfrage auf Sie zutrifft, bedeutet dies nicht unbedingt, dass Sie zum gefährdeten Personenkreis gehören. Wenn Sie glauben, selbst erkrankt zu sein oder medizinische Informationen zu COVID-19 erhalten möchten, wenden Sie sich bitte an Ihren Hausarzt oder besuchen Sie die Website des Bundesamtes für Gesundheit.
   symptoms:
     coughing: Husten
     diarrhea: Diarrhea

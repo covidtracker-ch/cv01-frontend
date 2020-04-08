@@ -1,6 +1,6 @@
 ---
 it:
-  aboutTheStudy: Informazioni sulla ricerca
+  aboutTheStudy: Foglio informativo per i partecipanti
   age: Fascia d'età
   behaviorPrompt: 'Seleziona l''opzione che assomiglia di più alla sua situazione attuale:'
   behaviors:

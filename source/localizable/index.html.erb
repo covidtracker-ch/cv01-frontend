@@ -47,12 +47,9 @@ ageRanges:
       <li><%= link_to t(:aboutTheStudy), '/study_info.html', target: "_blank" %></li>
       <li><%= link_to t(:consentInformation), '/consent.html', target: "_blank" %></li>
     </ul>
-    <div class="survey_additional_header"><%= t(:surveyAdditionalInformationHeader) %>
-    </div>
-    <div class="survey_additional"><%= t(:surveyAdditionalInformation) %>
-    </div>
-    <div class="survey_additional_part2">
-      <%= t(:surveyAdditionalInformationPartTwo) %>
+
+    <div class="survey_additional_container">
+      <%= partial "localizable/partials/home_more" %>
     </div>
 
     <!--

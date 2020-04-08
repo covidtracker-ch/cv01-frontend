@@ -135,9 +135,6 @@ en:
   smokeOrVape: Do you smoke or vape?
   spain: Spain
   supportedBy: In cooperation with
-  surveyAdditionalInformationHeader: What you should know
-  surveyAdditionalInformation: The collected data from this survey will be used for displaying summary statistics and for epidemiological research. This survey is for everyone, not only for people who may have contracted SARS-CoV-2 (COVID-19). If you would like to answer for multiple members of your household (e.g., children), please fill one survey per person.
-  surveyAdditionalInformationPartTwo: This survey is not a COVID-19 diagnostic tool, and taking part in it does not preclude a diagnostic test if needed. Having any of the symptoms that are listed in our survey is not necessarily an indication of COVID-19. Also, having comorbidities listed in our survey does not necessarily mean that you are an at-risk individual. If you believe you may be infected or would like to get medical information on COVID-19, please get in touch with your family doctor or visit the Swiss Federal Office of Public Health website.
   symptoms:
     coughing: Coughing
     diarrhea: Diarrhea

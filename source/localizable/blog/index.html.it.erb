@@ -1,0 +1,32 @@
+---
+pageable: true
+per_page: 10
+---
+<%= partial "partials/header" %>
+<%= partial "partials/homelink" %>
+
+<div class="container blog">
+  <section class="subpage">
+    <% if paginate && num_pages > 1 %>
+      <p>Page <%= page_number %> of <%= num_pages %></p>
+
+      <% if prev_page %>
+        <p><%= link_to 'Previous page', prev_page %></p>
+      <% end %>
+    <% end %>
+
+    <h1>Blog Posts</h1>
+    <% blog.articles_by_locale.each_with_index do |article, i| %>
+      <h2><%= link_to article.title, article %></h2>
+      <h4 class="blog_time"><%= article.data.author %>, <%= article.date.strftime('%b %e, %Y') %></h4>
+
+      <%= article.summary(250) %>
+    <% end %>
+
+    <% if paginate %>
+      <% if next_page %>
+        <p><%= link_to 'Next page', next_page %></p>
+      <% end %>
+    <% end %>
+  </section>
+</div>

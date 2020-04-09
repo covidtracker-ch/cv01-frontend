@@ -10,6 +10,8 @@ ageRanges:
   - 71-80
   - 81-90
   - 90+
+# formTarget: https://covid-stage.apps-customer.210235761750.ninegcp.ch/form
+formTarget: http://localhost:5000/form
 ---
 <div class="message hidden" id="msg-error">
   <div class="container">
@@ -52,11 +54,7 @@ ageRanges:
       <%= partial "localizable/partials/home_more" %>
     </div>
 
-    <!--
-    <form action="http://localhost:5000/form" onsubmit="persistForm()" method="post" id="covid-form">
-    -->
-
-    <form action="https://covid-stage.apps-customer.210235761750.ninegcp.ch/form" onsubmit="persistForm()" method="post" id="covid-form">
+    <form action="<%= current_page.data.formTarget %>" onsubmit="persistForm()" method="post" id="covid-form">
       <div class="boxed code-chooser">
         <!-- ---------------------------------------------------------
         --- first-time survey?

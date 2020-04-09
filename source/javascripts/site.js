@@ -47,14 +47,25 @@ function checkError() {
   }
 }
 
+
+// ---------------------------------------------------------------------------------------------
+// --- language selection and routing
+// ---------------------------------------------------------------------------------------------
+
 function goToLang(lang) {
-  // var path = window.location.pathname.split("/").pop();
-  // if(lang == 'de') {
-  //   window.location.assign(window.location.origin + '/' + path);
-  // }else{
-  //   window.location.assign(window.location.origin + '/' + lang + '/' + path);
-  // }
+  // afaict the intention is to get the first element of the path
+  // if we're in de, paths are used directly; if not, we need to add the language prefix to the path
+  var normPath = window.location.pathname[0] === '/' ? window.location.pathname.slice(1) : window.location.pathname;
+
+  var path = normPath.split("/").pop();
+  if (lang === 'de') {
+    window.location.assign(window.location.origin + '/' + path);
+  }
+  else {
+    window.location.assign(window.location.origin + '/' + lang + '/' + path);
+  }
 }
+
 function checkLang() {
   var userLang = navigator.language || navigator.userLanguage;
   userLang = userLang.slice(0,2);
@@ -66,22 +77,30 @@ function checkLang() {
   }
 
   if(overwrittenLang) {
-    if(overwrittenLang == currentLang) return;
+    if (overwrittenLang == currentLang)
+      return;
     goToLang(overwrittenLang);
     return;
   }
 
-  if(userLang == 'fr') {
-    localStorage.setItem('languageOverwrite', 'fr');
-    goToLang('fr');
-  } else if(userLang == 'it') {
-    localStorage.setItem('languageOverwrite', 'it');
-    goToLang('it');
-  } else if(userLang == 'en') {
-    localStorage.setItem('languageOverwrite', 'en');
-    goToLang('en');
+  if(userLang == 'fr' || userLang == 'it' || userLang == 'en') {
+    localStorage.setItem('languageOverwrite', userLang);
+    goToLang(userLang);
   }
 }
+
+function setupLangSelectors() {
+  for(var i=0; i < langLinks.length; i++) {
+    langLinks[i].addEventListener('click', function(e) {
+      localStorage.setItem('languageOverwrite', e.currentTarget.dataset.lang);
+    });
+  }
+}
+
+
+// ---------------------------------------------------------------------------------------------
+// --- form visibility handlers
+// ---------------------------------------------------------------------------------------------
 
 function setupForm() {
   if(form) {
@@ -122,14 +141,13 @@ function setupForm() {
         }
       });
     }
-
-    for(var i=0; i < langLinks.length; i++) {
-      langLinks[i].addEventListener('click', function(e) {
-        localStorage.setItem('languageOverwrite', e.currentTarget.dataset.lang);
-      });
-    }
   }
 }
+
+
+// ---------------------------------------------------------------------------------------------
+// --- API calls
+// ---------------------------------------------------------------------------------------------
 
 function updateTotalSubs(targetID) {
   var http = new XMLHttpRequest();
@@ -167,12 +185,7 @@ function retrieveCatImage(targetID) {
   http.send();
   http.onload = function() {
     var data = JSON.parse(http.responseText);
-    document.getElementById(targetID).innerHTML = "<img " +
-        "alt=\"" + cat_breed + "_cat_img\" " +
-        "src=\"" + data[0].url +"\" " +
-        // "width=\"" + data[0].width + "\" " +
-        // "height=\"" + data[0].width + "\"" +
-        " />"
+    document.getElementById(targetID).innerHTML = "<img alt=\"" + cat_breed + "_cat_img\" src=\"" + data[0].url +"\" />"
   }
 }
 
@@ -270,7 +283,6 @@ function checkForMigrationCode() {
   var participantCodeManual = document.getElementById('participantCodeManual');
 
   if (params['migration_code'] && firstTime_No && participantCodeList && participantCodeManual) {
-    console.log("Setting migration code to ", params['migration_code']);
     firstTime_No.checked = true;
     participantCodeList.value = '__none__';
     document.getElementById(firstTime_No.dataset.show).classList.remove('hidden');
@@ -279,6 +291,7 @@ function checkForMigrationCode() {
     clearForm();
   }
 }
+
 function bindConsentButtons() {
   var yesResponse = document.getElementById('consentToStudy-1');
   var noResponse = document.getElementById('consentToStudy-0');
@@ -300,6 +313,7 @@ function bindConsentButtons() {
 // ---------------------------------------------------------------------------------------------
 
 onDOMReady(function() {
+  setupLangSelectors();
   checkError();
   checkLang();
   checkForCode();

@@ -661,12 +661,16 @@ section.map {
 }
 
 .alert {
-  border-radius: 3px;
+  border-radius: 8px;
+  padding: 20px;
   margin-bottom: 2rem;
+  font-weight: normal;
+  font-size: 18px;
 }
 .alert-primary {
-  background-color: #c2e4f2;
-  border: solid 1px #60c7f0;
+  background-color: #a8dbf0;
+  border: solid 1px #a8dbf0;
+  color: #597580;
 }
 .text-center {
   text-align: center;

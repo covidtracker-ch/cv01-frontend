@@ -243,6 +243,26 @@ function bindParticipantsList(lastCode) {
   }
 }
 
+function checkForMigrationCode() {
+  var params = searchParams();
+
+  // if there's a migration code and we're on the homepage, prefill it
+  // (yes, i'm aware that this is less than attractive...)
+  var firstTime_No = document.getElementById('firstTimeSurvey-0');
+  var participantCodeList = document.getElementById('participantCodeList');
+  var participantCodeManualBox = document.getElementById('participantCodeManualBox');
+  var participantCodeManual = document.getElementById('participantCodeManual');
+
+  if (params['migration_code'] && firstTime_No && participantCodeList && participantCodeManual) {
+    console.log("Setting migration code to ", params['migration_code']);
+    firstTime_No.checked = true;
+    participantCodeList.value = '__none__';
+    document.getElementById(firstTime_No.dataset.show).classList.remove('hidden');
+    participantCodeManualBox.classList.remove('hidden');
+    participantCodeManual.value = params['migration_code'];
+    clearForm();
+  }
+}
 function bindConsentButtons() {
   var yesResponse = document.getElementById('consentToStudy-1');
   var noResponse = document.getElementById('consentToStudy-0');
@@ -267,13 +287,14 @@ onDOMReady(function() {
   checkError();
   checkLang();
   checkForCode();
-
   setupForm();
-
-  var lastCode = getLastCode();
 
   // binding the participants' list will rehydrate
   // the form when it preselects the last participant
-  bindParticipantsList(lastCode);
+  bindParticipantsList(getLastCode());
   bindConsentButtons();
+
+  // finally, overwrites the existing selection with the querystring param 'migration_code', if provided
+  // (this is to support users with existing participant codes from other sites who have been redirected here)
+  checkForMigrationCode();
 });

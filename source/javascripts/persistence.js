@@ -179,7 +179,7 @@ function rehydrateForm(fromCode) {
     else if (pageElems[0]) {
       // it's a simple value
       if (pageElems[0].getAttribute('type') === 'checkbox' && payload[elem.name]) {
-          pageElems[0].setAttribute('checked', 'true');
+          pageElems[0].checked = true;
       }
       else if (pageElems[0].tagName.toUpperCase() === 'SELECT') {
         // iterate through the options to find a match
@@ -192,7 +192,7 @@ function rehydrateForm(fromCode) {
         }
       }
       else {
-        pageElems[0].setAttribute('value', payload[elem.name] ? payload[elem.name].trim()  : '');
+        pageElems[0].value = payload[elem.name] ? payload[elem.name].trim()  : '';
       }
     }
   }
@@ -215,11 +215,19 @@ function clearForm() {
 
     if (pageElems.length > 1) {
       for (var j = 0; j < pageElems.length; j++) {
-        pageElems[j].checked = false;
+          pageElems[j].checked = false;
       }
     }
     else if (pageElems[0]) {
-      pageElems[0].setAttribute('value', '');
+      if (pageElems[0].getAttribute('type') === 'checkbox') {
+        pageElems[0].checked = false;
+      }
+      else if (elem.tagName.toUpperCase() === 'SELECT') {
+        elem.value = elem.options[0].value;
+      }
+      else {
+        pageElems[0].value = '';
+      }
     }
   }
 }

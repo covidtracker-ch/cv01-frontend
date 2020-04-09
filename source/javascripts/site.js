@@ -86,7 +86,6 @@ function checkLang() {
 function setupForm() {
   if(form) {
     for(var i=0; i < hiddens.length; i++) {
-      hiddens[i].classList.remove('js-hide');
       hiddens[i].classList.add('hidden');
     }
 
@@ -100,6 +99,23 @@ function setupForm() {
 
         if (e.target.dataset.hide) {
           document.getElementById(e.target.dataset.hide).classList.add('hidden');
+
+          // reset all controls in hidden panels
+          var elems = document.querySelectorAll("#" + e.target.dataset.hide + " *");
+          for (var j = 0; j < elems.length; j++) {
+            var elem = elems[j];
+
+            // clear input elements
+            if (elem.tagName === 'INPUT') {
+              elem.value = elem.defaultValue;
+              elem.checked = undefined;
+            }
+
+            // hide any elements that are by default hidden
+            if (elem.classList.contains("js-hide")) {
+              elem.classList.add("hidden");
+            }
+          }
         }
         if (e.target.dataset.show) {
           document.getElementById(e.target.dataset.show).classList.remove('hidden');

@@ -611,9 +611,11 @@ section.subpage {
   background: white;
   width: 400px;
   margin: 0 auto;
+  min-height: 200px;
+  background: url('../images/oval.svg') no-repeat center center;
 
   img {
-    width: 400px; min-height: 200px;
+    width: 400px; min-height: 200px; margin: 0;
   }
 }
 

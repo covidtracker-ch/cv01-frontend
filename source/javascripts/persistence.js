@@ -73,6 +73,13 @@ function persistForm() {
   if (form) {
     var payload = {};
 
+    // add the current language in to the submission so the server can construct a language-aware redirect URL
+    var lang = document.getElementById('lang');
+    if (lang) {
+      lang.value = document.body.dataset.lang;
+      localStorage.setItem('languageOverwrite', lang.value); // also ensure the local lang is consistent
+    }
+
     // first, check if they consented to saving their responses; only proceed to save this user's data
     // if they consent. if they don't consent to saving cookies, their form data is cleared.
     var saveResponses = document.querySelector('input[name="saveResponses"]:checked').value;

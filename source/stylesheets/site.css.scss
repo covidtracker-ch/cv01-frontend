@@ -650,3 +650,27 @@ section.map {
   margin: 10px;
   font-size: 14px;
 }
+
+.blog {
+  .blog_time {
+    font-weight: normal;
+    color: #777;
+    font-size: smaller;
+    font-style: italic;
+  }
+}
+
+.alert {
+  border-radius: 3px;
+  margin-bottom: 2rem;
+}
+.alert-primary {
+  background-color: #c2e4f2;
+  border: solid 1px #60c7f0;
+}
+.text-center {
+  text-align: center;
+}
+.font-italic {
+  font-style: italic;
+}

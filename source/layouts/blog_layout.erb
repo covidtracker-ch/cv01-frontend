@@ -1,0 +1,11 @@
+<% wrap_layout :layout do %>
+  <%= partial "partials/header" %>
+  <%= partial "partials/blogslink" %>
+  <div class="container blog">
+    <section class="subpage">
+      <h1><%= current_page.data.title %></h1>
+      <h4 class="blog_time">by <%= current_page.data.author %> -- <%= current_page.date.strftime('%b %e, %Y') %></h4>
+      <%= yield %>
+    </section>
+  </div>
+<% end %>

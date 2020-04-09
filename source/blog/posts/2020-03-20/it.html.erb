@@ -1,0 +1,57 @@
+---
+title: Behind the Scenes
+author: Andre Kahles
+---
+<h4>Setting up a COVID-19 Survey</h4>
+<div class="alert alert-primary text-center font-italic">Se puoi aiutarci a tradurre, ti preghiamo di contattarci!</div>
+
+<p>
+News, social media, economy, our daily lives, … - everything seems to be fully determined by the current pandemic of the SARS-CoV-2 virus that has taken hold of almost all countries in the world and has brought public life as we know it to an abrupt standstill.
+In this situation, many people feel anxious and are worried about their futures and those of their loved ones. In large part, this uncertainty arises from the fact that many things about SARS-CoV-2 are yet unknown, which makes it harder to provide accurate predictions. Fortunately, this is a situation that everybody can help to improve.
+</p>
+
+<h4>More science. Less fear.</h4>
+
+<p>
+In the spirit of this motto -- used by one of the leading Cancer Hospitals in the world -- we wanted to help reduce this uncertainty. Let us do more science to learn more about the virus and let us use it to answer difficult questions and help to reduce the fear.
+While some of these questions are hard to work on if you don’t have access to a specialized lab with highly trained personnel (e.g., How to find a potent vaccine?), others require only some IT infrastructure and the support of volunteers (e.g., How quickly does the virus spread? Where will the situation become critical and where should we best allocate resources?).
+</p>
+
+<p>
+As members of the Biomedical Informatics Group at ETH Zürich, we are in a good position to help with the latter. Following examples from other countries, such as Israel and the US, we could ask the Swiss population about their current health status and ask them to provide this anonymously not only for a single day, but over the course of time. Together with their approximate location, this information is a very rich data source that supplements individual testing for the virus (currently a very limited resource).
+</p>
+
+<h4>Why is this data helpful?</h4>
+
+<p>
+One might wonder how anonymous data without exact geographic location might help at all. We would like to explain why it does help (and helps very much indeed). It is not our goal to make a diagnosis for an individual person, but to learn how many people across Switzerland are currently affected in their health -- how the population is affected. Data collected with our survey can show us how this number changes dynamically over time, and whether local clusters emerge, potentially allowing more resources to be made available for specific regions. We can also see how comorbidities and individual health histories are distributed across Switzerland and its cantons. All these questions and many more can be addressed, if a sufficient number of people answer a short list of questions about their health on a regular basis. While we do not need the name or the street of a person, it is important for us to connect the dots. That means, if a participant answers multiple times, it is important to know what that participant answered in the past and link these records with each other. This allows us to observe what epidemiologists call “temporal dynamics”, a very informative type of dataset that allows us to carry out predictions.
+Having access to the approximate location of participants is sufficient to see local patterns emerge and to check whether a region is gaining more cases than another. This will help to react with appropriate urgency.
+</p>
+
+<h4>What kind of data should be collected?</h4>
+
+<p>
+It is very easy to come up with a handful of interesting questions one could ask of the participants and put them into a quick survey. What is much harder is to find a good balance between content and length. That is, which questions are informative enough to be placed into the survey not only from a scientific but also from a public health perspective. On the one hand, every question will cost the participants some of their time and hence will increase the burden of participation. On the other hand, there is a minimal set of questions that is needed to allow for scientific utility.
+To best balance these choices, we contacted a network of experts including physicians of relevant specialties (such as epidemiology and intensive care), as well as leading epidemiological scientists. In this context, we would like to acknowledge the help of Dr. Tobias Merz, Dr. Martin Faltys, Dr. Christian Althaus, Dr. Marcel Salathé, and many others out of a great team of supporters.
+As a result of several rounds of feedback, we created a survey comprising a single page and less than 20 questions that contains sufficient information for robust data science.
+</p>
+
+<h4>How to connect the dots?</h4>
+
+<p>
+While a single data point is useful, its value very much increases if we know how it changes over time. Then we can learn about possible symptom progression and see the changes per region over time, and also learn how many people recover how quickly. This is the main reason why we ask participants to come back and answer the survey again and again. One of the most difficult problems we faced in this context was how to collect multiple data points from a single participant over time without asking for their name. Eventually, we solved this by assigning a random code to each participant, which will be stored in the browser (if the participant allows the use of cookies). Even in the case participants opt out of using cookies, they can write down the participant code and re-use it for the next survey.
+To ease the time burden on the participants, we pre-fill the survey with the latest answers given if cookies are enabled. In this case, checking in daily takes less than 30 seconds.
+</p>
+
+<h4>This is health data - how do we deal with privacy?</h4>
+
+<p>
+Fortunately, as members of the Biomedical Informatics group at ETH Zurich, we are used to dealing with sensitive health-related data. Our very first step was to contact the ETH Ethics Board and describe the project. Following this initial discussion, we wrote a formal proposal and submitted it to the Board. Our proposal was accepted by the board after their evaluation and our revisions, and we were now allowed to collect data, use it for research, and share it in aggregated form with interested parties. One might wonder why this is important. As scientists, we depend on the public to trust us with their data. Even in a situation where information is collected anonymously, risks do exist and we have to (and want to) inform about them with as much detail as possible. This is also the reason why participants have to give their consent before every single submission of the data and why we provide detailed information on benefits and risks.
+As a result of this, we cannot display single data records as this would violate the mandated anonymization. What is possible though is to display summary information in real time. As soon as a sufficient number of zip-code areas has reached a nominal count of 50 data points (a threshold required by the ethics board), we can display information at a much more fine-grained level. At the same time, we will also provide access to more informative summary statistics than the total number of submissions.
+</p>
+
+<h4>Quo vadis?</h4>
+
+<p>
+At the time of writing (March 30, 2020), we have passed the 2,500 submission mark, in just our second day after launch. While this is certainly impressive for such a short term effort, it is only the very first step towards a dataset that is useful and informative for epidemiology and public health. It is important to not only educate the participants about what happens with their data, but also to motivate them to come back and convince them to further spread the word. Having a representative health survey available as a basis for real-time epidemiological predictions in Switzerland would be truly useful and help contain the spread of the pandemic.
+</p>

@@ -8,6 +8,14 @@ end
 activate :livereload
 activate :i18n, :mount_at_root => :de
 
+activate :blog do |blog|
+  blog.sources = "blog/posts/{year}-{month}-{day}/{lang}.html"
+  blog.permalink = "{lang}/blog/posts/{year}/{month}/{day}/{title}.html"
+  blog.default_extension = 'html'
+  blog.layout = 'blog_layout'
+  blog.paginate = true
+end
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -52,3 +60,5 @@ end
 ready do
   proxy "_redirects", "netlify-redirects", ignore: true
 end
+
+Time.zone = "Europe/Zurich"

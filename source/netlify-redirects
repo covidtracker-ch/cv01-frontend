@@ -1,1 +1,4 @@
-/*  /index.html 404
+/en/* /en/404.html 404
+/fr/* /fr/404.html 404
+/it/* /it/404.html 404
+/* /404.html 404

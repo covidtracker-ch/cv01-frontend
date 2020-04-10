@@ -57,6 +57,11 @@ function goToLang(lang) {
   // if we're in de, paths are used directly; if not, we need to add the language prefix to the path
   var normPath = window.location.pathname[0] === '/' ? window.location.pathname.slice(1) : window.location.pathname;
 
+  if (normPath.indexOf("404") !== -1) {
+    // ensure we're not redirecting on the 404 page
+    return;
+  }
+
   var path = normPath.split("/").pop();
   if (lang === 'de') {
     window.location.assign(window.location.origin + '/' + path);

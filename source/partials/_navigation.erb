@@ -1,10 +1,10 @@
 <div class="navigation">
   <div class="navigation__inner">
     <ul class="lang-nav">
-      <li><a href="/<%= curPageWithoutLang %>" data-lang="de" class="js-setLang langlink ml-4<% if I18n.locale == :de %> active<% end %>">Deutsch</a></li>
-      <li><a href="/fr/<%= curPageWithoutLang %>" data-lang="fr" class="js-setLang langlink ml-4<% if I18n.locale == :fr %> active<% end %>">Français</a></li>
-      <li><a href="/it/<%= curPageWithoutLang %>" data-lang="it" class="js-setLang langlink ml-4<% if I18n.locale == :it %> active<% end %>">Italiano</a></li>
-      <li><a href="/en/<%= curPageWithoutLang %>" data-lang="en" class="js-setLang langlink ml-4<% if I18n.locale == :en %> active<% end %>">English</a></li>
+      <li><a href="<%= curPageWithLang("de") %>" data-lang="de" class="js-setLang langlink ml-4<% if I18n.locale == :de %> active<% end %>">Deutsch</a></li>
+      <li><a href="<%= curPageWithLang("fr") %>" data-lang="fr" class="js-setLang langlink ml-4<% if I18n.locale == :fr %> active<% end %>">Français</a></li>
+      <li><a href="<%= curPageWithLang("it") %>" data-lang="it" class="js-setLang langlink ml-4<% if I18n.locale == :it %> active<% end %>">Italiano</a></li>
+      <li><a href="<%= curPageWithLang("en") %>" data-lang="en" class="js-setLang langlink ml-4<% if I18n.locale == :en %> active<% end %>">English</a></li>
     </ul>
     <nav class="main-nav">
       <ul>

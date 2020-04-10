@@ -43,8 +43,20 @@ page '/*.txt', layout: false
 # https://middlemanapp.com/basics/helper-methods/
 
 helpers do
-  def curPageWithoutLang
-    return current_page.path.sub("index.html", "").sub(I18n.locale.to_s + "/", "")
+  def curPageWithLang(newlang)
+    if newlang == "de"
+      newlang = ""
+    else
+      newlang = "/" + newlang
+    end
+
+    # blog posts use localized names, so i don't know how to augment the current URL with a new language...
+    # for now we'll just send them back to the blog homepage
+    if current_resource.url.include? "blog/posts"
+      return newlang + "/blog"
+    end
+
+    return newlang + current_resource.url.sub("index.html", "").sub(I18n.locale.to_s + "/", "")
   end
 end
 

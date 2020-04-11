@@ -73,10 +73,8 @@ ready do
   proxy "_redirects", "netlify-redirects", ignore: true
 end
 
-configure :build do
-  config[:api_url] = "https://covid-stage.apps-customer.210235761750.ninegcp.ch"
-end
-
+# set the API url to the staging server by default, but override when building locally
+config[:api_url] = "https://covid-stage.apps-customer.210235761750.ninegcp.ch"
 configure :development do
   config[:api_url] = "http://localhost:5000"
 end

@@ -1,7 +1,7 @@
-<a href="#" id="openModal_<%= name %>"><%= t(:'mailingList.header') %></a>
+<a href="#" id="openModal_mailinglist"><%= t(:'mailingList.header') %></a>
 
-<div class="mdl mdl-fadein" id="exampleModal_<%= name %>">
-  <div class="mdl-content mdl-slidein" id="exampleModal_inner_<%= name %>">
+<div class="mdl mdl-fadein" id="exampleModal_mailinglist">
+  <div class="mdl-content mdl-slidein" id="exampleModal_inner_mailinglist">
     <div class="mdl-header hero" style="padding: 20px; border-radius: 5px 5px 0 0;">
       <span class="close">&#x2716;</span>
       <h2><%= t(:'mailingList.header') %></h2>
@@ -54,19 +54,19 @@ onDOMReady(function() {
   // It is one of the button Modalise will attach the Show event.
   // Note that you can use Modalise without the events, by omitting the .attach() function.
   // Then, you can use show() or hide() to use it manually without overload.
-  var btnOpen = document.getElementById('openModal_<%= name %>');
+  var btnOpen = document.getElementById('openModal_mailinglist');
 
   // prevent the button from navigating
   btnOpen.addEventListener('click', function(e) { e.preventDefault(); });
 
   // Modalise(id, options);
-  myModal = new Modalise('exampleModal_<%= name %>', {btnsOpen : [btnOpen]})
+  myModal = new Modalise('exampleModal_mailinglist', {btnsOpen : [btnOpen]})
       .attach()
       .on('onConfirm', subscribeToList);
 
   // allow fader to dismiss modal while keeping the modal interactive
-  var inner = document.querySelector("#exampleModal_inner_<%= name %>");
-  var outer = document.querySelector("#exampleModal_<%= name %>");
+  var inner = document.querySelector("#exampleModal_inner_mailinglist");
+  var outer = document.querySelector("#exampleModal_mailinglist");
   inner.addEventListener('click',function innerFunction(event){
     event.stopPropagation();
   });

@@ -24,7 +24,7 @@ ageRanges:
       <%= partial "partials/icon" %>
       <h1 class="hero__headline"><%= t(:title) %></h1>
       <%= t(:introduction) %>
-      <p><%= link_to t(:seemore), '/faq.html' %> - <%= partial("localizable/partials/mailinglist", :locals => { :name => "mailing_list" }) %></p>
+      <p><%= link_to t(:seemore), '/faq.html' %> - <%= partial "localizable/partials/mailinglist" %></p>
       <p><a target="_blank" rel="noreferrer" href="<%= t(:pressReleaseLink) %>"><%= t(:pressRelease) %></a></p>
       <a href="#form" class="btn btn--inv"><%= t(:toform) %></a>
     </div>

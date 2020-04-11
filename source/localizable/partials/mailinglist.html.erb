@@ -62,9 +62,7 @@ onDOMReady(function() {
   // Modalise(id, options);
   myModal = new Modalise('exampleModal_<%= name %>', {btnsOpen : [btnOpen]})
       .attach()
-      .on('onShow', console.log)
-      .on('onConfirm', subscribeToList)
-      .on('onHide', console.log);
+      .on('onConfirm', subscribeToList);
 
   // allow fader to dismiss modal while keeping the modal interactive
   var inner = document.querySelector("#exampleModal_inner_<%= name %>");

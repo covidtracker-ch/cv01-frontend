@@ -170,3 +170,9 @@ fr:
   yesAnswer: 'Yes'
   zip: Code postal
   pageNotFound: Page non trouvée
+  mailingList:
+    header: Inscrivez-vous à la liste de diffusion
+    body: Veuillez vous inscrire à notre liste de diffusion pour rester au courant des développements.
+    warning: Cette adresse e-mail ne sera en aucun cas transmise à des tiers ni connectée à vos données d'enquête.
+    join: Envoyer
+  emailAddress: Adresse e-mail

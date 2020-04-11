@@ -1,0 +1,91 @@
+$top-offset: 30px;
+
+.mdl {
+    font-size: 18px;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* mdl Content */
+.mdl-content {
+    vertical-align: center;
+    position: fixed;
+    top: $top-offset;
+    left: 30px;
+    right: 30px;
+    border: solid 1px darkred;
+    border-radius: 5px !important;
+    background-color: #fefefe;
+}
+
+.mdl-fadein {
+    -webkit-animation-name: mdl-fadeIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: mdl-fadeIn;
+    animation-duration: 0.4s;
+}
+
+.mdl-slidein {
+    -webkit-animation-name: mdl-slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: mdl-slideIn;
+    animation-duration: 0.4s;
+}
+
+/* The Close Button */
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:focus, .close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mdl-body {
+    padding: 20px;
+    color: #777;
+}
+
+.mdl-header {
+    font-size: 24px;
+    padding: 4px 4px;
+}
+.mdl-header h2 {
+    margin: 0;
+}
+
+.mdl-footer {
+    text-align: right;
+    padding-right: 20px;
+
+    button {
+        margin-left: 15px;
+    }
+}
+
+/* Add Animation */
+@-webkit-keyframes mdl-slideIn {
+    from { top: -300px; opacity: 0; } to { top: $top-offset;opacity: 1; }
+}
+@keyframes mdl-slideIn {
+    from { top: -300px; opacity: 0; } to { top: $top-offset;opacity: 1; }
+}
+
+@-webkit-keyframes mdl-fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+}
+@keyframes mdl-fadeIn {
+    from { opacity: 0; } to { opacity: 1; }
+}

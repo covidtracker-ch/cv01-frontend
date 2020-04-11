@@ -161,3 +161,9 @@ en:
   yesAnswer: 'Yes'
   zip: Postal code
   pageNotFound: Page not found
+  mailingList:
+    header: Sign up for the mailing list
+    body: Please sign up for our mailing list to stay on top of developments.
+    warning: This email address will not be sent out to third-parties nor connected to your survey data in any way.
+    join: Submit
+  emailAddress: Email Address

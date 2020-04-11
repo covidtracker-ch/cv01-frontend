@@ -73,4 +73,12 @@ ready do
   proxy "_redirects", "netlify-redirects", ignore: true
 end
 
+configure :build do
+  config[:api_url] = "https://covid-stage.apps-customer.210235761750.ninegcp.ch"
+end
+
+configure :development do
+  config[:api_url] = "http://localhost:5000"
+end
+
 Time.zone = "Europe/Zurich"

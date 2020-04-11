@@ -169,3 +169,9 @@ de:
   yesAnswer: Ja
   zip: Postleitzahl
   pageNotFound: Seite nicht gefunden
+  mailingList:
+    header: Melden Sie sich für die Mailingliste an
+    body: Bitte melden Sie sich für unsere Mailingliste an, um über die Entwicklungen auf dem Laufenden zu bleiben.
+    warning: Diese E-Mail-Adresse wird weder an Dritte gesendet noch in irgendeiner Weise mit Ihren Umfragedaten verbunden.
+    join: Abschicken
+  emailAddress: E-Mail-Adresse

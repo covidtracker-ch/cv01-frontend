@@ -1,0 +1,79 @@
+<a href="#" id="openModal_<%= name %>"><%= t(:'mailingList.header') %></a>
+
+<div class="mdl mdl-fadein" id="exampleModal_<%= name %>">
+  <div class="mdl-content mdl-slidein" id="exampleModal_inner_<%= name %>">
+    <div class="mdl-header hero" style="padding: 20px; border-radius: 5px 5px 0 0;">
+      <span class="close">&#x2716;</span>
+      <h2><%= t(:'mailingList.header') %></h2>
+    </div>
+
+    <div class="mdl-body">
+      <p><%= t(:'mailingList.body') %></p>
+      <p><%= t(:'mailingList.warning') %></p>
+
+      <div class="input-wrap input-wrap--text" style="margin: 0; width: 100%;">
+        <label class="label" for="zip"><%= t(:emailAddress) %></label>
+        <input id="email" name="email" class="input input--short" type="text" style="min-width: 50%;" required>
+      </div>
+    </div>
+
+    <div class="mdl-footer">
+      <button class="btn btn--inv cancel" onclick="return false">Cancel</button>
+      <button id="joinButton" class="btn confirm" onclick="return false"><%= t(:'mailingList.join') %></button>
+    </div>
+  </div>
+</div>
+
+<script>
+var myModal = {};
+
+function subscribeToList() {
+  var email = document.getElementById('email');
+  var joinButton = document.getElementById('joinButton');
+
+  joinButton.disabled = true;
+
+  var http = new XMLHttpRequest();
+  http.open("POST", "<%= config[:api_url] %>/mailinglist/subscribe");
+  http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+  http.onreadystatechange = function() {
+    console.log("Readystate cchanged!: ", http.readyState);
+    if(http.readyState == 4) {
+      if (http.status == 200) {
+        // TODO: tell the user it worked?
+        console.log("Subscribed!: ", http.responseText);
+        myModal.hide();
+      }
+      joinButton.disabled = false;
+    }
+  };
+  http.send("email=" + encodeURIComponent(email.value));
+}
+
+onDOMReady(function() {
+  // It is one of the button Modalise will attach the Show event.
+  // Note that you can use Modalise without the events, by omitting the .attach() function.
+  // Then, you can use show() or hide() to use it manually without overload.
+  var btnOpen = document.getElementById('openModal_<%= name %>');
+
+  // prevent the button from navigating
+  btnOpen.addEventListener('click', function(e) { e.preventDefault(); });
+
+  // Modalise(id, options);
+  myModal = new Modalise('exampleModal_<%= name %>', {btnsOpen : [btnOpen]})
+      .attach()
+      .on('onShow', console.log)
+      .on('onConfirm', subscribeToList)
+      .on('onHide', console.log);
+
+  // allow fader to dismiss modal while keeping the modal interactive
+  var inner = document.querySelector("#exampleModal_inner_<%= name %>");
+  var outer = document.querySelector("#exampleModal_<%= name %>");
+  inner.addEventListener('click',function innerFunction(event){
+    event.stopPropagation();
+  });
+  outer.addEventListener('click', function outerFunction(event){
+    myModal.hide();
+  });
+})
+</script>

@@ -227,7 +227,7 @@ function bindParticipantsList(lastCode) {
 
   if (allResponses) {
     for (code in allResponses) {
-      if (!allResponses.hasOwnProperty(code))
+      if (!allResponses.hasOwnProperty(code) || code === REPLACE_SENTINEL)
         continue;
 
       newOption = document.createElement("option");

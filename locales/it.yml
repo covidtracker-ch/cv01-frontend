@@ -2,7 +2,7 @@
 it:
   aboutTheStudy: Foglio informativo per i partecipanti
   age: Fascia d'età
-  behaviorPrompt: 'Seleziona l''opzione che assomiglia di più alla sua situazione attuale:'
+  behaviorPrompt: Selezioni l'opzione che descrive al meglio la sua attuale situazione
   behaviors:
     isolation:
       label: Isolamento
@@ -19,79 +19,74 @@ it:
       label: Distanziamento sociale
       subtext: 'Nessuna stretta di mano, allontanamento dagli altri'
     typical_activity:
-      label: Continuazione normale di tutte le attività
+      label: Normale proseguimento delle attività
   birthyear: Anno di nascita
   chronicCondition: Hai una condizione cronica?
   comorbidities:
     main:
       highBloodPressure:
-        label: Alta pressione sanguigna
+        label: Ipertensione
       heartDisease:
-        label: 'Malattie cardiache a lungo termine, come l''insufficienza cardiaca.'
+        label: Malattie cardiovascolari croniche, ad es. insufficienza cardiaca
       diabetes2:
-        label: Diabete (Tipo 2)
+        label: Diabete (di tipo 2)
       diabetes1:
-        label: Diabete (Tipo 1)
+        label: Diabete (di tipo 1)
       liver:
-        label: 'Problemi al fegato cronici (ad es., epatite)'
+        label: Malattia cronica del fegato (ad es. epatite)
       respiratory:
-        label: Problemi respiratori cronici
-        subtext: '(ad es., BPCO, asma, enfisema, bronchite, fibrosi cistica)'
+        label: Malattia cronica delle vie aeree
+        subtext: (ad es. BPCO, asma, enfisema, bronchite, mucoviscidosi)
       kidney:
-        label: Problemi renali cronici
+        label: Malattia renale cronica
       immuneSystem:
-        label: Sistema immunitario indebolito o immunosoppressori
+        label: Sistema immunitario indebolito o terapia immunosoppressivas
         subtext: >-
-          (vale a dire, un malato di cancro attualmente sottoposto a chemioterapia
-          / radioterapia)
+          (ad es. pazienti affetti dal cancro sottoposti attualmente a chemioterapia/radioterapia)
     extended:
       bloodCancer:
         label: >-
-          Paziente con tumore del sangue (come la leucemia) in qualsiasi fase del
-          trattamento
+          Pazienti affetti dal cancro del sangue (ad es. leucemia) in qualsiasi stadio della terapia
       hiv:
         label: HIV/AIDS
       spleen:
-        label: Problemi cronici della milza
-        subtext: '(cioè, malattia da anemia falciforme o milza rimossa)'
+        label: Malattia cronica della milza
+        subtext: (ad es. anemia falciforme o asportazione della milza)
       organTransplant:
-        label: Ho avuto un trapianto di organi
+        label: Ho subito un trapianto d’organi
       neurological:
-        label: Problemi neurologici cronici
+        label: Malattia neurologica cronica
         subtext: >-
-          (ad es., morbo di Parkinson, malattia dei motoneuroni, sclerosi
-          multipla, o paralisi cerebrale)
+          (ad. es. morbo di Parkinson, malattia del motoneurone, sclerosi multipla o paresi cerebrale)
       obesity:
         label: Obesità
       pregnancy:
-        label: Attualmente incinta
-  comorbiditiesPrompt: Comorbidità (selezionare tutte le risposte corrispondenti)
+        label: Gravidanza esistente
+  comorbiditiesPrompt: Stato di salute (selezionare ciò che fa al caso)
   consentInformation: Termini di consenso
   consentToStudy: >-
     Acconsento ai <a href="/it/consent.html" target="_blank"> termini di
     partecipazione </a> in questo studio
   cookieWarning: >-
-    Se si seleziona 'sì', si acconsente all'utilizzo dei cookie. Quando si
-    utilizzano i cookie, altri utenti che hanno accesso a questo computer
-    potrebbero essere in grado di recuperare le risposte al sondaggio.
+    Selezionando 'sì', acconsente all'utilizzo dei cookie. L’utilizzo dei cookie potrebbe consentire ad altri utenti, che hanno accesso al computer, di recuperare le risposte al sondaggio.
   dataProtection: Protezione dei dati
   dateContacted: 'In caso di riscontro positivo, quando ha avuto il contatto?'
   description: >-
     Solo agendo insieme possiamo salvare vite! Aiutaci a proteggere persone
     particolarmente a rischio usando il Covid-19-Tracker.
   ems: Centro medico-sociale
-  feelsUnhealthy: Hai qualche sintomo insolito?
-  female: Femmina
-  firstTimeForm: È la prima volta che compili questo modulo?
+  feelsUnhealthy: Presenta dei sintomi insoliti?
+  female: femminile
+  firstTimeForm: È la prima volta che compila questo modulo?
   followingPreviousSymptoms: 'Hai sofferto di uno dei seguenti sintomi:'
   followingSymptoms: 'Attualmente soffre dei seguenti sintomi:'
   france: Francia
   generalinfo: Informazioni generali
   germany: Germania
-  hasBeenTested: Siete stati testati per covid-19?
+  hasBeenTested: È mai stato testato per il Covid-19?
   hideMoreComorbidities: Nascondi di più
   hospital: Ospedale
-  householdSize: Dimensioni della famiglia in cui vive
+  householdSize: Quanti sono i membri della famiglia in cui vive 
   implementation: Attuazione
   imprint: Note legali
   introduction: >-
@@ -105,9 +100,9 @@ it:
     cadenza settimanale.</p> <p>Importante: il rilevamento dei dati garantisce
     l’anonimato e non consente di trarre conclusioni sulla sua identità.</p>
   italy: Italia
-  leavingHomeForWork: Sta attualmente lasciando la tua casa per lavoro?
+  leavingHomeForWork: Al momento attuale esce di casa solo per andare al lavoro?
   loading: loading...
-  male: Maschio
+  male: maschile
   manualParticipantCode: (Opzionale) Inserisci il tuo codice di partecipazione
   maybe: Probabilmente
   negative: Negativo
@@ -115,7 +110,7 @@ it:
   noinformation: Nessuna informazione
   nonTestReason: Hai cercato un consiglio medico?
   notKnownAnswer: Non che io sappia
-  other: Altro
+  other: altro
   participantCode: (Opzionale) Il codice di partecipazione di prima
   partners: Partner
   phoneDigits: Le ultime quattro cifre del vostro numero di telefono
@@ -127,7 +122,7 @@ it:
   pressRelease: Comunicato stampa del Canton Berna
   pressReleaseLink: >-
     https://www.be.ch/portal/de/index/mediencenter/medienmitteilungen.meldungNeu.html/portal/de/meldungen/mm/2020/04/20200408_0901_die_eth_zuerich_undderkantonbernentwickelngemeinsamdencovid-19sy?utm_source=rss&utm_medium=Medienmitteilungen&utm_campaign=Die+ETH+Z%C3%BCrich+und+der+Kanton+Bern+entwickeln+gemeinsam+den+COVID-19+Symptom-Tracker
-  previouslyUnhealthy: 'Dal 1 ° febbraio, hai avuto sintomi da cui ti sei ripreso?'
+  previouslyUnhealthy: 'Dal 1 ° febbraio, ha manifestato dei sintomi da cui poi si è ripreso?'
   privatePractice: Ambulatorio privato
   probablyAnswer: Probabilmente
   saveResponses: Ricorda le mie risposte per la prossima volta.
@@ -138,7 +133,7 @@ it:
   shareon: Condividi su
   showMoreComorbidities: Mostra di più...
   sinceHowManyDays: Da quando?
-  smokeOrVape: Fuma o utilizza sigarette elettroniche?
+  smokeOrVape: Fuma sigarette normali o elettroniche?
   spain: Spagna
   supportedBy: Supportato da
   symptoms:
@@ -160,10 +155,10 @@ it:
   unlistedCode: Il mio codice non è elencato
   url: 'https://www.covidtracker.ch/it'
   wasAbroad: È stato all'estero negli ultimi 14 giorni?
-  wasInContactWithCase: Siete stati in contatto con un caso positivo di covide-19?
+  wasInContactWithCase: È mai entrato in contatto con un caso positivo di Covid-19?
   whenTested: 'In caso di riscontro positivo, quando è stato eseguito il test?'
   whereTested: 'In caso di riscontro positivo, dove è stato eseguito il test?'
-  worksInHealth: Lavora nel sistema sanitario con i pazienti?
+  worksInHealth: Nel sistema sanitario, lavora a contatto con i pazienti?
   yesAnswer: Si
   zip: Codice Postale
   pageNotFound: Pagina non trovata

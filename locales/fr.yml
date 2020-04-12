@@ -143,17 +143,39 @@ fr:
   spain: Espagne
   supportedBy: Soutenu par
   symptoms:
-    coughing: Toux
-    diarrhea: Diarrhée
-    dyspnea: Difficultés respiratoires
-    fever: Fièvre de plus de 38 degrés
-    headache: Mal de tête
-    lostTaste: Perte d'odeur ou de goût
-    musclePain: Douleur musculaire
-    nausea: Nausée
-    runnyNose: Nez qui coule
-    throat: Maux de gorge
-    tiredness: Grande fatigue
+    coughing:
+      label: Toux
+      field: Coughing
+    diarrhea:
+      label: Diarrhée
+      field: Diarrhea
+    dyspnea:
+      label: Difficultés respiratoires
+      field:  Dyspnea
+    fever:
+      label: Fièvre de plus de 38 degrés
+      field: Fever
+    headache:
+      label: Mal de tête
+      field: Headache
+    lostTaste:
+      label: Perte d'odeur ou de goût
+      field: LostTaste
+    musclePain:
+      label: Douleur musculaire
+      field: MusclePain
+    nausea:
+      label: Nausée
+      field: Nausea
+    runnyNose:
+      label: Nez qui coule
+      field: RunnyNose
+    throat:
+      label: Maux de gorge
+      field: Throat
+    tiredness:
+      label: Grande fatigue
+      field: Tiredness
   technology: Technologie
   testResult: 'Si oui, quel a été le résultat de votre test?'
   title: COVID-19-Tracking Suisse

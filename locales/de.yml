@@ -144,17 +144,39 @@ de:
   spain: Spanien
   supportedBy: In Zusammenarbeit mit
   symptoms:
-    coughing: Husten
-    diarrhea: Durchfall
-    dyspnea: Atembeschwerden
-    fever: Fieber über 38 Grad
-    headache: Kopfschmerzen
-    lostTaste: Verlust des Geruchs-/Geschmackssinns
-    musclePain: Gliederschmerzen
-    nausea: Übelkeit
-    runnyNose: Schnupfen
-    throat: Halsschmerzen
-    tiredness: Grosse Müdigkeit
+    coughing:
+      label: Husten
+      field: Coughing
+    diarrhea:
+      label: Durchfall
+      field: Diarrhea
+    dyspnea:
+      label: Atembeschwerden
+      field: Dyspnea
+    fever:
+      label: Fieber über 38 Grad
+      field: Fever
+    headache:
+      label: Kopfschmerzen
+      field: Headache
+    lostTaste:
+      label: Verlust des Geruchs-/Geschmackssinns
+      field: LostTaste
+    musclePain:
+      label: Gliederschmerzen
+      field: MusclePain
+    nausea:
+      label: Übelkeit
+      field: Nausea
+    runnyNose:
+      label: Schnupfen
+      field: RunnyNose
+    throat:
+      label: Halsschmerzen
+      field: Throat
+    tiredness:
+      label: Grosse Müdigkeit
+      field: Tiredness
   technology: Technik
   testResult: 'Falls ja, wie war Ihr Testresultat?'
   title: COVID-19 Tracking Schweiz

@@ -160,9 +160,9 @@ ageRanges:
       ---------------------------------------------------------- -->
       <div id="form-expanded" class="boxed js-hide">
         <span class="section-title reduced-margins"><%= t(:followingSymptoms) %></span>
-        <% t(:symptoms).each do | key, text | %>
+        <% t(:symptoms).each do | key, entry | %>
           <div class="input-wrap input-wrap--radio">
-            <span class="label"><%= text %></span>
+            <span class="label"><%= entry[:label] %></span>
             <div class="radio-wrap">
               <label class="radio-item" for="<%= key %>-1">
                 <input class="js-toggle input" type="radio" name="<%= key %>" id="<%= key %>-1" value="1" data-show="wrap-<%= key %>Since">
@@ -203,16 +203,16 @@ ageRanges:
       ---------------------------------------------------------- -->
       <div id="previous-symptoms-expanded" class="boxed js-hide">
         <span class="section-title reduced-margins"><%= t(:followingPreviousSymptoms) %></span>
-        <% t(:symptoms).each do | key, text | %>
+        <% t(:symptoms).each do | key, entry | %>
           <div class="input-wrap input-wrap--radio">
-            <span class="label"><%= text %></span>
+            <span class="label"><%= entry[:label] %></span>
             <div class="radio-wrap">
               <label class="radio-item">
-                <input class="js-toggle input" type="radio" name="previously_<%= key %>" value="1">
+                <input class="js-toggle input" type="radio" name="previous<%= entry[:field] %>" value="1">
                 <span><%= t(:yesAnswer) %></span>
               </label>
               <label class="radio-item">
-                <input class="js-toggle input" type="radio" name="previously_<%= key %>" value="0">
+                <input class="js-toggle input" type="radio" name="previous<%= entry[:field] %>" value="0">
                 <span><%= t(:noAnswer) %></span>
               </label>
             </div>

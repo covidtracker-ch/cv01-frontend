@@ -136,17 +136,39 @@ en:
   spain: Spain
   supportedBy: In cooperation with
   symptoms:
-    coughing: Coughing
-    diarrhea: Diarrhea
-    dyspnea: Shortness of breath
-    fever: Fever above 38 Degrees
-    headache: Headache
-    lostTaste: Loss of smell or taste
-    musclePain: Muscle Pain
-    nausea: Nausea
-    runnyNose: Runny Nose
-    throat: Sore throat
-    tiredness: Fatigue
+    coughing:
+      label: Coughing
+      field:  Coughing
+    diarrhea:
+      label: Diarrhea
+      field:  Diarrhea
+    dyspnea:
+      label: Shortness of breath
+      field: Dyspnea
+    fever:
+      label: Fever above 38 Degrees
+      field: Fever
+    headache:
+      label: Headache
+      field:  Headache
+    lostTaste:
+      label: Loss of smell or taste
+      field: LostTaste
+    musclePain:
+      label: Muscle Pain
+      field: MusclePain
+    nausea:
+      label: Nausea
+      field: Nausea
+    runnyNose:
+      label: Runny Nose
+      field: RunnyNose
+    throat:
+      label: Sore throat
+      field: Throat
+    tiredness:
+      label: Fatigue
+      field: Tiredness
   technology: Tech
   testResult: What was the result?
   title: COVID-19 Tracking Switzerland

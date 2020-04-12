@@ -137,17 +137,39 @@ it:
   spain: Spagna
   supportedBy: Supportato da
   symptoms:
-    coughing: Tosse
-    diarrhea: Diarrea
-    dyspnea: Difficoltà di respirazione
-    fever: Febbre oltre i 38 gradi
-    headache: Mal di testa
-    lostTaste: Perdita di odore o sapore
-    musclePain: Dolore muscolare
-    nausea: Nausea
-    runnyNose: Naso che cola
-    throat: Mal di gola
-    tiredness: Molto stanco
+    coughing:
+      label: Tosse
+      field: Coughing
+    diarrhea:
+      label: Diarrea
+      field: Diarrhea
+    dyspnea:
+      label: Difficoltà di respirazione
+      field: Dyspnea
+    fever:
+      label: Febbre oltre i 38 gradi
+      field: Fever
+    headache:
+      label: Mal di testa
+      field: Headache
+    lostTaste:
+      label: Perdita di odore o sapore
+      field: LostTaste
+    musclePain:
+      label: Dolore muscolare
+      field: MusclePain
+    nausea:
+      label: Nausea
+      field: Nausea
+    runnyNose:
+      label: Naso che cola
+      field: RunnyNose
+    throat:
+      label: Mal di gola
+      field: Throat
+    tiredness:
+      label: Molto stanco
+      field: Tiredness
   technology: Tecnologia
   testResult: 'Se sì, qual è stato il risultato?'
   title: Tracciamento del COVID-19 in Svizzera

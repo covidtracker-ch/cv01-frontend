@@ -45,12 +45,22 @@ h2 {
 p {
   line-height: 1.4;
 
+  .blog-detail & {
+    margin: 0;
+  }
 }
 ul.list {
 
   li {
     line-height: 1.4;
     margin: .5rem 0;
+  }
+}
+
+h4 {
+  
+  .blog-detail & {
+    margin: 0;
   }
 }
 
@@ -86,7 +96,7 @@ ul.list {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 940px;
   padding: 0 1rem;
   margin: 0 auto;
   box-sizing: border-box;
@@ -142,16 +152,18 @@ ul.list {
   }
   .subtext {
     display: block;
-    font-size: .8rem;
+    font-size: .7rem;
     color: #999;
-    font-style: oblique;
+    // font-style: oblique;
+    line-height: 1.4;
     font-weight: normal;
-    margin-bottom: .5rem;
+    margin-bottom: .75rem;
+    margin-top: -.25rem;
     letter-spacing: .02rem;
 
     &--rb-inset {
       margin-left: 1.5em;
-      margin-top: 5px;
+      margin-top: .15rem;
     }
 
     &--inset {
@@ -249,6 +261,10 @@ ul.list {
       border-radius: 99%;
       line-height: 1rem;
     }
+  }
+
+  &#wrap-participantcode {
+    margin-top: 1.5rem;
   }
 }
 
@@ -352,7 +368,9 @@ section.subpage {
   }
 }
 .partners-wrap, .social-wrap {
-  max-width: 900px;
+  max-width: 940px;
+  padding: 0 1rem;
+  box-sizing: border-box;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -523,7 +541,7 @@ section.subpage {
   z-index: 1;
 
   &__inner {
-    max-width: 900px;
+    max-width: 940px;
     margin: 0 auto;
     position: relative;
     padding: 0 1rem;
@@ -587,9 +605,9 @@ section.subpage {
 }
 
 .boxed {
-  border: solid 1px #beccc2; border-radius: 3px;
-  background: #edf7ef;
-  padding: 20px;
+  border: solid 1px #ddd; border-radius: 3px;
+  background: #fafafa;
+  padding: 1rem 1.5rem;
 
   .reduced-margins {
     margin-top: 1rem;
@@ -600,8 +618,10 @@ section.subpage {
   }
 }
 .code-chooser.boxed {
+  margin: 3rem 0 4rem 0;
+
   .input-wrap {
-    margin: 10px;
+    margin: .5rem 0;
   }
 }
 
@@ -638,25 +658,25 @@ section.map {
 }
 
 .survey_additional_header {
-  margin: 10px;
+  margin: 3rem 0 1rem 0;
+  font-size: 1.5rem;
+  color: #555;
 }
 
-.survey_additional {
-  margin: 10px;
-  font-size: 14px;
-}
-
+.survey_additional,
 .survey_additional_part2 {
-  margin: 10px;
-  font-size: 14px;
+  margin: .5rem 0;
+  font-size: .8rem;
+  color: #555;
 }
 
 .blog {
   .blog_time {
     font-weight: normal;
-    color: #777;
-    font-size: smaller;
-    font-style: italic;
+    color: #888;
+    font-size: .8rem;
+    margin-top: -.5rem;
+    // font-style: italic;
   }
 }
 
@@ -677,4 +697,28 @@ section.map {
 }
 .font-italic {
   font-style: italic;
+}
+
+.moreinfo-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  // justify-content: space-evenly;
+
+  li {
+    font-size: .8rem;
+    margin-right: 1rem;
+
+    a {
+      display: block;
+      text-decoration: underline;
+      color: #888;
+    }
+  }
+}
+
+.blog-summary {
+  margin-top: 1rem;
+  color: #888;
 }

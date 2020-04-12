@@ -5,7 +5,7 @@ per_page: 10
 <%= partial "partials/header" %>
 <%= partial "partials/homelink" %>
 
-<div class="container blog">
+<div class="container blog blog-detail">
   <section class="subpage">
     <% if paginate && num_pages > 1 %>
       <p>Seite <%= page_number %> vom <%= num_pages %></p>
@@ -19,8 +19,10 @@ per_page: 10
     <% blog.articles_by_locale.each_with_index do |article, i| %>
       <h2><%= link_to article.title, article %></h2>
       <h4 class="blog_time"><%= article.data.author %>, <%= article.date.strftime('%b %e, %Y') %></h4>
-
-      <%= article.summary(250) %>
+      
+      <div class="blog-summary">
+        <%= article.summary(250) %>
+      </div>
     <% end %>
 
     <% if paginate %>

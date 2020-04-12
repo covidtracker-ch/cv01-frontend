@@ -114,7 +114,7 @@ fr:
   manualParticipantCode: (Optionnel) Entrez votre code de participation
   maybe: Probablement
   negative: Négatif
-  noAnswer: 'No'
+  noAnswer: 'Non'
   noinformation: Aucune information
   nonTestReason: Avez-vous consulté un médecin?
   notKnownAnswer: Pas que je sache de
@@ -140,7 +140,7 @@ fr:
   shareby: Partager par
   shareon: Partager sur
   showMoreComorbidities: Montre plus...
-  sinceHowManyDays: Pour combien de jours ?
+  sinceHowManyDays: Depuis quand ?
   smokeOrVape: Fumez-vous ou vapotez-vous?
   spain: Espagne
   supportedBy: Soutenu par
@@ -167,7 +167,7 @@ fr:
   whenTested: 'Si oui: quand ?'
   whereTested: 'Si oui: où ?'
   worksInHealth: Travaillez-vous dans le système de santé avec des patients ?
-  yesAnswer: 'Yes'
+  yesAnswer: 'Oui'
   zip: Code postal
   pageNotFound: Page non trouvée
   mailingList:

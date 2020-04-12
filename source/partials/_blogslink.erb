@@ -1,3 +1,11 @@
 <div class="container homelink">
-  <%= link_to 'Blog Posts', '/blog' %>
+  <% if I18n.locale == :en %>
+    <%= link_to 'Blog Posts', '/en/blog' %>
+  <% elsif I18n.locale == :fr %>
+    <%= link_to 'Blog Posts', '/fr/blog' %>
+  <% elsif I18n.locale == :it %>
+    <%= link_to 'Blog Posts', '/it/blog' %>
+  <% else %>
+    <%= link_to 'Blog Posts', '/blog' %>
+  <% end %>
 </div>

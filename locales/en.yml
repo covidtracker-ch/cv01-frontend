@@ -25,7 +25,7 @@ en:
   comorbidities:
     main:
       highBloodPressure:
-        label: High Blood Pressure
+        label: High blood pressure
       heartDisease:
         label: 'Long-term heart disease, like heart failure.'
       diabetes2:
@@ -33,15 +33,15 @@ en:
       diabetes1:
         label: Diabetes (Type 1)
       liver:
-        label: 'Chronic liver disease (i.e., hepatitis)'
+        label: 'Chronic liver disease (e.g., hepatitis)'
       respiratory:
         label: Chronic respiratory disease
-        subtext: '(i.e., COPD, asthma, emphysema, bronchitis, cystic fibrosis.)'
+        subtext: '(e.g., COPD, asthma, emphysema, bronchitis, cystic fibrosis.)'
       kidney:
         label: Chronic kidney disease
       immuneSystem:
         label: Weakened immune system or on immunosuppressants
-        subtext: '(i.e., cancer patient currently undergoing chemo/radiotherapy)'
+        subtext: '(e.g., cancer patient currently undergoing chemo/radiotherapy)'
     extended:
       bloodCancer:
         label: Blood cancer patient (such as leukemia) at any stage of treatment
@@ -49,13 +49,13 @@ en:
         label: HIV/AIDS
       spleen:
         label: Chronic spleen disease
-        subtext: '(i.e., sickle cell disease or spleen removed)'
+        subtext: '(e.g., sickle cell disease or spleen removed)'
       organTransplant:
         label: I've had an organ transplant
       neurological:
         label: Chronic neurological disease
         subtext: >-
-          (i.e., Parkinson’s disease, motor neuron disease, multiple sclerosis or
+          (e.g., Parkinson’s disease, motor neuron disease, multiple sclerosis or
           cerebral palsy)
       obesity:
         label: Obesity
@@ -78,7 +78,7 @@ en:
   ems: Retirement home
   feelsUnhealthy: Do you have any unusual symptoms?
   female: Female
-  firstTimeForm: Is this your first time filling out this form?
+  firstTimeForm: Is this the first time you have filled out this form?
   followingPreviousSymptoms: 'Did you suffer from any of the following symptoms:'
   followingSymptoms: 'Do you suffer from any of the following symptoms:'
   france: France
@@ -121,7 +121,7 @@ en:
   press: Press
   pressRelease: Press release Canton of Bern
   pressReleaseLink: ''
-  previouslyUnhealthy: 'Since February 1st, did you have any symptoms from which you have recovered?'
+  previouslyUnhealthy: Since February 1st, have you had any symptoms from which you have recovered?
   privatePractice: Private Practice
   probablyAnswer: Probably
   saveResponses: Remember my responses for next time
@@ -159,7 +159,7 @@ en:
   whereTested: Where were you tested?
   worksInHealth: Do you work with patients in the healthcare system?
   yesAnswer: 'Yes'
-  zip: Postal code
+  zip: Zip code
   pageNotFound: Page not found
   mailingList:
     header: Sign up for the mailing list

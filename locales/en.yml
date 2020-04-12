@@ -166,4 +166,5 @@ en:
     body: Please sign up for our mailing list to stay on top of developments.
     warning: This email address will not be sent out to third-parties nor connected to your survey data in any way.
     join: Submit
+    cancel: Cancel
   emailAddress: Email Address

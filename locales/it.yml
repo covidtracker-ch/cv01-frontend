@@ -172,4 +172,5 @@ it:
     body: Iscriviti alla nostra mailing list per rimanere aggiornato sugli sviluppi.
     warning: Questo indirizzo e-mail non verrà inviato a terzi né collegato ai dati del sondaggio in alcun modo.
     join: Invia
+    cancel: Abortire
   emailAddress: indirizzo email

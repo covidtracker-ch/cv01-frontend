@@ -7,23 +7,20 @@ fr:
     actuelle:
   behaviors:
     isolation:
-      label: Isolement
+      label: Confinement
       subtext: >-
-        Ne présente aucun symptôme, mais j'ai peut-être été exposé. Ne pas quitter
-        la maison.
+        Je ne présente aucun symptôme, mais j’ai peut-être été exposé. Je ne quitte pas la maison.
     self_isolation:
-      label: Auto-isolement
+      label: Auto-Confinement
       subtext: >-
-        Ne présente aucun symptôme, mais j'ai peut-être été exposé. Ne pas quitter
-        la maison.
+        Je ne présente aucun symptôme, mais j’ai peut-être été exposé. Je ne quitte pas la maison.
     precaution_isolation:
-      label: Auto-isolation de précaution
+      label: Auto-confinement de précaution
       subtext: >-
-        Aucune exposition connue mais limitant tous les contacts. Quitter la
-        maison uniquement pour l'épicerie, etc.
+        Aucune exposition connue, mais limitation de tous les contacts. Je quitte la maison uniquement pour des courses indispensables (épicerie, pharmacie, etc).
     social_distancing:
       label: Distanciation sociale
-      subtext: 'Pas de poignée de main, garder une distance avec les autres.'
+      subtext: 'Pas de poignée de main, respect de la distance de sécurité avec les autres personnes.'
     typical_activity:
       label: Maintien des activités habituelles
   birthyear: Année de naissance
@@ -39,16 +36,16 @@ fr:
       diabetes1:
         label: Diabète (Type 1)
       liver:
-        label: Problèmes hépatiques chroniques (c.-à-d. Hépatite)
+        label: Problèmes hépatiques chroniques (par ex. hépatite)
       respiratory:
         label: Problèmes respiratoires chroniques
-        subtext: '(c.-à-d. MPOC, asthme, emphysème, bronchite, fibrose kystique)'
+        subtext: '(par ex. MPOC, asthme, emphysème, bronchite, fibrose kystique)'
       kidney:
         label: Problèmes rénaux chroniques
       immuneSystem:
         label: Système immunitaire affaibli ou sous immunosuppresseurs
         subtext: >-
-          (c.-à-d. patient atteint d'un cancer qui subit actuellement une chimio /
+          (par ex. patient atteint d'un cancer qui subit actuellement une chimio /
           radiothérapie)
     extended:
       bloodCancer:
@@ -59,41 +56,42 @@ fr:
         label: VIH/SIDA
       spleen:
         label: Problèmes chroniques de la rate
-        subtext: (c.-à-d. Drépanocytose ou ablation de la rate)
+        subtext: (par ex. Drépanocytose ou ablation de la rate)
       organTransplant:
         label: J'ai eu une greffe d'organe
       neurological:
         label: Problèmes neurologiques chroniques
         subtext: >-
-          (c.-à-d. Maladie de Parkinson, maladie des motoneurones, sclérose en
+          (par ex. Maladie de Parkinson, maladie des motoneurones, sclérose en
           plaques, trouble d'apprentissage ou paralysie cérébrale)
       obesity:
         label: Obésité
       pregnancy:
         label: Actuellement enceinte
   comorbiditiesPrompt: Condition préexistante/ Comorbidités (Cochez tout ce qui s'applique)
-  consentInformation: Conditions de Participation
+  consentInformation: Conditions de participation
   consentToStudy: >-
     J'accepte les <a href="/fr/consent.html" target="_blank"> conditions de
     participation </a> à cette étude
   cookieWarning: >-
     Si vous sélectionnez 'oui', vous consentez à l'utilisation de cookies. Lors de
-    l'utilisation de cookies, d'autres utilisateurs qui ont accès à cet ordinateur
-    peuvent être en mesure de récupérer les réponses à l'enquête.
+    l'utilisation de cookies, 
+    d’autres personnes ayant accès à cet ordinateur pourraient être en mesure 
+    de récupérer de récupérer les réponses à l'enquête.
   dataProtection: Protection des données
   dateContacted: 'Si oui, quand étiez-vous en contact ?'
   description: Sauve des vies à l’aide du tracker COVID-19.
   ems: EMS
   feelsUnhealthy: Avez-vous des symptômes inhabituels?
   female: Femme
-  firstTimeForm: C'est la première fois que vous remplissez ce formulaire?
+  firstTimeForm: Est-ce la première fois que vous remplissez ce questionnaire?
   followingPreviousSymptoms: 'Avez-vous souffert de l''un des symptômes suivants:'
   followingSymptoms: 'Souffrez-vous actuellement des symptômes suivants:'
   france: France
   generalinfo: Informations générales
   germany: Allemagne
   hasBeenTested: Avez-vous été testé pour le covid-19 ?
-  hideMoreComorbidities: Cacher plus
+  hideMoreComorbidities: Retour au-dessus
   hospital: Hôpital
   householdSize: Taille du foyer dans lequel vous vivez
   implementation: Réalisation
@@ -117,8 +115,8 @@ fr:
   noAnswer: 'Non'
   noinformation: Aucune information
   nonTestReason: Avez-vous consulté un médecin?
-  notKnownAnswer: Pas que je sache de
-  other: Autres
+  notKnownAnswer: Pas à ma connaissance
+  other: Autre
   participantCode: (Optionnel) Votre code de participation d'avant
   partners: Partenaires
   phoneDigits: Les quatre derniers chiffres de votre numéro de téléphone
@@ -129,7 +127,7 @@ fr:
   press: Presse
   pressRelease: Communiqué de presse du canton de Berne
   pressReleaseLink: >-
-    https://www.be.ch/portal/de/index/mediencenter/medienmitteilungen.meldungNeu.html/portal/de/meldungen/mm/2020/04/20200408_0901_die_eth_zuerich_undderkantonbernentwickelngemeinsamdencovid-19sy?utm_source=rss&utm_medium=Medienmitteilungen&utm_campaign=Die+ETH+Z%C3%BCrich+und+der+Kanton+Bern+entwickeln+gemeinsam+den+COVID-19+Symptom-Tracker
+    https://www.be.ch/portal/fr/index/mediencenter/medienmitteilungen.meldungNeu.html/portal/fr/meldungen/mm/2020/04/20200408_0901_die_eth_zuerich_undderkantonbernentwickelngemeinsamdencovid-19sy?utm_source=rss&utm_medium=Medienmitteilungen&utm_campaign=Die+ETH+Z%C3%BCrich+und+der+Kanton+Bern+entwickeln+gemeinsam+den+COVID-19+Symptom-Tracker
   previouslyUnhealthy: 'Depuis le 1er février, avez-vous eu des symptômes dont vous vous êtes remis?'
   privatePractice: Pratique privée
   probablyAnswer: Probablement
@@ -139,7 +137,7 @@ fr:
   sex: Sexe (attribué à la naissance)
   shareby: Partager par
   shareon: Partager sur
-  showMoreComorbidities: Montre plus...
+  showMoreComorbidities: En montrer plus...
   sinceHowManyDays: Depuis quand ?
   smokeOrVape: Fumez-vous ou vapotez-vous?
   spain: Espagne
@@ -163,7 +161,7 @@ fr:
   unlistedCode: Mon code n'est pas répertorié
   url: 'https://www.covidtracker.ch/fr'
   wasAbroad: Avez-vous été à l’étranger durant ces 14 derniers jours ?
-  wasInContactWithCase: Avez-vous été en contact avec un cas positif pour le covid-19 ?
+  wasInContactWithCase: Avez-vous été en contact avec un cas positif de covid-19 ?
   whenTested: 'Si oui: quand ?'
   whereTested: 'Si oui: où ?'
   worksInHealth: Travaillez-vous dans le système de santé avec des patients ?
@@ -175,4 +173,5 @@ fr:
     body: Veuillez vous inscrire à notre liste de diffusion pour rester au courant des développements.
     warning: Cette adresse e-mail ne sera en aucun cas transmise à des tiers ni connectée à vos données d'enquête.
     join: Envoyer
+    cancel: Supprimer
   emailAddress: Adresse e-mail

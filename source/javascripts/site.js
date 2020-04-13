@@ -277,6 +277,66 @@ function bindParticipantsList(lastCode) {
   }
 }
 
+function selectExistingCode(code, isManual) {
+  var firstTime_No = document.getElementById('firstTimeSurvey-0');
+  var participantCodeList = document.getElementById('participantCodeList');
+  var participantCodeManualBox = document.getElementById('participantCodeManualBox');
+  var participantCodeManual = document.getElementById('participantCodeManual');
+
+  if (code && firstTime_No && participantCodeList && participantCodeManual) {
+    firstTime_No.checked = true;
+    document.getElementById(firstTime_No.dataset.show).classList.remove('hidden');
+
+    if (isManual) {
+      participantCodeManualBox.classList.remove('hidden');
+      participantCodeList.value = '__none__';
+      participantCodeManual.value = code;
+      clearForm();
+    }
+    else {
+      console.log("Selecting value ", code, " from options: ", participantCodeList.options);
+      for (var i = 0; i < participantCodeList.options.length; i++) {
+        var curOption = participantCodeList.options[i];
+        if (curOption.value === code) {
+          console.log("Found! ", i);
+          participantCodeList.selectedIndex = i;
+          curOption.selected = true;
+          // break;
+        }
+      }
+    }
+  }
+}
+
+function checkForMigrationData() {
+  var params = searchParams();
+
+  if (params['migration_data']) {
+    // un-encode and deserialize the data
+    var decoded = JSON.parse(decodeURIComponent(params['migration_data']));
+    var allResponses = JSON.parse(localStorage.getItem('formData')) || {};
+
+    for (var i = 0; i < decoded.length; i++) {
+      var rec = decoded[i];
+      if (allResponses.hasOwnProperty(rec.code)) {
+        // if it's already been imported, skip it
+        continue;
+      }
+
+      updateStore(rec.code, {
+        participantCode: rec.code,
+        ageRange: rec.age_range,
+        sex: (rec.sex === "M" && "male") || (rec.sex === "F" && "female") || "other"
+      });
+    }
+
+    if (decoded[0].code) {
+      // sets lastCode so that bindParticipantsList() loads it
+      localStorage.setItem('lastCode', decoded[0].code);
+    }
+  }
+}
+
 function checkForMigrationCode() {
   var params = searchParams();
 
@@ -284,16 +344,10 @@ function checkForMigrationCode() {
   // (yes, i'm aware that this is less than attractive...)
   var firstTime_No = document.getElementById('firstTimeSurvey-0');
   var participantCodeList = document.getElementById('participantCodeList');
-  var participantCodeManualBox = document.getElementById('participantCodeManualBox');
   var participantCodeManual = document.getElementById('participantCodeManual');
 
   if (params['migration_code'] && firstTime_No && participantCodeList && participantCodeManual) {
-    firstTime_No.checked = true;
-    participantCodeList.value = '__none__';
-    document.getElementById(firstTime_No.dataset.show).classList.remove('hidden');
-    participantCodeManualBox.classList.remove('hidden');
-    participantCodeManual.value = params['migration_code'];
-    clearForm();
+    selectExistingCode(params['migration_code'], true);
   }
 }
 
@@ -323,6 +377,9 @@ onDOMReady(function() {
   checkLang();
   checkForCode();
   setupForm();
+
+  // check for migration data prior to binding the participant list, since it'll affect its contents
+  checkForMigrationData();
 
   // binding the participants' list will rehydrate
   // the form when it preselects the last participant

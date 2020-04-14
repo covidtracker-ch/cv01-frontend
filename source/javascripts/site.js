@@ -277,37 +277,6 @@ function bindParticipantsList(lastCode) {
   }
 }
 
-function selectExistingCode(code, isManual) {
-  var firstTime_No = document.getElementById('firstTimeSurvey-0');
-  var participantCodeList = document.getElementById('participantCodeList');
-  var participantCodeManualBox = document.getElementById('participantCodeManualBox');
-  var participantCodeManual = document.getElementById('participantCodeManual');
-
-  if (code && firstTime_No && participantCodeList && participantCodeManual) {
-    firstTime_No.checked = true;
-    document.getElementById(firstTime_No.dataset.show).classList.remove('hidden');
-
-    if (isManual) {
-      participantCodeManualBox.classList.remove('hidden');
-      participantCodeList.value = '__none__';
-      participantCodeManual.value = code;
-      clearForm();
-    }
-    else {
-      console.log("Selecting value ", code, " from options: ", participantCodeList.options);
-      for (var i = 0; i < participantCodeList.options.length; i++) {
-        var curOption = participantCodeList.options[i];
-        if (curOption.value === code) {
-          console.log("Found! ", i);
-          participantCodeList.selectedIndex = i;
-          curOption.selected = true;
-          // break;
-        }
-      }
-    }
-  }
-}
-
 function checkForMigrationData() {
   var params = searchParams();
 
@@ -338,16 +307,26 @@ function checkForMigrationData() {
 }
 
 function checkForMigrationCode() {
+  // if there's a migration code and we're on the homepage, prefill it into the
+  // "other code" box.
+  // (note that this is one of two mechanisms for accepting migration codes;
+  // the second mechanism is checkForMigrationData() above.)
+
   var params = searchParams();
 
-  // if there's a migration code and we're on the homepage, prefill it
-  // (yes, i'm aware that this is less than attractive...)
   var firstTime_No = document.getElementById('firstTimeSurvey-0');
   var participantCodeList = document.getElementById('participantCodeList');
   var participantCodeManual = document.getElementById('participantCodeManual');
 
   if (params['migration_code'] && firstTime_No && participantCodeList && participantCodeManual) {
-    selectExistingCode(params['migration_code'], true);
+    // sets the
+    firstTime_No.checked = true;
+    document.getElementById(firstTime_No.dataset.show).classList.remove('hidden');
+
+    participantCodeManualBox.classList.remove('hidden');
+    participantCodeList.value = '__none__';
+    participantCodeManual.value = params['migration_code'];
+    clearForm();
   }
 }
 

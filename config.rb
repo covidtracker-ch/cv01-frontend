@@ -74,8 +74,8 @@ ready do
 end
 
 # set the API url to the staging server by default, but override when building locally
-config[:api_url] = "https://covid-stage.apps-customer.210235761750.ninegcp.ch"
-# config[:api_url] = "https://backend.covidtracker.ch"
+# config[:api_url] = "https://covid-stage.apps-customer.210235761750.ninegcp.ch"
+config[:api_url] = "https://backend.covidtracker.ch"
 configure :development do
   config[:api_url] = "http://localhost:5000"
 end

@@ -62,12 +62,22 @@ function goToLang(lang) {
     return;
   }
 
-  var path = normPath.split("/").pop();
-  if (lang === 'de') {
-    window.location.assign(window.location.origin + '/' + path);
+  var isBlogPost = normPath.indexOf("blog/posts") !== -1;
+  var pathParts = normPath.split("/");
+
+  if (pathParts[0] === 'en' || pathParts[0] === 'fr' || pathParts[0] === 'it' || pathParts[0] === 'de') {
+    // remove the language prefix
+    pathParts.shift();
+  }
+
+  if (lang === 'de' && !isBlogPost) {
+    // for german, non-blog URLs always omit the language code
+    window.location.assign(window.location.origin + '/' + pathParts.join("/"));
   }
   else {
-    window.location.assign(window.location.origin + '/' + lang + '/' + path);
+    // non-de paths always have the language code prefix
+    // additionally, blog posts are *always* prefixed with their language code, unlike the rest of the site
+    window.location.assign(window.location.origin + '/' + lang + '/' + pathParts.join("/"));
   }
 }
 

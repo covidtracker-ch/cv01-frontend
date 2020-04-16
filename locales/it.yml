@@ -191,3 +191,7 @@ it:
     join: Invia
     cancel: Abortire
   emailAddress: indirizzo email
+  apibuttons:
+    daily: Quotidiano
+    weekly: Settimanalmente
+    total: Totale

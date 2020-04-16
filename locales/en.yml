@@ -190,3 +190,7 @@ en:
     join: Submit
     cancel: Cancel
   emailAddress: Email Address
+  apibuttons:
+    daily: Daily
+    weekly: Weekly
+    total: Total

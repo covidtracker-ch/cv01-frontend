@@ -197,3 +197,7 @@ fr:
     join: Envoyer
     cancel: Supprimer
   emailAddress: Adresse e-mail
+  apibuttons:
+    daily: Du quotidien
+    weekly: Hebdomadaire
+    total: Total

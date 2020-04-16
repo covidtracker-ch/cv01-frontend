@@ -10,7 +10,7 @@ activate :i18n, :mount_at_root => :de
 
 activate :blog do |blog|
   blog.sources = "blog/posts/{year}-{month}-{day}/{lang}.html"
-  blog.permalink = "{lang}/blog/posts/{year}/{month}/{day}/{title}.html"
+  blog.permalink = "{lang}/blog/posts/{year}/{month}/{day}/{permalink}.html"
   blog.default_extension = 'html'
   blog.layout = 'blog_layout'
   blog.paginate = true

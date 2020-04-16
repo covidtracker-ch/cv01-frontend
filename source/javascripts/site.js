@@ -62,12 +62,22 @@ function goToLang(lang) {
     return;
   }
 
-  var path = normPath.split("/").pop();
-  if (lang === 'de') {
-    window.location.assign(window.location.origin + '/' + path);
+  var isBlogPost = normPath.indexOf("blog/posts") !== -1;
+  var pathParts = normPath.split("/");
+
+  if (pathParts[0] === 'en' || pathParts[0] === 'fr' || pathParts[0] === 'it' || pathParts[0] === 'de') {
+    // remove the language prefix
+    pathParts.shift();
+  }
+
+  if (lang === 'de' && !isBlogPost) {
+    // for german, non-blog URLs always omit the language code
+    window.location.assign(window.location.origin + '/' + pathParts.join("/"));
   }
   else {
-    window.location.assign(window.location.origin + '/' + lang + '/' + path);
+    // non-de paths always have the language code prefix
+    // additionally, blog posts are *always* prefixed with their language code, unlike the rest of the site
+    window.location.assign(window.location.origin + '/' + lang + '/' + pathParts.join("/"));
   }
 }
 
@@ -277,21 +287,54 @@ function bindParticipantsList(lastCode) {
   }
 }
 
-function checkForMigrationCode() {
+function checkForMigrationData() {
   var params = searchParams();
 
-  // if there's a migration code and we're on the homepage, prefill it
-  // (yes, i'm aware that this is less than attractive...)
+  if (params['migration_data']) {
+    // un-encode and deserialize the data
+    var decoded = JSON.parse(decodeURIComponent(params['migration_data']));
+    var allResponses = JSON.parse(localStorage.getItem('formData')) || {};
+
+    for (var i = 0; i < decoded.length; i++) {
+      var rec = decoded[i];
+      if (allResponses.hasOwnProperty(rec.code)) {
+        // if it's already been imported, skip it
+        continue;
+      }
+
+      updateStore(rec.code, {
+        participantCode: rec.code,
+        ageRange: rec.age_range,
+        sex: (rec.sex === "M" && "male") || (rec.sex === "F" && "female") || "other"
+      });
+    }
+
+    if (decoded[0].code) {
+      // sets lastCode so that bindParticipantsList() loads it
+      localStorage.setItem('lastCode', decoded[0].code);
+    }
+  }
+}
+
+function checkForMigrationCode() {
+  // if there's a migration code and we're on the homepage, prefill it into the
+  // "other code" box.
+  // (note that this is one of two mechanisms for accepting migration codes;
+  // the second mechanism is checkForMigrationData() above.)
+
+  var params = searchParams();
+
   var firstTime_No = document.getElementById('firstTimeSurvey-0');
   var participantCodeList = document.getElementById('participantCodeList');
-  var participantCodeManualBox = document.getElementById('participantCodeManualBox');
   var participantCodeManual = document.getElementById('participantCodeManual');
 
   if (params['migration_code'] && firstTime_No && participantCodeList && participantCodeManual) {
+    // sets the
     firstTime_No.checked = true;
-    participantCodeList.value = '__none__';
     document.getElementById(firstTime_No.dataset.show).classList.remove('hidden');
+
     participantCodeManualBox.classList.remove('hidden');
+    participantCodeList.value = '__none__';
     participantCodeManual.value = params['migration_code'];
     clearForm();
   }
@@ -323,6 +366,9 @@ onDOMReady(function() {
   checkLang();
   checkForCode();
   setupForm();
+
+  // check for migration data prior to binding the participant list, since it'll affect its contents
+  checkForMigrationData();
 
   // binding the participants' list will rehydrate
   // the form when it preselects the last participant

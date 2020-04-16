@@ -96,7 +96,7 @@ en:
     possible. This is the purpose of this campaign.</p> <p><b>Whether you are sick
     or healthy, infected or not, your data can help save lives.</b> By filling out
     the form below, you are helping us to overcome this crisis together. Ideally,
-    repeat your participation weekly (<a href="/images/covidtracker.ics">set up
+    repeat your participation daily (<a href="/images/covidtracker.ics">set up
     calendar event</a>).</p> <p>Important: The data is collected anonymously and
     does not allow identification of individuals.</p>
   italy: Italy
@@ -126,7 +126,7 @@ en:
   probablyAnswer: Probably
   saveResponses: Remember my responses for next time
   seemore: Learn more
-  sendForm: Submit your feedback
+  sendForm: Submit
   sex: Sex (at birth)
   shareby: Share on
   shareon: Share on
@@ -172,7 +172,7 @@ en:
   technology: Tech
   testResult: What was the result?
   title: COVID-19 Tracking Switzerland
-  toform: Submit your feedback
+  toform: To the survey
   unlistedCode: My code isn't listed
   url: 'https://www.covidtracker.ch/en'
   wasAbroad: Have you been abroad in the last 14 days?

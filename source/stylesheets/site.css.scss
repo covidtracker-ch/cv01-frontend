@@ -58,7 +58,7 @@ ul.list {
 }
 
 h4 {
-  
+
   .blog-detail & {
     margin: 0;
   }
@@ -92,6 +92,11 @@ h4 {
     &:hover {
       background-color: #fee;
     }
+  }
+  &--small {
+    height: 12px;
+    font-size: 14px;
+    padding-top: .5rem;
   }
 }
 

@@ -164,14 +164,25 @@ function setupForm() {
 // --- API calls
 // ---------------------------------------------------------------------------------------------
 
-function updateTotalSubs(targetID) {
+
+function humanize(value) {
+  if(value < 1000) return value;
+  if(value < 1e5) return Math.round(value/100)/10 + "k";
+  if(value < 1e6) return Math.round(value/1000) + "k";
+}
+
+function updateSummary() {
   var http = new XMLHttpRequest();
-  http.open("GET", "https://api.covidtracker.ch/count");
+  http.open("GET", "https://dataserve.covidtracker.ch/api/summary");
   http.send();
   http.onload = function() {
-    var s = http.responseText;
-    s = s.slice(0, 3) + "'" + s.slice(3);
-    document.getElementById(targetID).innerHTML = s;
+    const summary = JSON.parse(http.responseText);
+    document.getElementById('dailySubmissionsSummary').innerText = humanize(summary.daily.submissions);
+    document.getElementById('dailyCasesSummary').innerText = humanize(summary.daily.cases);
+    document.getElementById('weeklySubmissionsSummary').innerText = humanize(summary.weekly.submissions);
+    document.getElementById('weeklyCasesSummary').innerText = humanize(summary.weekly.cases);
+    document.getElementById('totalSubmissionsSummary').innerText = humanize(summary.total.submissions);
+    document.getElementById('totalCasesSummary').innerText = humanize(summary.total.cases);
   }
 }
 

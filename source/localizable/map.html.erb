@@ -1,33 +1,48 @@
 <%= partial "partials/header" %>
 <%= partial "partials/homelink" %>
 
+<br><br>
+<div class="container container--wide">
+    <h3>Overview</h3>
+    <table>
+      <tr>
+        <th></th>
+        <th>Submissions</th>
+        <th>Suspected cases</th>
+      </tr>
+      <tr>
+        <th>Last 24 hours</th>
+        <td id="dailySubmissionsSummary"><%= t(:loading) %></td>
+        <td id="dailyCasesSummary"><%= t(:loading) %></td>
+      </tr>
+      <tr>
+        <th>Last 7 days</th>
+        <td id="weeklySubmissionsSummary"><%= t(:loading) %></td>
+        <td id="weeklyCasesSummary"><%= t(:loading) %></td>
+      </tr>
+      <tr>
+        <th>Total</th>
+        <td id="totalSubmissionsSummary"><%= t(:loading) %></td>
+        <td id="totalCasesSummary"><%= t(:loading) %></td>
+      </tr>
+    </table>
+</div>
+
 <div class="container container--wide">
   <section class="map map--detail">
     <h3>
-      Detailkarte
-      <%= partial "partials/apibuttons" %>
+      Detailed map
     </h3>
-    <p>Total Antworten: <b><span id="totalsubs">t(:loading)</span></b></p>
+
     <div class="map-container">
       <iframe src="https://experience.arcgis.com/experience/543146be68424528856d57262cc2b02d/" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
+      <%= partial "partials/apibuttons" %>
   </section>
 </div>
-
-<div class="container">
-  <section class="map">
-    <h2>Heatmap</h2>
-    <h3>Anteil klinischer Verdachtsfälle</h3>
-    <p>Verhältnis zwischen den nach unserer "case definition" klassifizierten Fällen und der totalen Anzahl an Antworten, pro Postleitzahl.</p>
-    <div class="map-container">
-      <iframe src="https://script.google.com/a/macros/astina.ch/s/AKfycbyJ6R3G59HfS5YzkQvmY9xSbf-PsmZbAHDEA6ZwYAO_MkuCRo6v/exec?type=fraction" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-    </div>
-  </section>
-</div>
-
 
 <script>
 onDOMReady(function() {
-  updateTotalSubs('totalsubs');
+  updateSummary();
 });
 </script>

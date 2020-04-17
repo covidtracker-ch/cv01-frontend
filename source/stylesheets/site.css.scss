@@ -64,6 +64,17 @@ h4 {
   }
 }
 
+th {
+  padding: 10px;
+  font-weight: normal;
+  text-align: right;
+}
+
+td {
+  padding: 10px; 
+  font-weight: bold;
+}
+
 .btn {
   --webkit-appearance: none;
   display: inline-block;
@@ -96,6 +107,8 @@ h4 {
   &--small {
     height: 12px;
     font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
     padding-top: .5rem;
   }
   &--download {

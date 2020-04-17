@@ -58,7 +58,7 @@ ul.list {
 }
 
 h4 {
-  
+
   .blog-detail & {
     margin: 0;
   }
@@ -91,6 +91,16 @@ h4 {
 
     &:hover {
       background-color: #fee;
+    }
+  }
+  &--small {
+    height: 12px;
+    font-size: 14px;
+    padding-top: .5rem;
+  }
+  &--download {
+    img {
+      height: 15px; padding-bottom: 2px; margin-right: 3px; vertical-align: middle;
     }
   }
 }

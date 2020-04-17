@@ -3,7 +3,10 @@
 
 <div class="container container--wide">
   <section class="map map--detail">
-    <h3>Detailkarte</h3>
+    <h3>
+      Detailkarte
+      <%= partial "partials/apibuttons" %>
+    </h3>
     <p>Total Antworten: <b><span id="totalsubs">t(:loading)</span></b></p>
     <div class="map-container">
       <iframe src="https://experience.arcgis.com/experience/543146be68424528856d57262cc2b02d/" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>

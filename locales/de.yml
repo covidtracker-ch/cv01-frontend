@@ -197,3 +197,7 @@ de:
     join: Abschicken
     cancel: Abbrechen
   emailAddress: E-Mail-Adresse
+  apibuttons:
+    daily: Täglich
+    weekly: Wöchentlich
+    total: Gesamt

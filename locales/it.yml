@@ -86,7 +86,7 @@ it:
   hasBeenTested: È mai stato testato per il Covid-19?
   hideMoreComorbidities: Nascondi di più
   hospital: Ospedale
-  householdSize: Quanti sono i membri della famiglia in cui vive 
+  householdSize: Quanti sono i membri della famiglia in cui vive
   implementation: Attuazione
   imprint: Note legali
   introduction: >-
@@ -191,3 +191,7 @@ it:
     join: Invia
     cancel: Abortire
   emailAddress: indirizzo email
+  apibuttons:
+    daily: Quotidiano
+    weekly: Settimanalmente
+    total: Totale

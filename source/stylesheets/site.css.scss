@@ -745,3 +745,16 @@ section.map {
   margin-top: 1rem;
   color: #888;
 }
+
+.mdl-content {
+  max-height: 90vh;
+  overflow-y: scroll;
+}
+
+.mdl-footer {
+  margin: 1.5rem 0;
+}
+
+.mdl-footer > .btn {
+  margin: 0.5rem 0 0 0.2rem !important;
+}

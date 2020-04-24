@@ -1,41 +1,80 @@
 ---
-permalink: case definition
-title: Case Definition Explained
-author: Ximena Bonilla
+permalink: early spread detection
+title: Early Spread Detection
+author: Natalie Davidson
 ---
+
+
+<h3>Why participate in the covidtracker.ch survey? </h3>
+
 <div class="alert alert-primary text-center font-italic">Si vous pouvez nous aider à traduire, contactez-nous.</div>
 
-<p>
-  When a disease is being monitored, epidemiologists follow its progression by counting cases, calculating infection rates in the population, and then tracking the changes in these numbers over time. However, in order to count cases, a <b>case definition</b> needs to be established.
-</p>
 
 <p>
-  By following standard guidelines, it is possible to compare the number of cases, or the affected rates at different times or with other countries (providing they use the same guidelines to define their cases)1. We could compare the number of COVID-19 cases occurring in the Canton of Bern today, with the number of cases a year from now, or the disease rates for Vaud with those of Zürich, or with those of the whole of Switzerland. These types of comparisons allow for example, the identification of areas that are more susceptible to COVID-19 in order to allocate more resources, or areas where the disease has been controlled where it is OK to relax restrictions. When a difference is observed using the same case definition, the difference is likely to be a real one rather than a consequence of using distinct ways of classifying cases.
+  To answer this question, we first need to answer another question: what may happen when quarantine restrictions are relieved? As observed in Singapore [<b>1</b>], the Influenza pandemic of 1918 [<b>2</b>, <b>3</b>], and predicted in an Imperial College model of COVID-19 spread [<b>4</b>], a secondary wave of infection may occur. The secondary peak prediction from Imperial College is shown in the plot below by the blue and yellow peaks that appear after the intervention is removed.
 </p>
 
+<figure>
+  <img class="blog-img" src="/blog/images/blogpost_intervention_peak.png" alt="Secondary Peak after interventions stop. Adapted from [5]">
+  <figcaption>Figure 1 adapted from [5].</figcaption>
+</figure>
+
+<p>
+  To know if a second wave is starting, we ideally would need a daily estimate of how many people have COVID-19. However, providing daily tests across a large percentage of the population, including patients that are asymptomatic or with only mild to moderate symptoms, is logistically difficult to implement and is not currently done in Switzerland. <b>This is where our survey can help and where your participation is fundamental! Using our <a href="https://www.covidtracker.ch/en/blog/posts/2020/04/16/case-definition.html">COVID-19 case definition</a> and powered by users like you, we can help catch the second wave earlier!</b>
+</p>
+
+<h3>Why participate in the covidtracker.ch survey? </h3>
+<p>
+  In order to detect a secondary wave, we wanted to see how many survey responses were needed. We know this number depends on the doubling rate (i.e., how many days it takes the number of infected individuals to double) and the delay before we can detect a coming wave. First, we tested how much data we would need to detect the second wave in 2 to 8 days with various COVID-19 doubling times. To do this simulation, we assume that around 2% of the Swiss population has COVID-19 symptoms (as currently observed in our survey data) and we have a threshold of 80% sensitivity for our model (that is out of 100 positive cases, we reliably identify 80). For example, if we want to detect a secondary wave in 2 days after symptoms begin (2+Δ, where Δ is the incubation time): If the number of persons with COVID-19 doubles every three days, <b>we need at least 200 surveys per region every day</b>. You can see in Table 1 below, how it changes for longer detection periods and slower doubling rates. If we would like to detect an increase at the level of a Canton, then 200 surveys per day would be sufficient. However, if we want to detect an increase within a smaller region (like a city or zip code area), then one would need 200 surveys for that region. To cover all of Switzerland with good spatial resolution, we estimate that we need at least 20’000 survey participants every day.
+</p>
+
+<figure>
+  <img class="blog-img" src="/blog/images/blogpost_power_sim.png" alt="Estimated number of samples needed to detect secondary peak.">
+  <figcaption>Table 1.</figcaption>
+</figure>
+
+<p>
+  Now that we know how many surveys we need, do we currently have enough? <b>For most cantons, we do not have enough surveys to detect a second wave before the number of cases doubles.</b> Shown below in Table 2, are the cantons that have enough submissions to detect the second wave at different speeds. We look if we have enough submissions per canton on average over the last month, and over the last seven days. If we would like a more detailed map of the location of the spread, we would need ~10 times as many participants as we currently have.
+</p>
+
+
+<figure>
+  <img class="blog-img" src="/blog/images/blogpost_canton_coverage.png" alt="Cantons with sufficient submissions to detect the secondary wave.">
+  <figcaption>Table 2.</figcaption>
+</figure>
+
+
+<h3> How You Can Help </h3>
+<p>
+  <b>Our study is powered by citizen scientists like you!</b> Whether you are healthy or sick, every survey you provide (and encourage others to provide) powers our early detection method. Through our analysis, we can see that our goal is achievable. With only 1% of the population taking the survey every day we believe that we can make accurate predictions of a possible secondary wave. If you support our goal and want to help, please share our survey and answer it regularly!
+</p>
+
+
+<section class="home-section" id="sharing">
+  <%= partial "partials/social" %>
+</section>
+
+
+<p>
+  Works Cited:
+</p>
 <ol>
-  <li> <b>COVID-19 suspected case:</b> Individuals with acute respiratory illness (fever AND at least one more sign or symptom of disease, such as cough and shortness of breath), living in a location with COVID-19 community transmission (such as Switzerland) OR with a history of travel to areas with community transmission of the disease, OR in contact with a confirmed or probable COVID-19 case. </li>
+  <li>
+    Griffiths, James. “Singapore Had a Model Coronavirus Response, Then Cases Spiked. What Happened?” CNN, Cable News Network, 19 Apr. 2020, <a href="edition.cnn.com/2020/04/18/asia/singapore-coronavirus-response-intl-hnk/index.html"> Link to article. </a>
+  </li>
 
-  <li> <b>COVID-19 probable case:</b>A suspected case where the test is inconclusive or could not be performed.</li>
+  <li>
+    “1918 Pandemic Influenza: Three Waves.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, 11 May 2018, <a href="www.cdc.gov/flu/pandemic-resources/1918-commemoration/three-waves.html"> Link to article. </a>
+  </li>
 
-  <li> <b>COVID-19 confirmed case:</b>A person with laboratory confirmation of COVID-19 infection, irrespective of clinical signs and symptoms.</li>
+  <li>
+    Soper, George A. "The Lessons of the Pandemic." Science 49.1274 (1919): 501-506.
+  </li>
+
+  <li>
+    Ferguson, Neil, et al. "Report 9: Impact of non-pharmaceutical interventions (NPIs) to reduce COVID19 mortality and healthcare demand." (2020).  </li>
+  <li>
+    Adam, David. "Special report: The simulations driving the world's response to COVID-19." Nature (2020).
+  </li>
+
 </ol>
-
-<p>
-  Only those with a positive laboratory test (whether they have symptoms or not) are considered confirmed cases. At this time, Switzerland is testing mostly severe cases and thus, the number of confirmed cases is not necessarily indicative of the number of people with COVID-19 in the country, since many have very mild symptoms, or only moderate ones that do not require hospitalization. Therefore, we don't currently show confirmed cases on the map, as this number is small in the current situation. We have decided to show <b>COVID-19 suspected cases</b>, a definition better suited to inform on the prevalence of disease symptoms in our community.
-</p>
-
-<p>
-  As the disease definition is refined by health authorities, we may adapt to reflect other variables (e.g. additional risk factors, comorbidities, new symptoms). Please tune in again for updates, we will post them in this blog when they occur.
-<p/>
-
-<p>
-  For more information:
-</p>
-<ul>
-  <li>Principles of Epidemiology | Lesson 1 - Section 5. <a href="https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section5.html">Link to Article</a>  (2019).</li>
-
-  <li>Global Surveillance for human infection with coronavirus disease (COVID-19). <a href="https://www.who.int/publications-detail/global-surveillance-for-human-infection-with-novel-coronavirus-(2019-ncov)">Link to Article</a></li>
-
-  <li>Case definition and European surveillance for COVID-19, as of 2 March 2020. European Centre for Disease Prevention and Control <a href="https://www.ecdc.europa.eu/en/case-definition-and-european-surveillance-human-infection-novel-coronavirus-2019-ncov">Link to Article</a> </li>
-</ul>

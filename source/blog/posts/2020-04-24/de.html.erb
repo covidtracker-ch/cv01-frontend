@@ -1,41 +1,84 @@
 ---
-permalink: case definition
-title: Case Definition Explained
-author: Ximena Bonilla
+permalink: early spread detection
+title: Die Ausbreitung früh erkennen
+author: Natalie Davidson
 ---
-<div class="alert alert-primary text-center font-italic">Wenn Sie uns beim Übersetzen helfen können, kontaktieren Sie uns.</div>
+
+<h3>Warum sollte man bei covidtracker.ch mitmachen? </h3>
+<p>
+
+  Um diese Frage zu beantworten müssen wir uns zunächst einer anderen Frage zuwenden: Was würde passieren, wenn alle Einschränkungen des öffentlichen Lebens direkt aufgehoben würden? Wie bereits in Singapur [<b>1</b>] und während der Grippe-Pandemie in 1918 beobachtet worden ist [<b>2</b>, <b>3</b>] und wie von einer Studie des Imperial College London auch für COVID-19 vorausgesagt wird [<b>4</b>], ist das Auftreten einer zweiten Erkrankungswelle möglich. Wie eine solche zweite Erkrankungswelle verlaufen könnte ist in Abbildung 1 dargestellt. Basierend auf der Studie von Forschenden des Imperial College zeigen die blaue bzw. gelbe Kurve wie sich die Fallzahlen erneut zuspitzen könnten nachdem etwaige Einschränkungen aufgehoben werden.
+
+</p>
+
+<figure>
+  <img class="blog-img" src="/blog/images/blogpost_intervention_peak_DE.png" alt="Secondary Peak after interventions stop. Adapted from [5]">
+  <figcaption>Abbildung 1 (Quelle: [<b>5</b>], bearbeitet).</figcaption>
+</figure>
 
 <p>
-  When a disease is being monitored, epidemiologists follow its progression by counting cases, calculating infection rates in the population, and then tracking the changes in these numbers over time. However, in order to count cases, a <b>case definition</b> needs to be established.
+  Um herauszufinden ob eine solche zweite Welle im Anmarsch ist, bräuchte es idealerweise eine  tägliche Schätzung der Anzahl aller an COVID-19 Erkrankter in der Schweiz. Wollten wir dies anhand eines regelmässigen, flächendeckenden klinischen Tests tun, würden wir schnell sowohl an logistische als auch an Kostengrenzen stossen -  vor allem deshalb, weil für eine robuste Schätzung auch das regelmässige Testen einer grossen Anzahl von Personen notwendig ist, die nur milde oder gar keine Symptome zeigen oder die gar nicht erkrankt sind. Das wird sich auf absehbare Zeit in der Schweiz nicht umsetzen lassen.<b>Genau hier setzt unsere Umfrage an und Sie können uns direkt dabei helfen! Basierend auf unsere <a href="https://www.covidtracker.ch/de/blog/posts/2020/04/16/case-definition.html">Fall-Definition von COVID-19</a> und unterstützt durch Ihre Teilnahme können wir eine zweite Erkrankungswelle besser erkennen und frühzeitig Gegenmassnahmen ergreifen!</b>
+</p>
+
+<h3>Wie viele Teilnehmer werden gebraucht? </h3>
+<p>
+  Mit dem Ziel eine zweite Erkrankungswelle frühzeitig zu erkennen, galt es für uns zunächst herauszufinden wie viele Umfrageergebnisse für eine statistisch signifikante Schätzung benötigt werden. Wir wissen bereits, dass diese Zahl von einigen Kenngrössen abhängt: der Verdopplungsrate (also die Anzahl von Tagen innerhalb derer sich die Anzahl Erkrankter verdoppelt) und die Zeitverzögerung mit der etwaige Symptome einsetzen und man Erkrankte überhaupt erkennen kann.
 </p>
 
 <p>
-  By following standard guidelines, it is possible to compare the number of cases, or the affected rates at different times or with other countries (providing they use the same guidelines to define their cases)1. We could compare the number of COVID-19 cases occurring in the Canton of Bern today, with the number of cases a year from now, or the disease rates for Vaud with those of Zürich, or with those of the whole of Switzerland. These types of comparisons allow for example, the identification of areas that are more susceptible to COVID-19 in order to allocate more resources, or areas where the disease has been controlled where it is OK to relax restrictions. When a difference is observed using the same case definition, the difference is likely to be a real one rather than a consequence of using distinct ways of classifying cases.
+  Wir testeten zunächst wie viele Teilnehmer es bräuchte um eine zweite Erkrankungswelle innerhalb von 2 bis 8 Tagen zu erkennen, abhängig von unterschiedlichen COVID-19 Verdopplungsraten. Für eine solche Simulation muss man einige Annahmen treffen. In unserem Fall haben wir angenommen, dass 2% der Schweizer Einwohner Symptome zeigen (basierend auf unseren bisherigen Umfragedaten) und dass unser Modell eine Sensitivität von 80% hat (das heisst, von 100 positiven Fällen können wir 80 identifizieren). Um nun beispielsweise eine zweite Erkrankungswelle innerhalb von 2 Tagen nach erstem Auftreten von Symptomen (2+Δ, wobei Δ die Inkubationszeit darstellt) zu erkennen und man annimmt, dass sich die Zahl der an COVID-19 Erkrankten alle drei Tage verdoppelt, <b>bräuchten wir mindestens 200 Teilnehmer pro Region und Tag</b> um eine Aussage zu treffen. In Tabelle 1 fassen wir die Ergebnisse für andere Erkennungszeiträume und Verdopplungsraten zusammen. Wenn wir also einen Anstieg der Fälle innerhalb eines Kantons detektieren wollen, dann sind 200 Teilnehmer pro Tag ausreichend. Wollen wir dieselbe Detektion jedoch für eine enger gefasste Region ermöglichen (bspw. für eine Stadt oder Postleitzahlbereich), dann bräuchte es eben auch 200 Teilnehmer für diese enger gefasste Region. Möchte man die gesamte Schweiz mit einer guten regionalen Auflösung abdecken, so ergeben unsere Schätzungen, dass es Schweizweit täglich mindestens 20’000 Teilnehmer braucht.
+
 </p>
 
+
+<figure>
+  <img class="blog-img" src="/blog/images/blogpost_power_sim_DE.png" alt="Estimated number of samples needed to detect secondary peak.">
+  <figcaption>Tabelle 1.</figcaption>
+</figure>
+
+<p>
+  Da wir nun herausgefunden haben wie viele Teilnehmer wir brauchen, können wir uns jetzt der Frage zuwenden ob diese Mindestzahl derzeit schon erreicht ist? Dies ist leider nicht der Fall. <b>Für die meisten Kantone haben wir derzeit nicht ausreichend Teilnehmer um eine zweite Erkrankungswelle zu erkennen bevor sich die Anzahl der Erkrankten verdoppelt hat.</b> Tabelle 2 fasst die Kantone zusammen, welche derzeit genügend Teilnehmer haben um eine zweite Erkrankungswelle (mit unterschiedlichen Detektionszeiten) zu erkennen. Diese Angaben basieren auf den Teilnehmerzahlen des letzten Monats sowie der letzten 7 Tage. Um eine noch detailliertere Karte der derzeitigen Verbreitung von Symptomen zeichnen zu können, bräuchten wir ungefähr 10 mal mehr Teilnehmer als derzeit.
+
+</p>
+
+
+<figure>
+  <img class="blog-img" src="/blog/images/blogpost_canton_coverage_DE.png" alt="Cantons with sufficient submissions to detect the secondary wave.">
+  <figcaption>Table 2.</figcaption>
+</figure>
+
+
+<h3> Helfen Sie uns! </h3>
+<p>
+  <b>Unsere Umfrage zählt auf die wissenschaftliche Unterstützung durch die Bevölkerung!</b> Unabhängig davon ob Sie gesund oder erkrankt sind - jeder Teilnehmende und jede/r der/die bereit ist die Umfrage bekannter zu machen hilft uns dabei den Erkennungsmethoden für eine zweite Erkrankungswelle frühzeitig mehr Aussagekraft zu geben. Wenn nur 1% der Schweizer Bevölkerung täglich eine halbe Minute Zeit opfert um an der Umfrage teilzunehmen, können wir eine zweite Erkrankungswelle bereits frühzeitig erkennen. Wenn Sie uns also unterstützen wollen, bitte nehmen Sie regelmässig an unserer Umfrage Teil und bitten Sie andere das gleiche zu tun!
+</p>
+
+
+<section class="home-section" id="sharing">
+  <%= partial "partials/social" %>
+</section>
+
+
+<p>
+  Quellen:
+</p>
 <ol>
-  <li> <b>COVID-19 suspected case:</b> Individuals with acute respiratory illness (fever AND at least one more sign or symptom of disease, such as cough and shortness of breath), living in a location with COVID-19 community transmission (such as Switzerland) OR with a history of travel to areas with community transmission of the disease, OR in contact with a confirmed or probable COVID-19 case. </li>
+  <li>
+    Griffiths, James. “Singapore Had a Model Coronavirus Response, Then Cases Spiked. What Happened?” CNN, Cable News Network, 19 Apr. 2020, <a href="edition.cnn.com/2020/04/18/asia/singapore-coronavirus-response-intl-hnk/index.html"> Link to article. </a>
+  </li>
 
-  <li> <b>COVID-19 probable case:</b>A suspected case where the test is inconclusive or could not be performed.</li>
+  <li>
+    “1918 Pandemic Influenza: Three Waves.” Centers for Disease Control and Prevention, Centers for Disease Control and Prevention, 11 May 2018, <a href="www.cdc.gov/flu/pandemic-resources/1918-commemoration/three-waves.html"> Link to article. </a>
+  </li>
 
-  <li> <b>COVID-19 confirmed case:</b>A person with laboratory confirmation of COVID-19 infection, irrespective of clinical signs and symptoms.</li>
+  <li>
+    Soper, George A. "The Lessons of the Pandemic." Science 49.1274 (1919): 501-506.
+  </li>
+
+  <li>
+    Ferguson, Neil, et al. "Report 9: Impact of non-pharmaceutical interventions (NPIs) to reduce COVID19 mortality and healthcare demand." (2020).  </li>
+  <li>
+    Adam, David. "Special report: The simulations driving the world's response to COVID-19." Nature (2020).
+  </li>
+
 </ol>
-
-<p>
-  Only those with a positive laboratory test (whether they have symptoms or not) are considered confirmed cases. At this time, Switzerland is testing mostly severe cases and thus, the number of confirmed cases is not necessarily indicative of the number of people with COVID-19 in the country, since many have very mild symptoms, or only moderate ones that do not require hospitalization. Therefore, we don't currently show confirmed cases on the map, as this number is small in the current situation. We have decided to show <b>COVID-19 suspected cases</b>, a definition better suited to inform on the prevalence of disease symptoms in our community.
-</p>
-
-<p>
-  As the disease definition is refined by health authorities, we may adapt to reflect other variables (e.g. additional risk factors, comorbidities, new symptoms). Please tune in again for updates, we will post them in this blog when they occur.
-<p/>
-
-<p>
-  For more information:
-</p>
-<ul>
-  <li>Principles of Epidemiology | Lesson 1 - Section 5. <a href="https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section5.html">Link to Article</a>  (2019).</li>
-
-  <li>Global Surveillance for human infection with coronavirus disease (COVID-19). <a href="https://www.who.int/publications-detail/global-surveillance-for-human-infection-with-novel-coronavirus-(2019-ncov)">Link to Article</a></li>
-
-  <li>Case definition and European surveillance for COVID-19, as of 2 March 2020. European Centre for Disease Prevention and Control <a href="https://www.ecdc.europa.eu/en/case-definition-and-european-surveillance-human-infection-novel-coronavirus-2019-ncov">Link to Article</a> </li>
-</ul>

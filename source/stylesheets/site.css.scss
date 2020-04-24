@@ -71,7 +71,7 @@ th {
 }
 
 td {
-  padding: 10px; 
+  padding: 10px;
   font-weight: bold;
 }
 
@@ -744,6 +744,11 @@ section.map {
 .blog-summary {
   margin-top: 1rem;
   color: #888;
+}
+
+.blog-img {
+  width:100%; 
+  height: auto;
 }
 
 .mdl-content {

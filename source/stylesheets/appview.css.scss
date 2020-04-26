@@ -1,3 +1,23 @@
-#body.appview {
-  background: black;
+#body.appview .homelink {
+  padding-top: 110px;
 }
+
+#body.appview .hero > .navigation {
+  margin-top: -100px;
+  background: #f74141;
+  position: fixed;
+  padding-top: 100px;
+  padding-bottom: 15px;
+}
+
+#body.appview .lang-nav {
+  display: none;
+}
+
+#body.appview .header {
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+  top: 0px;
+}
+

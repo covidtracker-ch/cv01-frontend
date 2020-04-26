@@ -47,6 +47,18 @@ function checkError() {
   }
 }
 
+function checkMobile() {
+  const inFrame = () => {
+    try {
+      return window.self !== window.top;
+    } catch (e) {
+      return true;
+    }
+  }
+  if (inFrame()) {
+    document.getElementById('body').classList.add('appview');
+  }
+}
 
 // ---------------------------------------------------------------------------------------------
 // --- language selection and routing
@@ -375,6 +387,7 @@ onDOMReady(function() {
   setupLangSelectors();
   checkError();
   checkLang();
+  checkMobile();
   checkForCode();
   setupForm();
 

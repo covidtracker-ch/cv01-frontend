@@ -48,7 +48,7 @@ function checkError() {
 }
 
 function checkMobile() {
-  const inFrame = () => {
+  function inFrame() {
     try {
       return window.self !== window.top;
     } catch (e) {

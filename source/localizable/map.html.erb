@@ -28,21 +28,57 @@
     </table>
 </div>
 
-<div class="container container--wide">
-  <section class="map map--detail">
-    <h3>
-      Detailed map
-    </h3>
-
-    <div class="map-container">
-      <iframe src="https://experience.arcgis.com/experience/543146be68424528856d57262cc2b02d/" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+<div id="tabs" class="c-tabs no-js">
+  <div class="c-tabs-nav">
+    <a href="#" class="c-tabs-nav__link is-active">Map</a>
+    <a href="#" class="c-tabs-nav__link">Statistics</a>
+  </div>
+  <div class="c-tab is-active">
+    <div class="c-tab__content">
+      <div class="container container--wide">
+        <section class="map map--detail">
+          <h3>
+            Detailed map
+          </h3>
+      
+          <div class="map-container">
+            <iframe src="https://experience.arcgis.com/experience/543146be68424528856d57262cc2b02d/" width="600" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+        </section>
+      </div>
     </div>
-      <%= partial "partials/apibuttons" %>
-  </section>
+  </div>
+  <div class="c-tab">
+    <div class="c-tab__content">
+      <div class="container container--wide">
+        <section class="map map--detail">
+          <h3>
+            Summary Statistics and Trends
+          </h3>
+
+          <div class="map-container" style="display: flex; justify-content: center; height: 100%; position: relative;">
+            <iframe id="statsIframe" src="https://covid19survey.ethz.ch/viz/covidtracker_viz/" height="600" frameborder="0" style="margin: 0 auto; width: 100%;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            <div class="fader"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="padding: 0 2rem 1em 2rem;">
+    <%= partial "partials/apibuttons" %>
 </div>
 
 <script>
 onDOMReady(function() {
   updateSummary();
+  var myTabs = window.tabs({
+    el: '#tabs',
+    tabNavigationLinks: '.c-tabs-nav__link',
+    tabContentContainers: '.c-tab'
+  });
+  console.log(myTabs);
+  myTabs.init();
 });
 </script>

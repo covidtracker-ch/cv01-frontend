@@ -194,3 +194,16 @@ en:
     daily: Daily
     weekly: Weekly
     total: Total
+  pressKit:
+    header: News and Promotional Materials
+    infoText: Here is an overview of informational and promotional materials. You can download all materials <a href="/images/presskit/full_presskit.zip">here</a> or check them out below. As always, feel free to <a href="mailto:info@covid19survey.ch">contact us<a>.
+    faq: Download a PDF of our FAQ
+    interview: Interview with bodenseetv.ch
+    poster: Promotional Poster A4
+    bernPress: Canton Bern Press Release
+    ethzPress: ETH Zurich Press Release
+    preprint: Pre-print article with the international COVID-19 survey consortium.
+    strongerTogether: Stronger Together Promotional Images
+    needABreak: Need a Break Promotional Images
+    radio: Radiospot from RTS (in French)
+  pressKitFooter: Press Kit

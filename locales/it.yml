@@ -195,3 +195,16 @@ it:
     daily: Quotidiano
     weekly: Settimanalmente
     total: Totale
+  pressKit:
+    header: Novità e materiale promozionale
+    infoText: Ecco una panoramica dei materiali informativi e promozionali. Puoi scaricare tutti i materiali <a href="/images/presskit/full_presskit.zip"> qui </a> o dai un'occhiata qui sotto. Come sempre, non esitare a <a href="mailto:info@covid19survey.ch">contattarci<a>.
+    faq: Scarica un PDF delle nostre FAQ
+    interview: Intervista con bodenseetv.ch
+    poster: Poster promozionale A4
+    bernPress: Comunicato stampa Canton Berna
+    ethzPress: Comunicato stampa ETH Zurigo
+    preprint: Articolo prestampato con il consorzio internazionale per sondaggi COVID-19.
+    strongerTogether: Immagini promozionali insieme più forti
+    needABreak: Hai bisogno di una pausa Immagini promozionali
+    radio: Radiospot di RTS (in francese)
+  pressKitFooter: Press Kit

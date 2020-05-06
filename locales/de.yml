@@ -201,3 +201,16 @@ de:
     daily: Täglich
     weekly: Wöchentlich
     total: Gesamt
+  pressKit:
+    header: Nachrichten und Werbematerialien
+    infoText: Hier finden Sie eine Übersicht über Informations- und Werbematerialien. Sie können alle Materialien <a href="/images/presskit/full_presskit.zip"> hier </a> herunterladen oder unten nachlesen. Wenden Sie sich wie immer an, <a href="mailto:info@covid19survey.ch">kontaktieren Sie uns<a>.
+    faq: Laden Sie ein PDF unserer FAQ herunter
+    interview: Interview mit bodenseetv.ch
+    poster: Werbeplakat A4
+    bernPress: Pressemitteilung des Kantons Bern
+    ethzPress: Pressemitteilung der ETH Zürich
+    preprint: Pre-Print-Artikel mit dem internationalen COVID-19-Umfragekonsortium.
+    strongerTogether: Gemeinsam stärker Werbebilder
+    needABreak: Brauchen Sie eine Pause Werbebilder
+    radio: Radiospot von RTS (auf Französisch)
+  pressKitFooter: Press Kit

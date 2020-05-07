@@ -55,9 +55,11 @@ function checkMobile() {
       return true;
     }
   }
-  if (inFrame()) {
+  const inIframe = inFrame();
+  if (inIframe) {
     document.getElementById('body').classList.add('appview');
   }
+  return inIframe;
 }
 
 // ---------------------------------------------------------------------------------------------
@@ -386,8 +388,10 @@ function bindConsentButtons() {
 onDOMReady(function() {
   setupLangSelectors();
   checkError();
-  checkLang();
-  checkMobile();
+  const isMobile = checkMobile();
+  if(!isMobile){
+    checkLang();
+  }
   checkForCode();
   setupForm();
 

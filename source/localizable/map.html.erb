@@ -76,7 +76,8 @@ onDOMReady(function() {
   var myTabs = window.tabs({
     el: '#tabs',
     tabNavigationLinks: '.c-tabs-nav__link',
-    tabContentContainers: '.c-tab'
+    tabContentContainers: '.c-tab',
+    enableScrolling: true
   });
   console.log(myTabs);
   myTabs.init();

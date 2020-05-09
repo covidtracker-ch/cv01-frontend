@@ -15,6 +15,7 @@
       var tabContentContainers = el.querySelectorAll(options.tabContentContainers);
       var activeIndex = 0;
       var initCalled = false;
+      var enableScrolling = options.enableScrolling;
   
       /**
        * init
@@ -34,7 +35,7 @@
           }
         }
       };
-  
+
       /**
        * handleClick
        *
@@ -47,6 +48,11 @@
         link.addEventListener('click', function(e) {
           e.preventDefault();
           goToTab(index);
+          // scroll to this tab if scrollTo is set
+          if (enableScrolling) {
+            var scrollTarget = e.target.parentElement;
+            scrollTarget.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+          }
         });
       };
   

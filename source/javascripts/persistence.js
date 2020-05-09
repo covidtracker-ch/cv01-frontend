@@ -48,6 +48,11 @@ function updateStore(code, payload) {
   localStorage.setItem('formData', JSON.stringify(allResponses));
 }
 
+function getStoreByCode(code) {
+  var allResponses = JSON.parse(localStorage.getItem('formData')) || {};
+  return (code && allResponses[code]) ? allResponses[code] : null;
+}
+
 
 // ---------------------------------------------------------------------------------------------
 // --- form persistence, reloading
@@ -237,4 +242,64 @@ function clearForm() {
       }
     }
   }
+}
+
+// ---------------------------------------------------------------------------------------------
+// --- achievement store
+// ---------------------------------------------------------------------------------------------
+
+/**
+ * Sets the key in the actions store at 'code' to 'payload'
+ * @param code the code to update
+ * @param payload the value to which to update it
+ */
+function updateActions(code, payload) {
+  var allResponses = JSON.parse(localStorage.getItem('actions')) || {};
+  allResponses[code] = payload;
+  localStorage.setItem('actions', JSON.stringify(allResponses));
+}
+
+/**
+ * Retrieves the actions stored for code
+ * @param {*} code the code of the user
+ */
+function getActions(code) {
+  var allActions = JSON.parse(localStorage.getItem('actions')) || {};
+  return allActions[code] || {};
+}
+
+/**
+ * Records the action 'action' as occurring now
+ * @param code the code that performed the action, or falsey to look up the current user
+ * @param action the action that was performed
+ */
+function registerAction(action, code) {
+  if (!code) {
+    // try to figure out the code of the current user
+    code = localStorage.getItem('lastCode');
+    if (!code) {
+      // we tried twice, no dice...
+      // abort b/c we can't track actions for someone who doesn't have a code
+      return; 
+    }
+  }
+
+  // if they don't have real saved form data, they've opted out of tracking, so bail
+  var formData = getStoreByCode(code);
+  if (!formData || !formData['consentToStudy']) {
+    return;
+  }
+
+  var myActions = getActions(code);
+
+  // either retrieve or create the list of timestamps for this action
+  var curActions = myActions[action] || [];
+
+  // push the current time into this actions' event queue
+  curActions.push(new Date().getTime());
+  // and keep a queue of max 365 entries per action
+  curActions = curActions.slice(-365);
+
+  myActions[action] = curActions;
+  updateActions(code, myActions);
 }

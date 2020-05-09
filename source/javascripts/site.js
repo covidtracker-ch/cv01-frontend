@@ -21,9 +21,13 @@ function checkForCode() {
     // set this code as the last-used code
     lastCode = params['code'];
     localStorage.setItem('lastCode', lastCode);
-
+    
     // search through formData and replace any keys we deferred with the new code
     replaceKeyInStore(REPLACE_SENTINEL, lastCode);
+
+    // register a submission action
+    console.log("Registering submit with code: ", lastCode);
+    registerAction('submit', lastCode);
   }
   else {
     lastCode = localStorage.getItem('lastCode');

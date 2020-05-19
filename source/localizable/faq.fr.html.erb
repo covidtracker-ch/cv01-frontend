@@ -3,18 +3,56 @@
 <div class="container">
   <section class="subpage">
     <h2>FAQ</h2>
-    <h3 class="faq__question">Qui est derrière ce projet ?</h3>
-    <p>Le Covid-19-Tracker est réalisé par différents chercheurs et développeurs de logiciels, en collaboration avec la Direction de la santé publique du canton de Berne.</p>
-    <h3 class="faq__question">Quel est le but de cette campagne ?</h3>
-    <p>L’objectif du Covid-19-Tracker est de récolter, dans les plus brefs délais, un maximum de données de personnes saines et infectées en Suisse. Ces données doivent notamment permettre d’obtenir une image différenciée de la situation en lien avec le nouveau coronavirus.</p>
-    <p> <%= link_to t(:aboutTheStudy), '/study_info.html', target: "_blank" %> </p>
-    <h3 class="faq__question">En quoi la récolte des données peut-elle être utile dans la lutte contre le coronavirus ?</h3>
-    <p>Les informations sur la situation en lien avec le coronavirus en Suisse sont difficiles à coordonner et à rassembler. Les tests généralisés ne sont pas envisageables. Par conséquent, chaque élément d’information supplémentaire peut contribuer à arrêter la propagation du virus.<br>Les données recueillies par le biais du Covid-19-Tracker comprennent le code postal ainsi qu’une auto-évaluation de la personne répondant au questionnaire. Les régions présentant un nombre de cas de maladie potentiellement élevé pourront ainsi être identifiées. Les autorités auront la possibilité de prendre des mesures ciblées et locales.</p>
-    <h3 class="faq__question">Cette campagne a-t-elle un caractère scientifique ?</h3>
-    <p>La campagne a été développée en collaboration avec la Direction de la santé publique du canton de Berne. Cette institution confirme le besoin urgent d’informations les plus complètes possibles de la part de la population pour combattre l’épidémie. Des études scientifiques (dont celles du Dr. Jan von Overbeck) étayent l’approche actuellement mise en œuvre avec le Covid-19-Tracker.</p>
-    <h3 class="faq__question">Qu’advient-il de mes données ?</h3>
-    <p>Les données récoltées au moyen du Covid-19-Tracker ne peuvent pas être associées à des personnes. Ces données comprennent le code postal, l’âge, le genre et quelques informations complémentaires, mais aucun nom ni donnée à caractère personnel.</p>
-    <h3 class="faq__question">Les données ne risquent-elles pas d’être faussées si, par exemple, les personnes habitant des zones urbaines densément interconnectées, sont plus nombreuses à répondre au questionnaire ?</h3>
-    <p>Ce biais géographique peut être corrigé puisque le questionnaire est aussi rempli par des personnes en bonne santé. Le nombre de personnes infectées peut dont être divisé par la population totale. Le pour cent ou pour mille résultant aura une pertinence plus élevée.</p>
+    <div class="alert alert-primary text-center font-italic">Si vous pouvez nous aider à traduire, contactez-nous.</div>
+
+    <h3 class="faq__question">Why did you make this survey, what does this help?</h3>
+    <p>As the COVID-19 pandemic has spread across the world, it has become apparent that testing is essential for slowing community spread, as has been seen in South Korea and Vò, Italy. However, non-targeted longitudinal testing of a large population is currently infeasible. At the moment, in Switzerland, diagnostic testing is limited to only severe cases. We would like to supplement traditional diagnostic testing with a short and anonymous survey. This survey will allow us to longitudinally track the spread of symptomatic persons across the entire country and possibly hint as to how many symptomatic people currently exist, and where there is likely to be a large increase or local clustering of cases. We plan to release summary statistics to educate the public and give clear motivation to practice physical distancing, and to inform the Canton of Bern and other interested governmental entities on the symptom dynamics in their communities. </p>
+    
+    <h3 class="faq__question">What is the aim of the campaign?</h3>
+    <p>The aim of the COVID-19 tracker is to collect as much data, as quickly, and for as many days as possible, from a sample of the Swiss population, no matter whether they are sick or not. Among other things, this data is intended to provide a more detailed picture of the corona situation in different parts of our country (see previous question).</p>
+    
+    <h3 class="faq__question">Why do I need to fill the survey every day or at least frequently?</h3>
+    <p>To understand how symptoms evolve in a specific area, it is important to see how individual respondents change over time. Filling the survey once is an important data point, but aggregating data points across time is more valuable to identify changes in your area code and your city. </p>
+    
+    <h3 class="faq__question">Should I answer the survey even if I have no symptoms?</h3>
+    <p>Yes! We are interested in the changes in people's health, so, knowing that you felt well yesterday but you have a fever today, is important information. Just select "No symptoms" and continue to do so, unless the situation changes.</p>
+
+   
+    <h3 class="faq__question">I've been filling other COVID-19 surveys, or using similar apps. Should I also fill yours?</h3>
+    <p>Yes, please fill ours as well as the other ones if you have started to do so. Please also read the next question for details on what is being done to join efforts with other initiatives.</p>
+    
+   
+    <h3 class="faq__question">Why are there many options for symptoms tracking?</h3>
+    <p>It is not unusual in a time of high activity and urgency that several projects start in parallel. Our multidisciplinary team has worked diligently for several weeks to make sure that our survey is informative for both physicians and epidemiologists and fulfills the high ethical and legal standards that have to be met to safely and securely collect health-related data of the Swiss population. We have secured collaboration and support from the Canton of Bern and ETHZ, and we are coordinating with the other efforts to consolidate into a joint data stream across the currently available symptom tracking options. </p>
+    
+    <h3 class="faq__question">Who is behind this project?</h3>
+    <p>We are a group of academics, independent researchers, software developers, biologists and medical doctors working in conjunction with the health department of the Canton of Bern to provide what we believe is a needed service for our community <br />
+        <ul>
+        <li>ETH Zürich: Biomedical Informatics group, Department of Computer Science <a href="https://bmi.inf.ethz.ch/">https://bmi.inf.ethz.ch/</a> </li>
+        <li>Milliways: We find pragmatic solutions for almost every IT problem. </li>
+        <li>Nine: We ensure nobody has to worry about scalability of the backend thanks to a Kubernetes Cluster </li>
+        <li>Astina: Supplier of backend and data processing software solutions from Zurich </li>
+        <li>Esri: We pioneer problem solving and visualisation with Geographic Information System software to help you see what others can’t.</li>
+        <li>Canton of Bern: Dr. med. Jan von Overbeck, medical liaison and infectious diseases specialist  </li>
+        </ul>
+
+    </p>
+  
+    <h3 class="faq__question">Are medical doctors involved? Is this effort scientifically supported?</h3>
+    <p>The survey has been developed in close collaboration and with continuous feedback from physicians of relevant specialties ( such as epidemiology, intensive care, and infectology), as well as leading epidemiological scientists, and Canton of Bern authorities. We are especially grateful to Dr. med. Jan von Overbeck, Dr. med. Tobias Merz, Dr. med. Martin Faltys, Dr. Christian Althaus, Dr. Marcel Salathé, and many others out of a great team of supporters.</p>
+  
+    <h3 class="faq__question">Why only symptoms? Some symptoms can also relate to flu, cold...etc.</h3>
+    <p>This survey is not intended to be a COVID-19 diagnostic tool, and taking part in it does not preclude a diagnostic test if needed. Our goal is to estimate the amount of symptomatic people, and the prevalence of symptoms previous studies (such as <a href="https://www.medrxiv.org/content/10.1101/2020.03.19.20038844v2">this one</a>) have found to be correlated with reported positive COVID-19 tests. We hope this gives the public and experts insight into where COVID-19 is probably currently occurring the most, and can help predict where new clusters may develop.</p>
+  
+    <h3 class="faq__question">Where is the data stored? Is my data safe?</h3>
+    <p>All data is collected anonymously and is stored securely within Switzerland. We have taken the appropriate measures to prevent public access to the raw data. In agreement with our ethics clearance, data will only be made public in aggregated form, not allowing the singling out of an individual person.We do not collect names nor other forms of personal data. All data transmission is encrypted.</p>
+  
+    <h3 class="faq__question">What do you do with the data?</h3>
+    <p>In the short term, the data will be available to epidemiology researchers and the authorities to better estimate the dynamics of COVID-19 spread within Switzerland, and will be used to provide informative visualizations for the general public, see <a href="https://www.covidtracker.ch/it/map.html">our map</a>, for example. While the data can not be used to diagnose an individual, the data points aggregated over local areas and time, will show hotspots of emerging symptoms and allow for a timely reaction. In the long term, the full data set will be a valuable resource for research to better understand how diseases such as COVID-19 spread and inform on how well measures of mitigation worked.
+    </p>
+  
+    <h3 class="faq__question">Could the data be biased? if, for example, more people fill out the questionnaire in areas such as cities or other densely populated areas?</h3>
+    <p>Yes, this type of data collection has inherent biases and caveats. But many biases can be corrected if widespread participation is achieved, and if many people participate, observations can be highly accurate. For example, the geographic bias can be corrected by dividing the number of suspected cases by the total submissions in the area of interest, making the resulting percentage of symptoms per zip code more meaningful when put in the context of other zip codes or regions in the country.</p>
+  
   </section>
 </div>

@@ -783,3 +783,15 @@ section.map {
     }
   }
 }
+
+.maintenance {
+  display: flex;
+  align-items: center;
+  border: solid 1px rgb(177, 140, 61);
+  border-radius: 3px;
+  background-color: rgb(255, 249, 224);
+  padding: 10px;
+
+  h3 { margin: 0; margin-bottom: 10px; }
+  p { margin: 0; }
+}

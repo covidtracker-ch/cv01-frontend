@@ -97,14 +97,20 @@ fr:
   implementation: Réalisation
   imprint: Mentions obligatoires
   introduction: >-
-    <p>Le coronavirus se propage en Europe à une vitesse vertigineuse.</p> <p>Pour
-    enrayer la maladie, les cas suspects doivent être identifiés le plus tôt
-    possible. C’est l’objectif de la présente campagne.</p> <p><b>Que vous soyez
-    malade ou en bonne santé, infecté-e ou non : Vos données peuvent aider à
-    sauver des vies.</b> En remplissant le formulaire ci-dessous, vous participez
-    à l’effort commun pour venir à bout de cette crise. L’idéal serait que vous
-    renouveliez votre participation du quotidien (<a href="/images/covidtracker.ics">Configurer un rappel de calendrier</a>).</p> <p>Important: les données
-    récoltées sont anonyme et ne peuvent pas être associées à des personnes.</p>
+    <p>Donnez 1 minute de votre temps et aidez-nous à mieux comprendre l'évolution de la pándemie de COVID-19.</p>
+    <p>La maladie recule et un assouplissement progressif des mesures de restriction a eu lieu. Désormais, il est 
+      d'autant plus important de reconnaître précocement les accumulations régionales d'infection et de soutenir 
+      la capacité d'analyse moléculaire avec des données d'enquête supplémentaires.
+    </p>
+    <p>Que vous vous sentiez malade ou en bonne santé, vos données peuvent aider à sauver des vies. En remplissant
+       le formulaire ci-dessous, vous nous aidez à surmonter ensemble cette crise. Idéalement, répétez votre 
+       participation chaque semaine(<a href="/images/covidtracker.ics">configurer un événement dans votre calendrier</a>) 
+       ou quand vous vous sentez malade.
+    </p>
+    <p><b>Important:</b>Les données sont collectées de manière anonyme et ne permettent pas d'identifier 
+      des individus. Il s'agit d'une initiative à but non lucratif d'universitaires et de startups en Suisse,
+      et toutes les données anonymes sont disponibles pour des recherches visant à mieux comprendre la dynamique du COVID-19.
+    </p>
   italy: Italie
   leavingHomeForWork: Quittez-vous actuellement votre domicile pour travailler?
   loading: loading...

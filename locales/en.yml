@@ -91,14 +91,20 @@ en:
   implementation: Realization
   imprint: Legal Notice
   introduction: >-
-    <p>The coronavirus COVID-19 is spreading rapidly throughout Europe.</p> <p>In
-    order to contain the disease, suspected cases must be identified as early as
-    possible. This is the purpose of this campaign.</p> <p><b>Whether you are sick
-    or healthy, infected or not, your data can help save lives.</b> By filling out
-    the form below, you are helping us to overcome this crisis together. Ideally,
-    repeat your participation daily (<a href="/images/covidtracker.ics">set up
-    calendar event</a>).</p> <p>Important: The data is collected anonymously and
-    does not allow identification of individuals.</p>
+    <p>Donate 1 minute of your time and help us to better understand the dynamics of COVID-19.</p>
+    <p>The disease seems to be retreating and a stepwise loosening of restriction measures has begun. 
+      Now, it is all the more important to recognise regional accumulations of infection early on and to 
+      support the molecular testing capacity with additional survey data.
+    </p>
+    <p>Whether you feel sick or healthy, your data can help save lives. By filling out the form below, 
+      you are helping us to overcome this crisis together. Ideally, repeat your participation weekly (<a href="/images/covidtracker.ics">set up
+      calendar event</a>) or whenever you feel ill.
+    </p>
+    <p><b>Important:</b> The data is collected anonymously and does not allow identification of individuals. 
+      This is a non-for profit initiative from academics
+      and startups in Switzerland, and all anonymous data is available for research 
+      aiming at better understanding COVID-19 dynamics.
+    </p>
   italy: Italy
   leavingHomeForWork: Are you currently leaving your home for work?
   loading: loading...

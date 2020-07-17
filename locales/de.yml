@@ -97,14 +97,21 @@ de:
   implementation: Umsetzung
   imprint: Impressum
   introduction: >-
-    <p>Das Coronavirus breitet sich in Europa rasant aus.</p> <p>Um die Krankheit
-    einzudämmen, müssen Verdachtsfälle möglichst früh identifiziert werden. Dazu
-    dient diese Kampagne.</p> <p><b>Egal ob Sie krank sind oder gesund, infiziert
-    oder nicht: Ihre Daten können helfen, Leben zu retten.</b> Wenn Sie das
-    untenstehende Formular ausfüllen, tragen Sie dazu bei, dass wir diese Krise
-    gemeinsam meistern können. Im Idealfall wiederholen Sie Ihre Teilnahme täglich (<a href="/images/covidtracker.ics">Kalendererinnerung
-    einrichten</a>).</p> <p>Wichtig: Wir verwenden die erfassten Daten nicht, um
-    Rückschlüsse auf einzelne Personen zu ziehen.</p>
+    <p>Schenken Sie uns 1 Minute Ihrer Zeit und helfen Sie uns die Dynamik von COVID-19 besser zu verstehen.</p>
+    <p>Die Krankheit scheint auf dem Rückzug und die Massnahmen zur Einschränkung werden schrittweise gelockert.
+      Umso wichtiger ist es jetzt frühzeitig zu erkennen ob sich Ansteckungen regional häufen und die weiterhin 
+      limitierte Kapazität für molekulare Tests durch anonyme Umfragedaten zu unterstützen.
+    </p>
+    <p>Egal ob Sie sich krank fühlen oder gesund: Ihre Daten können helfen, die medizinische Situation zu 
+      entspannen und Leben zu retten. Wenn Sie das untenstehende Formular ausfüllen, tragen Sie dazu bei, 
+      dass wir diese Krise gemeinsam meistern können. Im Idealfall wiederholen Sie Ihre Teilnahme einmal 
+      pro Woche (<a href="/images/covidtracker.ics">Kalendererinnerung einrichten</a>) oder sobald Sie sich krank fühlen.
+    </p>
+    <p><b>Wichtig:</b> Alle Daten werden anonym erhoben und erlauben es nicht einzelne Teilnehmende zu 
+      identifizieren. Covidtracker ist eine gemeinsame Nonprofit-initiative von Schweizer Wissenschaftlern
+      und Startups. Damit wir lernen die Dynamik von COVID-19 besser zu verstehen, sind alle anonymen 
+      Daten frei für die Forschung verfügbar.
+    </p>
   italy: Italien
   leavingHomeForWork: Verlassen Sie derzeit Ihr Zuhause um zur Arbeit zu gehen?
   loading: lade...

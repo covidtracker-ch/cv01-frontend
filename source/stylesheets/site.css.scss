@@ -138,7 +138,7 @@ td {
   border-bottom: 1px solid #a00;
 
   .container {
-    padding: 5rem 1rem 6rem 1rem;
+    padding: 1rem 1rem 6rem 1rem;
   }
   &__headline {
   }
@@ -150,10 +150,11 @@ td {
   }
   @include mobile {
     .container {
-      padding: 5rem 1rem 2rem 1rem;
+      padding: 1rem 1rem 2rem 1rem;
     }
     .logo {
       margin-left: 0;
+      width: 3rem;
     }
   }
 }

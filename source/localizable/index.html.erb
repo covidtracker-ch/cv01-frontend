@@ -51,7 +51,7 @@ ageRanges:
       <%= partial "localizable/partials/home_more" %>
     </div>
 
-    <div class="maintenance">
+    <div class="maintenance" style="display: none;">
       <img class="side-icon" src="/images/exclamation-triangle.svg" alt="Notice Triangle" width="200" height="200" style="width: 200px;">
       <div>
         <h3><%= t(:maintenanceHeader) %></h3>
@@ -61,7 +61,7 @@ ageRanges:
       </div>
     </div>
 
-    <form action="<%= config[:api_url] %>/form" onsubmit="persistForm()" method="post" id="covid-form" style="display: none;">
+    <form action="<%= config[:api_url] %>/form" onsubmit="persistForm()" method="post" id="covid-form">
       <div class="boxed code-chooser">
         <!-- ---------------------------------------------------------
         --- first-time survey?

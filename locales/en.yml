@@ -211,3 +211,11 @@ en:
   pressKitFooter: Press Kit
   maintenanceHeader: Under Maintenance
   maintenanceText: Sorry! The system is currently undergoing maintenance. Service will return as soon as possible, so please check back soon.
+  hasBeenVaccinated: Have you been vaccinated against COVID-19?
+  declinedAnswer: Prefer not to answer
+  whenVaccinatedFirst: When was your first vaccination?
+  whenVaccinatedSecond: When was your second vaccination (if applicable)?
+  vaccineType: What type of COVID-19 vaccine did you receive?
+  vaccinePfizer: Pfizer
+  vaccineModerna: Moderna
+  vaccineJJ: Johnson & Johnson

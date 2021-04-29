@@ -218,4 +218,12 @@ de:
     radio: Radiospot von RTS (auf Französisch)
   pressKitFooter: Press Kit
   maintenanceHeader: Wird gewartet
-  maintenanceHeader: Entschuldigung! Das System wird derzeit gewartet. Der Service wird so schnell wie möglich zurückkehren. Bitte versuchen Sie es bald erneut.
+  maintenanceText: Entschuldigung! Das System wird derzeit gewartet. Der Service wird so schnell wie möglich zurückkehren. Bitte versuchen Sie es bald erneut.
+  hasBeenVaccinated: Wurden Sie gegen COVID-19 geimpft?
+  declinedAnswer: Ich möchte nicht antworten
+  whenVaccinatedFirst: Wann war deine erste Impfung?
+  whenVaccinatedSecond: Wann war Ihre zweite Impfung (falls zutreffend)?
+  vaccineType: Welche Art von COVID-19-Impfstoff haben Sie erhalten?
+  vaccinePfizer: Pfizer
+  vaccineModerna: Moderna
+  vaccineJJ: Johnson & Johnson

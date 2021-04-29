@@ -210,3 +210,11 @@ it:
   pressKitFooter: Press Kit
   maintenanceHeader: In manutenzione
   maintenanceText: Siamo spiacenti! Il sistema è attualmente in fase di manutenzione. Il servizio verrà restituito al più presto, quindi ricontrolla presto.
+  hasBeenVaccinated: Sei stato vaccinato contro COVID-19?
+  declinedAnswer: Preferisco non rispondere
+  whenVaccinatedFirst: Quando è stata la tua prima vaccinazione?
+  whenVaccinatedSecond: Quando è stata la tua seconda vaccinazione (se applicabile)?
+  vaccineType: Che tipo di vaccino COVID-19 hai ricevuto?
+  vaccinePfizer: Pfizer
+  vaccineModerna: Moderna
+  vaccineJJ: Johnson & Johnson

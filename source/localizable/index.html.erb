@@ -344,6 +344,22 @@ ageRanges:
               <input class="input" type="radio" name="vaccineType" id="vaccineType-JJ" value="johnson_johnson" required>
               <span><%= t(:vaccineJJ) %></span>
             </label>
+            <label class="radio-item" for="vaccineType-astrazeneca">
+              <input class="input" type="radio" name="vaccineType" id="vaccineType-astrazeneca" value="astrazeneca" required>
+              <span><%= t(:vaccineAstraZeneca) %></span>
+            </label>
+            <label class="radio-item" for="vaccineType-sputnik">
+              <input class="input" type="radio" name="vaccineType" id="vaccineType-sputnik" value="sputnik" required>
+              <span><%= t(:vaccineSputnik) %></span>
+            </label>
+            <label class="radio-item" for="vaccineType-other">
+              <input class="input" type="radio" name="vaccineType" id="vaccineType-other" value="other" required>
+              <span><%= t(:vaccineOther) %></span>
+            </label>
+            <label class="radio-item" for="vaccineType-unknown">
+              <input class="input" type="radio" name="vaccineType" id="vaccineType-unknown" value="unknown" required>
+              <span><%= t(:vaccineUnknown) %></span>
+            </label>
           </div>
         </div>
       </div>

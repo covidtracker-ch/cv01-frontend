@@ -226,3 +226,7 @@ fr:
   vaccinePfizer: Pfizer
   vaccineModerna: Moderna
   vaccineJJ: Johnson & Johnson
+  vaccineAstraZeneca: AstraZeneca
+  vaccineSputnik: Sputnik
+  vaccineOther: Autre
+  vaccineUnknown: Je ne sais pas

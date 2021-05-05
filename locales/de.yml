@@ -219,9 +219,9 @@ de:
   pressKitFooter: Press Kit
   maintenanceHeader: Wird gewartet
   maintenanceText: Entschuldigung! Das System wird derzeit gewartet. Der Service wird so schnell wie möglich zurückkehren. Bitte versuchen Sie es bald erneut.
-  hasBeenVaccinated: Wurden Sie gegen COVID-19 geimpft?
-  declinedAnswer: Ich möchte nicht antworten
-  whenVaccinatedFirst: Wann war deine erste Impfung?
+  hasBeenVaccinated: Wurden Sie bereits gegen COVID-19 geimpft?
+  declinedAnswer: Ich möchte nicht antworten.
+  whenVaccinatedFirst: Wann war Ihre erste Impfung?
   whenVaccinatedSecond: Wann war Ihre zweite Impfung (falls zutreffend)?
   vaccineType: Welche Art von COVID-19-Impfstoff haben Sie erhalten?
   vaccinePfizer: Pfizer

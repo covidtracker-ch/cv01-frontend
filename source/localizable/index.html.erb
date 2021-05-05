@@ -310,7 +310,7 @@ ageRanges:
             <input class="js-toggle input" type="radio" name="hasBeenVaccinated" id="hasBeenVaccinated-0" value="no" data-hide="wrap-vaccinated" required>
             <span><%= t(:noAnswer) %></span>
           </label>
-          <label class="radio-item" for="hasBeenVaccinated-0">
+          <label class="radio-item" for="hasBeenVaccinated-2">
             <input class="js-toggle input" type="radio" name="hasBeenVaccinated" id="hasBeenVaccinated-2" value="declined" data-hide="wrap-vaccinated" required>
             <span><%= t(:declinedAnswer) %></span>
           </label>
@@ -322,42 +322,42 @@ ageRanges:
       ---------------------------------------------------------- -->
       <div id="wrap-vaccinated" class="js-hide">
         <div class="input-wrap input-wrap--text input-wrap--child">
-          <label class="label" for="whenVaccinatedFirst"><%= t(:whenVaccinatedFirst) %> *</label>
-          <input id="whenVaccinatedFirst" name="whenVaccinatedFirst" class="input input--short" type="date" min="2019-11-01" max="2022-12-31" required>
+          <label class="label" for="whenVaccinatedFirst"><%= t(:whenVaccinatedFirst) %></label>
+          <input id="whenVaccinatedFirst" name="whenVaccinatedFirst" class="input input--short" type="date" min="2019-11-01" max="2022-12-31">
         </div>
         <div class="input-wrap input-wrap--text input-wrap--child">
           <label class="label" for="whenVaccinatedSecond"><%= t(:whenVaccinatedSecond) %></label>
           <input id="whenVaccinatedSecond" name="whenVaccinatedSecond" class="input input--short" type="date" min="2019-11-01" max="2022-12-31">
         </div>
         <div class="input-wrap input-wrap--child input-wrap--radio">
-          <span class="label"><%= t(:vaccineType) %> *</span>
-          <div class="radio-wrap">
+          <span class="label"><%= t(:vaccineType) %></span>
+          <div>
             <label class="radio-item" for="vaccineType-pfizer">
-              <input class="input" type="radio" name="vaccineType" id="vaccineType-pfizer" value="pfizer" required>
+              <input class="input" type="radio" name="vaccineType" id="vaccineType-pfizer" value="pfizer">
               <span><%= t(:vaccinePfizer) %></span>
             </label>
             <label class="radio-item" for="vaccineType-moderna">
-              <input class="input" type="radio" name="vaccineType" id="vaccineType-moderna" value="moderna" required>
+              <input class="input" type="radio" name="vaccineType" id="vaccineType-moderna" value="moderna">
               <span><%= t(:vaccineModerna) %></span>
             </label>
             <label class="radio-item" for="vaccineType-JJ">
-              <input class="input" type="radio" name="vaccineType" id="vaccineType-JJ" value="johnson_johnson" required>
+              <input class="input" type="radio" name="vaccineType" id="vaccineType-JJ" value="johnson_johnson">
               <span><%= t(:vaccineJJ) %></span>
             </label>
             <label class="radio-item" for="vaccineType-astrazeneca">
-              <input class="input" type="radio" name="vaccineType" id="vaccineType-astrazeneca" value="astrazeneca" required>
+              <input class="input" type="radio" name="vaccineType" id="vaccineType-astrazeneca" value="astrazeneca">
               <span><%= t(:vaccineAstraZeneca) %></span>
             </label>
             <label class="radio-item" for="vaccineType-sputnik">
-              <input class="input" type="radio" name="vaccineType" id="vaccineType-sputnik" value="sputnik" required>
+              <input class="input" type="radio" name="vaccineType" id="vaccineType-sputnik" value="sputnik">
               <span><%= t(:vaccineSputnik) %></span>
             </label>
             <label class="radio-item" for="vaccineType-other">
-              <input class="input" type="radio" name="vaccineType" id="vaccineType-other" value="other" required>
+              <input class="input" type="radio" name="vaccineType" id="vaccineType-other" value="other">
               <span><%= t(:vaccineOther) %></span>
             </label>
             <label class="radio-item" for="vaccineType-unknown">
-              <input class="input" type="radio" name="vaccineType" id="vaccineType-unknown" value="unknown" required>
+              <input class="input" type="radio" name="vaccineType" id="vaccineType-unknown" value="unknown">
               <span><%= t(:vaccineUnknown) %></span>
             </label>
           </div>

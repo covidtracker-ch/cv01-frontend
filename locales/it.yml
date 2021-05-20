@@ -215,7 +215,7 @@ it:
   whenVaccinatedFirst: Quando è stata la tua prima vaccinazione?
   whenVaccinatedSecond: Quando è stata la tua seconda vaccinazione (se applicabile)?
   vaccineType: Che tipo di vaccino COVID-19 hai ricevuto?
-  vaccinePfizer: Pfizer
+  vaccinePfizer: Pfizer/BioNTech
   vaccineModerna: Moderna
   vaccineJJ: Johnson & Johnson
   vaccineAstraZeneca: AstraZeneca

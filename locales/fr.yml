@@ -97,16 +97,7 @@ fr:
   implementation: Réalisation
   imprint: Mentions obligatoires
   introduction: >-
-    <p>Donnez 1 minute de votre temps et aidez-nous à mieux comprendre l'évolution de la pándemie de COVID-19.</p>
-    <p>Que vous vous sentiez malade ou en bonne santé, vos données peuvent aider à sauver des vies. En remplissant
-       le formulaire ci-dessous, vous nous aidez à surmonter ensemble cette crise. Idéalement, répétez votre 
-       participation chaque semaine(<a href="/images/covidtracker.ics">configurer un événement dans votre calendrier</a>) 
-       ou quand vous vous sentez malade.
-    </p>
-    <p><b>Important:</b>Les données sont collectées de manière anonyme et ne permettent pas d'identifier 
-      des individus. Il s'agit d'une initiative à but non lucratif d'universitaires et de startups en Suisse,
-      et toutes les données anonymes sont disponibles pour des recherches visant à mieux comprendre la dynamique du COVID-19.
-    </p>
+    <p>Le sondage est terminé. Nous vous remercions de votre soutien. </p>
   italy: Italie
   leavingHomeForWork: Quittez-vous actuellement votre domicile pour travailler?
   loading: loading...
